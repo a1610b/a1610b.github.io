@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>金融随机过程 | Tony&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="测度空间与概率空间Lebesgue测度空间设$\Omega$是实数空间$\mathbb{R}$的一个非空子集，$\mathcal{F}$为$\Omega$的一些子集构成的集合，集合函数$\mu$定义在$\mathcal{F}$上，且满足以下条件:  $\mu (\emptyset)=0$  $\forall A\in \mathcal(F),\mu(A)\ge0$  $\mu$，具有可列可加性。即">
+<meta name="keywords" content="随机过程,金融,数学">
+<meta property="og:type" content="article">
+<meta property="og:title" content="金融随机过程">
+<meta property="og:url" content="https://github.com/a1610b/a1610b.github.io/2019/07/29/金融随机过程/index.html">
+<meta property="og:site_name" content="Tony&#39;s Blog">
+<meta property="og:description" content="测度空间与概率空间Lebesgue测度空间设$\Omega$是实数空间$\mathbb{R}$的一个非空子集，$\mathcal{F}$为$\Omega$的一些子集构成的集合，集合函数$\mu$定义在$\mathcal{F}$上，且满足以下条件:  $\mu (\emptyset)=0$  $\forall A\in \mathcal(F),\mu(A)\ge0$  $\mu$，具有可列可加性。即">
+<meta property="og:locale" content="English and Chinese">
+<meta property="og:updated_time" content="2019-07-29T14:35:50.472Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="金融随机过程">
+<meta name="twitter:description" content="测度空间与概率空间Lebesgue测度空间设$\Omega$是实数空间$\mathbb{R}$的一个非空子集，$\mathcal{F}$为$\Omega$的一些子集构成的集合，集合函数$\mu$定义在$\mathcal{F}$上，且满足以下条件:  $\mu (\emptyset)=0$  $\forall A\in \mathcal(F),\mu(A)\ge0$  $\mu$，具有可列可加性。即">
+  
+    <link rel="alternate" href="/a1610b.github.io/atom.xml" title="Tony&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/a1610b.github.io/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/a1610b.github.io/" id="logo">Tony&#39;s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/a1610b.github.io/">Home</a>
+        
+          <a class="main-nav-link" href="/a1610b.github.io/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/a1610b.github.io/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://github.com/a1610b/a1610b.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="[post]-金融随机过程" class="article article-type-[post]" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/a1610b.github.io/2019/07/29/金融随机过程/" class="article-date">
+  <time datetime="2019-07-29T14:27:54.000Z" itemprop="datePublished">2019-07-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      金融随机过程
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="测度空间与概率空间"><a href="#测度空间与概率空间" class="headerlink" title="测度空间与概率空间"></a>测度空间与概率空间</h1><h2 id="Lebesgue测度空间"><a href="#Lebesgue测度空间" class="headerlink" title="Lebesgue测度空间"></a>Lebesgue测度空间</h2><p>设$\Omega$是实数空间$\mathbb{R}$的一个非空子集，$\mathcal{F}$为$\Omega$的一些子集构成的集合，集合函数$\mu$定义在$\mathcal{F}$上，且满足以下条件:</p>
+<ol>
+<li><p>$\mu (\emptyset)=0$</p>
+</li>
+<li><p>$\forall A\in \mathcal(F),\mu(A)\ge0$</p>
+</li>
+<li><p>$\mu$，具有可列可加性。即如$\{A_k\}^\infty_{k=1}\subset \mathcal{F}$，且两两不相交，则<script type="math/tex">\mu(\bigcup^\infty_{k=1}A_k)=\sum_{k=1}^{\infty}\mu(A_k)</script></p>
+</li>
+</ol>
+<p>则称$\mu$为$\mathcal{F}$上的测度。</p>
+<p>通俗的来说测度就是设定的基本单位，如长度。测度的定义只是把一个计量单位所需要的内容抽象出来了。</p>
+<p>$\forall E\subset \mathbb{R}$，记<script type="math/tex">Z_E=\{\sum_{k=1}^{\infty}\lambda(I_k)|\{I_k\}^{\infty}_{k=1}\text{为区间列，且}E\subset\bigcup_{k=1}^\infty I_k\}</script> 称$m^*(E)=\inf_{\{I_k\}}\{Z_E\}$为集合E的外测度，其中$\lambda(I_k)$表示区间$I_k$的长度。</p>
+<p>外测度是一个用以定义Lebesgue测度的定义，故使用长度做为基础</p>
+<p>设$\forall A\in\mathcal{F}$，如果A总能被总长度任意小的区间列所覆盖，则称A为零集。</p>
+<p>目前似乎只局限于在实数域以长度为测度进行讨论，但是这些定理显然是可以推广的。\<br>外测度似乎是一个可以在任何空间内进行使用的特殊/通用测度？</p>
+<ol>
+<li><p>空集是零集</p>
+</li>
+<li><p>$\mathbb{R}$上可数集是零集</p>
+</li>
+<li><p>可列个零集的并仍是零集</p>
+</li>
+<li><p>$\forall E \subset \mathbb{R}$，E为零集定价于$m^*(E)=0$</p>
+</li>
+</ol>
+<p>设$E\subset \mathbb{R}$，如果对于$\forall A\subset \mathbb{R}$均有<script type="math/tex">m^*(A)=m^*(A\cap E)+m^*(A\cap E^c)</script> 则称集合E为Lebesgue可测集。用$\mathcal{M}$表示$\mathbb{R}$上全体Lebesgue可测集的集合。</p>
+<p>没有平凡的不可测集，需要进行特别构造（参考论文Lebesgue不可测集的存在性及其应用）。也就是说常见的R中的集合都是Lebesgue可测的</p>
+<ol>
+<li><p>$\mathbb{R}$中任一零集是Lebesgue可测集</p>
+</li>
+<li><p>$\mathbb{R}$中任一区间是Lebesgue可测集</p>
+</li>
+<li><p>若$E_1\in \mathcal{M}$，$E_2\in \mathcal{M}$，则$E_1\cap E_2\in \mathcal{M}$，$E_1\cap E_2 \mathcal{M}$，$E_1\cup E_2- \mathcal{M}$，$E^c\in \mathcal{M}$</p>
+</li>
+<li><p>若$E_i\in \mathcal{M}$，则$\cup_{i=1}^\infty E_i\in \mathcal{M}$,若$E_i\cap E_j\in \emptyset, i\ne j$，则<script type="math/tex">m^*(\bigcup_{i=1}^\infty E_i)=\sum_{i=1}^\infty m^*(E_i)</script></p>
+<p>注意第五个定理说明可列个的情况下求和号和求外测度是可交换的。</p>
+</li>
+</ol>
+<p>设$\Omega$是一个非空集合，$\mathcal{F}$为$\Omega$的一些子集构成的集合，如果</p>
+<ol>
+<li><p>$\Omega \in \mathcal{F}$</p>
+</li>
+<li><p>若$A\in\mathcal{F}$，则$A^c\in\mathcal{F}$</p>
+</li>
+<li><p>若$A_i\in \mathcal{F}$，则$\cup_{i=1}^\infty A_i\in\mathcal{F}$</p>
+</li>
+</ol>
+<p>则称$\mathcal{F}$为一个$\sigma$-代数。</p>
+<p>设$\Omega$是一个非空集合，$\mathcal{F}$为$\Omega$上的一个$\sigma$-代数，$\mu$为$\mathcal{F}$上的一个测度。则称$(\Omega,\mathcal{F},\mu)$为一个测度空间。</p>
+<p>称测度空间$(\mathbb{R},\mathcal{M},\mu)$为Lebesgue测度空间，称m为$\mathcal{M}$上的Lebesgue测度。</p>
+<p>m其实就是外测度，但是只作用在$\mathcal{M}$中</p>
+<p>$(\mathbb{R},\mathcal{M},\mu)$为Lebesgue测度空间，则</p>
+<ol>
+<li><p>$\mathbb{R}$上任一区间的Lebesgue测度就是该区间的长。</p>
+</li>
+<li><p>零集的Lebesgue测度为0</p>
+</li>
+<li><p>设$A,B\in \mathcal{M}$则有</p>
+<ul>
+<li><p>如果$A\subset B$，那么$m(A)\le m(B)$</p>
+</li>
+<li><p>如果$A\subset B$，且m(A)有限，那么$m(B-A)\ge m(B)-m(A)$</p>
+</li>
+</ul>
+</li>
+<li><p>m具有平移不变性。即$m(A+{t})=m(A)$，t为$\mathbb{R}$中的单点。</p>
+</li>
+<li><p>设A，$A\triangle B\in \mathcal{M}$，且$m(A\triangle B)=0$，则$B\in \mathcal{M}$，且$m(A)=m(B)$，其中<script type="math/tex">A\triangle B=(A-B)\bigcup (B-A)</script></p>
+</li>
+</ol>
+<p>$(\mathbb{R},\mathcal{M},\mu)$为Lebesgue测度空间，$m^*$为$\mathbb{R}$上的外测度，则</p>
+<ol>
+<li><p>任给$A\subset \mathbb{R}$，$\varepsilon &gt;0$，必存在开集G，使$A\subset G$，且<script type="math/tex">m(G)\le m^*(A)+\varepsilon</script></p>
+</li>
+<li><p>任给$A\subset \mathbb{R}$，必存在开集列$\{G_n\}_{n=1}^{\infty}$，使$A\subset \cap_{n=1}^{\infty}G_n$，且 <script type="math/tex">m(\bigcap_{n=1}^{\infty}G_n)=m^*(A)</script></p>
+</li>
+<li><p>任给$E\in \mathcal{M}$，$\varepsilon &gt;0$，必存在闭集F，使$F\subset E$，且<script type="math/tex">m(E-F)\le \varepsilon</script></p>
+</li>
+<li><p>任给$E\in \mathcal{M}$，必存在闭集列$\{F_n\}_{n=1}^{\infty}$，使$E\subset \cup_{n=1}^{\infty}F_n$，且 <script type="math/tex">m(\bigcup_{n=1}^{\infty}F_n)=m^*(E)</script></p>
+</li>
+</ol>
+<p>$(\mathbb{R},\mathcal{M},\mu)$为Lebesgue测度空间，$\{A_n\}_{n=1}^\infty\subset \mathcal{M}$，则</p>
+<ol>
+<li><p>如果$\{A_n\}_{n=1}^\infty$关于n单调增加，那么<script type="math/tex">m(\bigcup_{n=1}^{\infty}A_n)=\lim\limits_{n\to \infty}m(A_n)</script></p>
+</li>
+<li><p>如果$\{A_n\}_{n=1}^\infty$关于n单调减少，且$m(A_1)&lt;\infty$那么<script type="math/tex">m(\bigcap_{n=1}^{\infty}A_n)=\lim\limits_{n\to \infty}m(A_n)</script></p>
+</li>
+</ol>
+<p>以上就是$\mathbb{R}$上的Lebesgue$\sigma$-代数。\</p>
+<p>设$\mathcal{G}$是$\Omega$的一些子集构成的集族，如果$\mathcal{G}$不是一个$\sigma$-代数，称包含$\mathcal{G}$的最小$\sigma$-代数为由$\mathcal{G}$生成的$\sigma$-代数，记为$\sigma(\mathcal{G})$</p>
+<p>称由$\mathbb{R}$上所有区间生成的$\sigma$-代数为Borel $\sigma$-代数，记为$\beta(\mathcal{R})$。$\beta(\mathcal{R})$中的元素称为Borel集。</p>
+<p>$\mathbb{R}$上所有开集，闭集，任一有理数集，任一无理数集均是Borel集。</p>
+<p>以下集族生成的$\sigma$-代数均为$\beta(\mathcal{R})$：</p>
+<ol>
+<li><p>所有区间</p>
+</li>
+<li><p>所有开区间</p>
+</li>
+<li><p>所有闭区间</p>
+</li>
+<li><p>所有开集</p>
+</li>
+<li><p>所有闭集</p>
+</li>
+<li><p>集族$\{[a,+\infty)|A\in \mathbb{R}\}$</p>
+</li>
+<li><p>集族$\{(a,+\infty)|A\in \mathbb{R}\}$</p>
+</li>
+<li><p>集族$\{(-\infty,a]|A\in \mathbb{R}\}$</p>
+</li>
+<li><p>集族$\{(-\infty,a)|A\in \mathbb{R}\}$</p>
+</li>
+</ol>
+<p>$\beta(\mathcal{R})$是由所有开区间经可列交，并，余，补得到的集合。</p>
+<p>可以对两种$\sigma$-代数进行比较，得到$\beta(\mathcal{R})$是$\mathcal{M}$的真子集。</p>
+<p>设$(\Omega,\mathcal{F},\mu)$为一测度空间，如果$\mathcal{F}$的任一零集的任一子集仍属于$\mathcal{F}$，则称$(\Omega,\mathcal{F},\mu)$为完备的测度空间</p>
+<p>设$(\Omega,\mathcal{F},\mu)$为一测度空间，$\mathcal{G}$是包含$\mathcal{F}$且满足下列条件的最小$\sigma$-代数：$\forall A\in \mathcal{F}$，$E\subset A$，如果$\mu)A)=0$，那么$E\in\mathcal{G}$。<em>即$\mathcal{G}$为包含$\mathcal{F}$，且包含$\mathcal{F}$的任一零集的所有子集的最小$\sigma$-代数，则称$\mathcal{G}$为$\mathcal{F}$的完备化</em></p>
+<p>$\mathcal{M}$是$\beta(\mathcal{R})$的完备化。</p>
+<h2 id="可测函数"><a href="#可测函数" class="headerlink" title="可测函数"></a>可测函数</h2><p>设$E\in \mathcal{M}$，f是以E为定义域的函数，如果$\forall \mathcal{R}$上的一个区间I，均有<script type="math/tex">f^{-1}(I)=\{x|x\in E,f(x)\in I\}\in \mathcal{M}</script>则称f(x)为Lebesgue可测函数，简称为可测函数。如果有<script type="math/tex">f^{-1}(I)=\{x|x\in E,f(x)\in I\}\in \beta(\mathcal{R})</script>则称f(x)为Borel可测函数。</p>
+<p>f(x)为可测集E上的实函数，则以下等价：</p>
+<ol>
+<li><p>f(x)为可测函数</p>
+</li>
+<li><p>$\forall a\in \mathbb{R},f^{-1}((a,+\infty))\in \mathcal{M}$</p>
+</li>
+<li><p>$\forall a\in \mathbb{R},f^{-1}([a,+\infty))\in \mathcal{M}$</p>
+</li>
+<li><p>$\forall a\in \mathbb{R},f^{-1}((-\infty,a))\in \mathcal{M}$</p>
+</li>
+<li><p>$\forall a\in \mathbb{R},f^{-1}((-\infty,a])\in \mathcal{M}$</p>
+</li>
+</ol>
+<p>常见的可测函数有</p>
+<ol>
+<li><p>E上的常函数</p>
+</li>
+<li><p>E上的连续函数</p>
+</li>
+<li><p>E上的单调函数</p>
+</li>
+</ol>
+<p>f(x)为可测集E上的实函数，则</p>
+<ol>
+<li><p>$\forall a\in \overline{\mathbb{R}},f^{-1}(\{a\})\in \mathcal{M}$</p>
+</li>
+<li><p>$\forall c\in \mathbb{R}$，cf(x)为E上的可测函数</p>
+</li>
+<li><p>$f^+(x), f^-(x)$均为E上的可测函数，其中：$f^+(x)=\max{f(x), 0},f^-(x)=\max{-f(x),0}$</p>
+</li>
+<li><p>|f(x)|为E上的可测函数</p>
+</li>
+<li><p>如果g(x)也为E上的可测函数，则$f(x)\pm g(x),f(x)g(x)$均为E上的可测函数</p>
+</li>
+</ol>
+<p>设$\{f_n(x)\}_{n=1}^\infty$ 为可测集E上的一列可测函数，则下列函数均为E上的可测函数:\<br>max, min, sup, inf, $\overline{\lim}$, $\underline{\lim}$, lim</p>
+<h2 id="可测函数的极限"><a href="#可测函数的极限" class="headerlink" title="可测函数的极限"></a>可测函数的极限</h2><p>某一结论如果在可测集E上除一个零集以外处处成立，则称该结论在E上几乎处处成立</p>
+<p>设f，g均为可测集E上的函数，如果f是可测的，且f和g几乎处处相等，则g也是可测的。</p>
+<p>设$E\in\mathcal{M}$，f为E上的实值函数，如果 <script type="math/tex">f(x) = \begin{cases}
+            c_1, & x \in E_1\\%mathbb花体字符
+            c_2, &x \in E_2\\
+            \dots\\
+            c_n, &x\in E_n  
+            \end{cases}%\text是为了在数学公式中处理中文</script> 其中$E=\cup_{i=1}^nE_i$，且当$i\ne j$时，$E_j\cap E_i=\emptyset$，则称f为E上的简单函数</p>
+<p>设E为$\mathbb{R}$上的点集，f为E上的函数，如果$x_0\in E$，且$\forall \varepsilon&gt;0, \exists \delta&gt;0$，当$x\in E, |x-x_0|&lt;\delta$时，有$|f(x)-f(x_0)|&lt;\varepsilon$，则称f在$x_0$点连续。</p>
+<p>设$E\in \mathcal{M}$，$f_i(x)$为E上几乎处处有限的可测函数，如果$\forall \varepsilon$，均有$\lim\limits_{n\to \infty}m(\{x|x\in E, |f_n(x)-f(x)|\ge \varepsilon\})=0$则称$\{f_n(x)\}$在E上一测度收敛于f(x)，记为$f_n(x)\xrightarrow{\mu} f(x)$</p>
+<p>$\{f_n(x)\}$为E上几乎处处有限的可测函数，且$m(E)&lt;\infty$。<script type="math/tex">\{f_n(x)\}\text{在E上几乎处处收敛于可测函数}f(x)\Rightarrow \{f_n(x)\}\text{在E上依测度收敛于可测函数}f(x)</script></p>
+<p>Riesz定理：若$\{f_n(x)\}$在E上依测度收敛于可测函数f(x)，则必存在子列$\{f_{n_k}(x)\}$在E上几乎处处收敛于f(x)。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://github.com/a1610b/a1610b.github.io/2019/07/29/金融随机过程/" data-id="cjyoi3yuq000k6wtbj4s81r5o" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/a1610b.github.io/tags/数学/">数学</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/a1610b.github.io/tags/金融/">金融</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/a1610b.github.io/tags/随机过程/">随机过程</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/a1610b.github.io/2019/07/29/金融衍生品/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Python Outline
+        
+      </div>
+    </a>
+  
+  
+    <a href="/a1610b.github.io/2019/07/29/Statistics/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Statistics</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/a1610b.github.io/tags/Math/">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/a1610b.github.io/tags/Stats/">Stats</a></li><li class="tag-list-item"><a class="tag-list-link" href="/a1610b.github.io/tags/machine-learning/">machine learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/a1610b.github.io/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/a1610b.github.io/tags/数学/">数学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/a1610b.github.io/tags/金融/">金融</a></li><li class="tag-list-item"><a class="tag-list-link" href="/a1610b.github.io/tags/随机过程/">随机过程</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/a1610b.github.io/tags/Math/" style="font-size: 10px;">Math</a> <a href="/a1610b.github.io/tags/Stats/" style="font-size: 10px;">Stats</a> <a href="/a1610b.github.io/tags/machine-learning/" style="font-size: 10px;">machine learning</a> <a href="/a1610b.github.io/tags/python/" style="font-size: 20px;">python</a> <a href="/a1610b.github.io/tags/数学/" style="font-size: 10px;">数学</a> <a href="/a1610b.github.io/tags/金融/" style="font-size: 20px;">金融</a> <a href="/a1610b.github.io/tags/随机过程/" style="font-size: 20px;">随机过程</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/a1610b.github.io/archives/2019/07/">July 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/a1610b.github.io/2019/07/29/Python Outline/">Python Outline</a>
+          </li>
+        
+          <li>
+            <a href="/a1610b.github.io/2019/07/29/机器学习/">Python Machine Learning</a>
+          </li>
+        
+          <li>
+            <a href="/a1610b.github.io/2019/07/29/应随/">应用随机过程</a>
+          </li>
+        
+          <li>
+            <a href="/a1610b.github.io/2019/07/29/金融衍生品/">Python Outline</a>
+          </li>
+        
+          <li>
+            <a href="/a1610b.github.io/2019/07/29/金融随机过程/">金融随机过程</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Tony She<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/a1610b.github.io/" class="mobile-nav-link">Home</a>
+  
+    <a href="/a1610b.github.io/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/a1610b.github.io/fancybox/jquery.fancybox.css">
+  <script src="/a1610b.github.io/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/a1610b.github.io/js/script.js"></script>
+
+
+
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</body>
+</html>

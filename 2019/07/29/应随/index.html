@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>应用随机过程 | Tony&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="布朗运动定义数学上的定义为当一个随机过程${B_t: t\ge0}$有：  $B_{t+s}-B_t \sim N(0, s\sigma^2)$  对$0&amp;lt;t_1&amp;lt;t_2&amp;lt;\dots&amp;lt;t_n$，$B_{t_n}-B_{t_{n-1}},\dots, B_{t_2}-B_{t_1}$相互独立  B的轨道连续   对于1，2有等价的定义如下：  ${B_t: t\ge0}$的任">
+<meta name="keywords" content="随机过程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="应用随机过程">
+<meta property="og:url" content="https://github.com/a1610b/a1610b.github.io/2019/07/29/应随/index.html">
+<meta property="og:site_name" content="Tony&#39;s Blog">
+<meta property="og:description" content="布朗运动定义数学上的定义为当一个随机过程${B_t: t\ge0}$有：  $B_{t+s}-B_t \sim N(0, s\sigma^2)$  对$0&amp;lt;t_1&amp;lt;t_2&amp;lt;\dots&amp;lt;t_n$，$B_{t_n}-B_{t_{n-1}},\dots, B_{t_2}-B_{t_1}$相互独立  B的轨道连续   对于1，2有等价的定义如下：  ${B_t: t\ge0}$的任">
+<meta property="og:locale" content="English and Chinese">
+<meta property="og:updated_time" content="2019-07-29T14:41:49.231Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="应用随机过程">
+<meta name="twitter:description" content="布朗运动定义数学上的定义为当一个随机过程${B_t: t\ge0}$有：  $B_{t+s}-B_t \sim N(0, s\sigma^2)$  对$0&amp;lt;t_1&amp;lt;t_2&amp;lt;\dots&amp;lt;t_n$，$B_{t_n}-B_{t_{n-1}},\dots, B_{t_2}-B_{t_1}$相互独立  B的轨道连续   对于1，2有等价的定义如下：  ${B_t: t\ge0}$的任">
+  
+    <link rel="alternate" href="/a1610b.github.io/atom.xml" title="Tony&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/a1610b.github.io/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/a1610b.github.io/" id="logo">Tony&#39;s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/a1610b.github.io/">Home</a>
+        
+          <a class="main-nav-link" href="/a1610b.github.io/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/a1610b.github.io/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://github.com/a1610b/a1610b.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="[post]-应随" class="article article-type-[post]" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/a1610b.github.io/2019/07/29/应随/" class="article-date">
+  <time datetime="2019-07-29T14:27:54.000Z" itemprop="datePublished">2019-07-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      应用随机过程
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="布朗运动"><a href="#布朗运动" class="headerlink" title="布朗运动"></a>布朗运动</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>数学上的定义为当一个随机过程${B_t: t\ge0}$有：</p>
+<ol>
+<li><p>$B_{t+s}-B_t \sim N(0, s\sigma^2)$</p>
+</li>
+<li><p>对$0&lt;t_1&lt;t_2&lt;\dots&lt;t_n$，$B_{t_n}-B_{t_{n-1}},\dots, B_{t_2}-B_{t_1}$相互独立</p>
+</li>
+<li><p>B的轨道连续</p>
+</li>
+</ol>
+<p>对于1，2有等价的定义如下：</p>
+<ol>
+<li><p>${B_t: t\ge0}$的任意有限维分布都是正态分布。</p>
+</li>
+<li><p>$EB_t = 0, Cov(X_t, X_s) = t\land s$</p>
+</li>
+</ol>
+<p>还有一些常用的性质如下：</p>
+<ol>
+<li><p>$\frac{B_t}{\sqrt{t}}$与$B_1$同分布。</p>
+</li>
+<li><p>$p_s(x, y) = p_s(y-x) = \frac{1}{\sqrt{2\pi s}}e^{-\frac{(y-x)^2}{2s}}$</p>
+</li>
+</ol>
+<h2 id="不变原理"><a href="#不变原理" class="headerlink" title="不变原理"></a>不变原理</h2><p>主要研究如何通过随机游动来刻画布朗运动。\<br>首先对随机游动进行处理，得到如下结果： <script type="math/tex">\begin{aligned}
+    &S_n := \xi_1+\dots+\xi_n, \xi \sim B(0, 0.5)\\
+    &\frac{S_{[nt]}}{\sqrt{n}} \sim B_t\\
+    \end{aligned}</script> 再对S进行插值使其轨道连续，就有： <script type="math/tex">\begin{aligned}
+    &S_{m+r} := (1-r)S_m+rS_{m+1} \qquad 0 < r <1\\
+    &C_t = \frac{S_{[nt]}}{\sqrt{n}}
+    \end{aligned}</script> 这样处理后的C具有连续的轨道。\</p>
+<h3 id="泛函"><a href="#泛函" class="headerlink" title="泛函"></a>泛函</h3><p>插入一些泛函的概念以理解不变原理。\<br>对任意的$T &gt; 0$, 有[0, T]上的所有连续函数记为C[0, T]。在这里的含义其实为全部长度为T的连续轨道。\<br>定义这个空间中的距离(最大模距离)为： <script type="math/tex">d_T(\phi, \varphi) := \max_{0\le t\le T}|\phi(t)-\varphi(t)| \qquad \forall \phi, \varphi \in C[0, T]</script> 泛函：一个以轨道为自变量的函数f, $f: C[0, T] \rightarrow \mathbb{R}$\<br>有界：对于泛函f, $\exists M &gt; 0, \text{  s.t.  } |f(\varphi)| \le M \qquad \forall \varphi \in C[0, T]$\<br>连续：对于泛函f, $\forall \varphi \in C[0, T] \quad \forall \epsilon &gt; 0   \exists \delta &gt; 0, \quad \text{s.t. } \forall\phi,  d(\phi, \varphi)&lt;\delta, |f(\varphi)-f(\phi)| &lt; \epsilon.$</p>
+<h3 id="不变原理-1"><a href="#不变原理-1" class="headerlink" title="不变原理"></a>不变原理</h3><p>对于在C[0, T]上的任意有界连续泛函f有： <script type="math/tex">\lim_{n\rightarrow\infty}Ef(\{C_t:0\le t\le T\}) = Ef(\{B_t: 0\le t\le T\})</script></p>
+<h3 id="重对数律"><a href="#重对数律" class="headerlink" title="重对数律"></a>重对数律</h3><script type="math/tex; mode=display">\limsup_{n\rightarrow\infty}\frac{B_t}{\sqrt{2t\log\log t}}</script><h2 id="轨道性质"><a href="#轨道性质" class="headerlink" title="轨道性质"></a>轨道性质</h2><h3 id="首中时"><a href="#首中时" class="headerlink" title="首中时"></a>首中时</h3><p>首中时：$\tau_A := \inf\{t \ge 0: B_t \in A\}$\<br>强马氏性：if $\tau &lt; \infty$, ${B_{t+\tau}-B_\tau:t \ge 0} \sim B_t$并与${B_s:0\le s \le \tau}$ 独立。\<br>反射原理：<script type="math/tex">P_0(\tau_a \le t) = P_0(\tau_a < t, B_t > a) + P_0 (\tau_a < t, B_t < a)</script> <script type="math/tex">\forall a > 0, \ P_0(\tau_a \le t) = 2P_0(B_t > a)</script> $\tau$是个随机变量，有密度函数为<script type="math/tex">p(t) =  \frac{a}{\sqrt{2\pi t^3}}e^{-\frac{a^2}{2t}}</script></p>
+<h3 id="最大值"><a href="#最大值" class="headerlink" title="最大值"></a>最大值</h3><p>$M_t = \sup_{0\le s\le t}B_s = \max_{0\le s\le t}B_s$\<br>$M_t$是随机变量，且密度函数为：<script type="math/tex">p(x) = \sqrt{\frac{2}{\pi t}}e^{-\frac{a^2}{2t}}</script></p>
+<h3 id="零点"><a href="#零点" class="headerlink" title="零点"></a>零点</h3><h2 id="位势理论"><a href="#位势理论" class="headerlink" title="位势理论"></a>位势理论</h2><p>对$a\le x \le b$, 有<script type="math/tex">P_x(\tau_b<\tau_a)=\frac{x-a}{b-a}</script> Wald引理： Given $a\le x \le b$ and $\tau - \tau_a \land \tau_b$</p>
+<ol>
+<li><p>$E_xB_\tau = x$</p>
+</li>
+<li><p>$E_x(B_\tau -x)^2 = E_x\tau$</p>
+</li>
+</ol>
+<p>由第一引理可以推出$\sup_{a\le x\le b}E_x\tau &lt; \infty$\<br>且有下面两个重要结果用于计算:</p>
+<ul>
+<li><p>D是一个边界光滑的区域，f是$\partial D$上的连续函数，$\tau_{\partial D} = \tau$。则$\varphi(x) = E_x f(B_\tau)$是Dirichlet问题的解。Dirichlet问题如下： $$\left\{</p>
+<pre><code>    \begin{array}{lr}
+    \Delta\varphi(x) = 0,&amp; \forall x \in D\\
+    \lim_{y\in D,y\rightarrow x}\varphi(y) = f(x), &amp; \forall x \in \partial D
+    \end{array}
+    \right.$$
+</code></pre></li>
+<li><p>D是一个边界光滑的区域，g是$D$上的有界连续函数，$\tau_{\partial D} = \tau$。则$\varphi(x) = E_x\int_0^\tau g(B_t)dt$是泊松问题的解。泊松问题如下： $$\left\{</p>
+<pre><code>    \begin{array}{lr}
+    \Delta\varphi(x) = -2g(x),&amp; \forall x \in D\\
+    \lim_{y\in D,y\rightarrow x}\varphi(y) = 0, &amp; \forall x \in \partial D
+    \end{array}
+    \right.$$
+</code></pre></li>
+</ul>
+<h2 id="马氏过程与高斯过程"><a href="#马氏过程与高斯过程" class="headerlink" title="马氏过程与高斯过程"></a>马氏过程与高斯过程</h2><p>马尔可夫过程定义如下：\<br>一族随机变量$\{X_t:t\ge0\}$，对任意$0\le t_1&lt;\dots<t_n<t$, s\>0, $s\in \mathbb{R}$, 有 <script type="math/tex">P(X_{t+s}\in A|X_t=x,X_{t_1}\in B_1, \dots, X_{t_n}\in B_n) = P(X_{t+s}\in A|X_t = x)</script> 时齐性：即$P(X_{t+s}\in A|X_t = x)$与t无关。\<br>转移密度函数：<script type="math/tex">P(X_{t+s}\in A|X_t = x) = \int_Ap_{s,t}(x,y)dy</script> 当$X_t$是时齐的时候，显然$p_{s, t}=p_{0, t-s}$。此时将$p_{s, t}$记为$p_t$。</t_n<t$,></p>
+<h3 id="布朗桥"><a href="#布朗桥" class="headerlink" title="布朗桥"></a>布朗桥</h3><p>定义为$\{X_t: 0\le t\le 1\},  X_t = B_t -tB_1$。也可拓展为$\{\tilde{X_t}:0 \le t \le s\},  \tilde{X_t} = B_t -\frac{t}{s}B_s+a$\<br>布朗桥的性质：</p>
+<ol>
+<li><p>$EX_t = 0,  EX_tX_s = s-ts \text{ when } s\le t$</p>
+</li>
+<li><p>布朗桥本质上就是给定$B_1 = 0$条件下的布朗运动。</p>
+</li>
+<li><p>布朗桥显然是马氏过程，但是是非时齐的</p>
+</li>
+</ol>
+<h3 id="Ornstein-Uhlenbeck过程"><a href="#Ornstein-Uhlenbeck过程" class="headerlink" title="Ornstein-Uhlenbeck过程"></a>Ornstein-Uhlenbeck过程</h3><p>定义为$\{X_t: 0\le t\},  X_t = e^{-\alpha t}B(E^{2\alpha t})$ 不变分布 可逆分布</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://github.com/a1610b/a1610b.github.io/2019/07/29/应随/" data-id="cjyoi3yuc00056wtb9w177ock" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/a1610b.github.io/tags/随机过程/">随机过程</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/a1610b.github.io/2019/07/29/机器学习/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Python Machine Learning
+        
+      </div>
+    </a>
+  
+  
+    <a href="/a1610b.github.io/2019/07/29/金融衍生品/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Python Outline</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/a1610b.github.io/tags/Math/">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/a1610b.github.io/tags/Stats/">Stats</a></li><li class="tag-list-item"><a class="tag-list-link" href="/a1610b.github.io/tags/machine-learning/">machine learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/a1610b.github.io/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/a1610b.github.io/tags/数学/">数学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/a1610b.github.io/tags/金融/">金融</a></li><li class="tag-list-item"><a class="tag-list-link" href="/a1610b.github.io/tags/随机过程/">随机过程</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/a1610b.github.io/tags/Math/" style="font-size: 10px;">Math</a> <a href="/a1610b.github.io/tags/Stats/" style="font-size: 10px;">Stats</a> <a href="/a1610b.github.io/tags/machine-learning/" style="font-size: 10px;">machine learning</a> <a href="/a1610b.github.io/tags/python/" style="font-size: 20px;">python</a> <a href="/a1610b.github.io/tags/数学/" style="font-size: 10px;">数学</a> <a href="/a1610b.github.io/tags/金融/" style="font-size: 20px;">金融</a> <a href="/a1610b.github.io/tags/随机过程/" style="font-size: 20px;">随机过程</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/a1610b.github.io/archives/2019/07/">July 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/a1610b.github.io/2019/07/29/Python Outline/">Python Outline</a>
+          </li>
+        
+          <li>
+            <a href="/a1610b.github.io/2019/07/29/机器学习/">Python Machine Learning</a>
+          </li>
+        
+          <li>
+            <a href="/a1610b.github.io/2019/07/29/应随/">应用随机过程</a>
+          </li>
+        
+          <li>
+            <a href="/a1610b.github.io/2019/07/29/金融衍生品/">Python Outline</a>
+          </li>
+        
+          <li>
+            <a href="/a1610b.github.io/2019/07/29/金融随机过程/">金融随机过程</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Tony She<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/a1610b.github.io/" class="mobile-nav-link">Home</a>
+  
+    <a href="/a1610b.github.io/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/a1610b.github.io/fancybox/jquery.fancybox.css">
+  <script src="/a1610b.github.io/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/a1610b.github.io/js/script.js"></script>
+
+
+
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</body>
+</html>

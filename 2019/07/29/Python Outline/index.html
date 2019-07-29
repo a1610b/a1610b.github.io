@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <title>Python Outline | Tony&#39;s Blog</title>
+  <meta name="keywords" content=" python ">
+  <meta name="description" content="Python Outline | Tony&#39;s Blog">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="Basic SyntaxData StructureListList is an ordered array. The basic def is list = [a, b, c].\Function that is often used:  list.append(x), adding x at the tail of the list list.insert(a, x), adding x at">
+<meta name="keywords" content="python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python Outline">
+<meta property="og:url" content="https://github.com/a1610b/a1610b.github.io/2019/07/29/Python Outline/index.html">
+<meta property="og:site_name" content="Tony&#39;s Blog">
+<meta property="og:description" content="Basic SyntaxData StructureListList is an ordered array. The basic def is list = [a, b, c].\Function that is often used:  list.append(x), adding x at the tail of the list list.insert(a, x), adding x at">
+<meta property="og:locale" content="English and Chinese">
+<meta property="og:updated_time" content="2019-07-29T14:41:54.841Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python Outline">
+<meta name="twitter:description" content="Basic SyntaxData StructureListList is an ordered array. The basic def is list = [a, b, c].\Function that is often used:  list.append(x), adding x at the tail of the list list.insert(a, x), adding x at">
+
+
+<link rel="icon" href="/img/avatar1.jpg">
+
+<link href="/css/style.css?v=1.0.1" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.0.1" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js?v=1.0.1"></script>
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+<script src="/js/iconfont.js?v=1.0.1"></script>
+
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="false">
+  <input class="theme_blog_path" value>
+</div>
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/avatar1.jpg" />
+</a>
+<div class="author">
+    <span>Tony She</span>
+</div>
+
+<div class="icon">
+    
+        
+    
+        
+        <a title="github" href="https://github.com/a1610b" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+    
+        
+        <a title="linkedin" href="https://www.linkedin.com/in/tony-she-766853126/" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-linkedin"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+        <a title="zhihu" href="https://www.zhihu.com/people/1610/activities" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-zhihu"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+        <a title="email" href="mailto:1516076680@qq.com" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-email"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="qq" href="http://wpa.qq.com/msgrd?v=3&uin=1516076680&site=qq&menu=yes" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-qq"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li><div class="all active">全部文章<small>(7)</small></div></li>
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    </div>
+    <div></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="7">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode==13){return false;}">
+        <input class="search" type="text" placeholder="Search..." autocomplete="off"id="local-search-input" >
+        <i class="cross"></i>
+        <span>
+            <label for="tagswitch">Tags:</label>
+            <input id="tagswitch" type="checkbox" style="display: none" />
+            <i id="tagsWitchIcon"></i>
+        </span>
+    </form>
+    <div class="tags-list">
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">python</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">Math</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">Stats</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">Stochastic Process</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">machine learning</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">Finance</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a  class=""
+           href="/a1610b.github.io/2019/07/29/Python Outline/"
+           data-tag="python"
+           data-author="" >
+            <span class="post-title" title="Python Outline">Python Outline</span>
+            <span class="post-date" title="2019-07-29 22:27:54">2019/07/29</span>
+        </a>
+        
+        <a  class=""
+           href="/a1610b.github.io/2019/07/29/Statistics/"
+           data-tag="Math,Stats"
+           data-author="" >
+            <span class="post-title" title="Statistics">Statistics</span>
+            <span class="post-date" title="2019-07-29 21:14:52">2019/07/29</span>
+        </a>
+        
+        <a  class=""
+           href="/a1610b.github.io/2019/07/29/应随/"
+           data-tag="Stochastic Process"
+           data-author="" >
+            <span class="post-title" title="应用随机过程">应用随机过程</span>
+            <span class="post-date" title="2019-07-29 22:27:54">2019/07/29</span>
+        </a>
+        
+        <a  class=""
+           href="/a1610b.github.io/2019/07/29/机器学习/"
+           data-tag="python,machine learning"
+           data-author="" >
+            <span class="post-title" title="Python Machine Learning">Python Machine Learning</span>
+            <span class="post-date" title="2019-07-29 22:27:54">2019/07/29</span>
+        </a>
+        
+        <a  class=""
+           href="/a1610b.github.io/2019/07/29/金融衍生品/"
+           data-tag="Finance"
+           data-author="" >
+            <span class="post-title" title="金融衍生品">金融衍生品</span>
+            <span class="post-date" title="2019-07-29 22:27:54">2019/07/29</span>
+        </a>
+        
+        <a  class=""
+           href="/a1610b.github.io/2019/07/29/统计/"
+           data-tag="Math,Stats"
+           data-author="" >
+            <span class="post-title" title="Statistic Notes">Statistic Notes</span>
+            <span class="post-date" title="2019-07-29 22:27:54">2019/07/29</span>
+        </a>
+        
+        <a  class=""
+           href="/a1610b.github.io/2019/07/29/金融随机过程/"
+           data-tag="Math,Stochastic Process,Finance"
+           data-author="" >
+            <span class="post-title" title="金融随机过程">金融随机过程</span>
+            <span class="post-date" title="2019-07-29 22:27:54">2019/07/29</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="[post]-Python Outline" class="article article-type-[post]" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">Python Outline</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color2">python</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2019-07-29 22:41:54'>2019-07-29 22:27</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Basic-Syntax"><span class="toc-text">Basic Syntax</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Data-Structure"><span class="toc-text">Data Structure</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#List"><span class="toc-text">List</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tuple"><span class="toc-text">Tuple</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Dictionary"><span class="toc-text">Dictionary</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Set"><span class="toc-text">Set</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Data-Analysis"><span class="toc-text">Data Analysis</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#numpy"><span class="toc-text">numpy</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pandas"><span class="toc-text">pandas</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#DataFrame"><span class="toc-text">DataFrame</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#import-create"><span class="toc-text">import/create</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Time"><span class="toc-text">Time</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Timestamp"><span class="toc-text">Timestamp</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Datetime"><span class="toc-text">Datetime</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#null"><span class="toc-text"> </span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sqilte3"><span class="toc-text">sqilte3</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#import-and-export"><span class="toc-text">import and export</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SQL"><span class="toc-text">SQL</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Machine-Learning"><span class="toc-text">Machine Learning</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#sklearn"><span class="toc-text">sklearn</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pytorch"><span class="toc-text">pytorch</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#tensorflow"><span class="toc-text">tensorflow</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Finance"><span class="toc-text">Finance</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#tushare"><span class="toc-text">tushare</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-4 i,
+    .toc-level-4 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Basic-Syntax"><a href="#Basic-Syntax" class="headerlink" title="Basic Syntax"></a>Basic Syntax</h1><h2 id="Data-Structure"><a href="#Data-Structure" class="headerlink" title="Data Structure"></a>Data Structure</h2><h3 id="List"><a href="#List" class="headerlink" title="List"></a>List</h3><p>List is an ordered array. The basic def is list = [a, b, c].\<br>Function that is often used:</p>
+<ul>
+<li>list.append(x), adding x at the tail of the list</li>
+<li>list.insert(a, x), adding x at position a and moving elements after it back one position.</li>
+<li>list.pop(x), remove and return the x-th element of the list.</li>
+<li>list.count(x), return the number of times element x exist in the list.</li>
+<li>list.sort(reverse = a), sort in ascending order if a is false, else sort in descending order.</li>
+</ul>
+<h3 id="Tuple"><a href="#Tuple" class="headerlink" title="Tuple"></a>Tuple</h3><p>Tuple is an ordered array that can’t be changed. The basic def is tuple = (a, b, c).\<br>Function:</p>
+<h3 id="Dictionary"><a href="#Dictionary" class="headerlink" title="Dictionary"></a>Dictionary</h3><p>A very good tool to store data. It is very similar to list, but you can use string instead of integer to label each object. </p>
+<h3 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h3><h1 id="Data-Analysis"><a href="#Data-Analysis" class="headerlink" title="Data Analysis"></a>Data Analysis</h1><h2 id="numpy"><a href="#numpy" class="headerlink" title="numpy"></a>numpy</h2><h2 id="pandas"><a href="#pandas" class="headerlink" title="pandas"></a>pandas</h2><h3 id="DataFrame"><a href="#DataFrame" class="headerlink" title="DataFrame"></a>DataFrame</h3><h4 id="import-create"><a href="#import-create" class="headerlink" title="import/create"></a>import/create</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pd.DataFrame(columns = [], index = [], )</span><br></pre></td></tr></table></figure>
+<h3 id="Time"><a href="#Time" class="headerlink" title="Time"></a>Time</h3><h4 id="Timestamp"><a href="#Timestamp" class="headerlink" title="Timestamp"></a>Timestamp</h4><h4 id="Datetime"><a href="#Datetime" class="headerlink" title="Datetime"></a>Datetime</h4><h3 id><a href="#" class="headerlink" title=" "></a> </h3><h2 id="sqilte3"><a href="#sqilte3" class="headerlink" title="sqilte3"></a>sqilte3</h2><h3 id="import-and-export"><a href="#import-and-export" class="headerlink" title="import and export"></a>import and export</h3><h3 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h3><h1 id="Machine-Learning"><a href="#Machine-Learning" class="headerlink" title="Machine Learning"></a>Machine Learning</h1><h2 id="sklearn"><a href="#sklearn" class="headerlink" title="sklearn"></a>sklearn</h2><h2 id="pytorch"><a href="#pytorch" class="headerlink" title="pytorch"></a>pytorch</h2><h2 id="tensorflow"><a href="#tensorflow" class="headerlink" title="tensorflow"></a>tensorflow</h2><h1 id="Finance"><a href="#Finance" class="headerlink" title="Finance"></a>Finance</h1><h2 id="tushare"><a href="#tushare" class="headerlink" title="tushare"></a>tushare</h2>
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
+    </div>
+</article>
+
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>Python Outline</p>
+    
+    <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Tony She">Tony She</a></p>
+    <p><span class="copy-title">发布时间:</span>2019-07-29, 22:27:54</p>
+    <p><span class="copy-title">最后更新:</span>2019-07-29, 22:41:54</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/a1610b.github.io/2019/07/29/Python Outline/" title="Python Outline">https://github.com/a1610b/a1610b.github.io/2019/07/29/Python Outline/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">©2016-2020 Tony She</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class="" id="rocket" href="javascript:void(0)"></a>
+    </div>
+</div>
+<div class="acParent"></div>
+
+</body>
+<script src="//cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+
+<script src="/js/script.js?v=1.0.1" ></script>
+<script>
+    var img_resize = 'default';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': ['#python','#Math','#Stats','#Stochastic Process','#machine learning','#Finance',],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().split('\n').length - 1, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: #fafafa;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+    .post .pjax article .article-entry>ol, .post .pjax article .article-entry>ul, .post .pjax article>ol, .post .pjax article>ul{
+        border: #e2dede solid 1px;
+        border-radius: 10px;
+        padding: 10px 32px 10px 56px;
+    }
+    .post .pjax article .article-entry li>ol, .post .pjax article .article-entry li>ul,.post .pjax article li>ol, .post .pjax article li>ul{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .post .pjax article .article-entry>ol>li, .post .pjax article .article-entry>ul>li,.post .pjax article>ol>li, .post .pjax article>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    .post .pjax article .article-entry li>ol>li, .post .pjax article .article-entry li>ul>li,.post .pjax article li>ol>li, .post .pjax article li>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("https://i.loli.net/2019/07/22/5d3521411f3f169375.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>

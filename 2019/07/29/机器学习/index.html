@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <title>Python Machine Learning | Tony&#39;s Blog</title>
+  <meta name="keywords" content=" python , machine learning ">
+  <meta name="description" content="Python Machine Learning | Tony&#39;s Blog">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="Basic SyntaxData StructureListList is an ordered array. The basic def is list = [a, b, c].\Function that is often used:  list.append(x), adding x at the tail of the list list.insert(a, x), adding x at">
+<meta name="keywords" content="python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python Outline">
+<meta property="og:url" content="https://github.com/a1610b/a1610b.github.io/2019/07/29/Python Outline/index.html">
+<meta property="og:site_name" content="Tony&#39;s Blog">
+<meta property="og:description" content="Basic SyntaxData StructureListList is an ordered array. The basic def is list = [a, b, c].\Function that is often used:  list.append(x), adding x at the tail of the list list.insert(a, x), adding x at">
+<meta property="og:locale" content="English and Chinese">
+<meta property="og:updated_time" content="2019-07-29T14:41:54.841Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python Outline">
+<meta name="twitter:description" content="Basic SyntaxData StructureListList is an ordered array. The basic def is list = [a, b, c].\Function that is often used:  list.append(x), adding x at the tail of the list list.insert(a, x), adding x at">
+
+
+<link rel="icon" href="/img/avatar1.jpg">
+
+<link href="/css/style.css?v=1.0.1" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.0.1" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js?v=1.0.1"></script>
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+<script src="/js/iconfont.js?v=1.0.1"></script>
+
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="false">
+  <input class="theme_blog_path" value>
+</div>
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/avatar1.jpg" />
+</a>
+<div class="author">
+    <span>Tony She</span>
+</div>
+
+<div class="icon">
+    
+        
+    
+        
+        <a title="github" href="https://github.com/a1610b" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+    
+        
+        <a title="linkedin" href="https://www.linkedin.com/in/tony-she-766853126/" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-linkedin"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+        <a title="zhihu" href="https://www.zhihu.com/people/1610/activities" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-zhihu"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+        <a title="email" href="mailto:1516076680@qq.com" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-email"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="qq" href="http://wpa.qq.com/msgrd?v=3&uin=1516076680&site=qq&menu=yes" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-qq"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li><div class="all active">全部文章<small>(7)</small></div></li>
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    </div>
+    <div></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="7">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode==13){return false;}">
+        <input class="search" type="text" placeholder="Search..." autocomplete="off"id="local-search-input" >
+        <i class="cross"></i>
+        <span>
+            <label for="tagswitch">Tags:</label>
+            <input id="tagswitch" type="checkbox" style="display: none" />
+            <i id="tagsWitchIcon"></i>
+        </span>
+    </form>
+    <div class="tags-list">
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">python</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">Math</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">Stats</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">Stochastic Process</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">machine learning</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">Finance</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a  class=""
+           href="/a1610b.github.io/2019/07/29/Python Outline/"
+           data-tag="python"
+           data-author="" >
+            <span class="post-title" title="Python Outline">Python Outline</span>
+            <span class="post-date" title="2019-07-29 22:27:54">2019/07/29</span>
+        </a>
+        
+        <a  class=""
+           href="/a1610b.github.io/2019/07/29/Statistics/"
+           data-tag="Math,Stats"
+           data-author="" >
+            <span class="post-title" title="Statistics">Statistics</span>
+            <span class="post-date" title="2019-07-29 21:14:52">2019/07/29</span>
+        </a>
+        
+        <a  class=""
+           href="/a1610b.github.io/2019/07/29/应随/"
+           data-tag="Stochastic Process"
+           data-author="" >
+            <span class="post-title" title="应用随机过程">应用随机过程</span>
+            <span class="post-date" title="2019-07-29 22:27:54">2019/07/29</span>
+        </a>
+        
+        <a  class=""
+           href="/a1610b.github.io/2019/07/29/机器学习/"
+           data-tag="python,machine learning"
+           data-author="" >
+            <span class="post-title" title="Python Machine Learning">Python Machine Learning</span>
+            <span class="post-date" title="2019-07-29 22:27:54">2019/07/29</span>
+        </a>
+        
+        <a  class=""
+           href="/a1610b.github.io/2019/07/29/金融衍生品/"
+           data-tag="Finance"
+           data-author="" >
+            <span class="post-title" title="金融衍生品">金融衍生品</span>
+            <span class="post-date" title="2019-07-29 22:27:54">2019/07/29</span>
+        </a>
+        
+        <a  class=""
+           href="/a1610b.github.io/2019/07/29/统计/"
+           data-tag="Math,Stats"
+           data-author="" >
+            <span class="post-title" title="Statistic Notes">Statistic Notes</span>
+            <span class="post-date" title="2019-07-29 22:27:54">2019/07/29</span>
+        </a>
+        
+        <a  class=""
+           href="/a1610b.github.io/2019/07/29/金融随机过程/"
+           data-tag="Math,Stochastic Process,Finance"
+           data-author="" >
+            <span class="post-title" title="金融随机过程">金融随机过程</span>
+            <span class="post-date" title="2019-07-29 22:27:54">2019/07/29</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="[post]-机器学习" class="article article-type-[post]" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">Python Machine Learning</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color2">python</a>
+            
+            <a href="javascript:" class="color2">machine learning</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2019-07-29 23:23:27'>2019-07-29 22:27</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#基本概念"><span class="toc-text">基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#数据前处理"><span class="toc-text">数据前处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#超参数"><span class="toc-text">超参数</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#交叉验证法"><span class="toc-text">交叉验证法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#分类回归"><span class="toc-text">分类回归</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本概念-1"><span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#决策树"><span class="toc-text">决策树</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本介绍"><span class="toc-text">基本介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#划分"><span class="toc-text">划分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#优化与评估"><span class="toc-text">优化与评估</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#贝叶斯网络"><span class="toc-text">贝叶斯网络</span></a></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-4 i,
+    .toc-level-4 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><p>从数据进行学习和预测的模型方法或算法。主要分为有监督学习和无监督学习</p>
+<ul>
+<li><p>有监督学习：对特定的目标变量进行预测，并且有目标变量的数据可以利用。在监督学习Supervised leanring,有一个变量可以对照，优化是一般有比较明确的目标。E.g. 回归、变量分类</p>
+</li>
+<li><p>无监督学习：无特定的目标变量，目的是探索数据内的规律。E.g. 聚类</p>
+</li>
+</ul>
+<h2 id="数据前处理"><a href="#数据前处理" class="headerlink" title="数据前处理"></a>数据前处理</h2><ul>
+<li><p>将数据分割为训练集以及测试集。代码为：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">X_train,X_test, y_train, y_test =</span><br><span class="line">    sklearn.cross_validation.train_test_split(iris.data, iris.target, test_size, random_state)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>数据标准化，使得数据的均值与方差一致。代码为：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.preprocessing.scale(X_train)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<pre><code>- 如需要对测试集以及检验集做相同变换，则可使用transformer。代码为:
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">scaler = preprocessing.StandardScaler().fit(X_train)</span><br><span class="line">X_train_scaled = scaler.transform(X_train)</span><br><span class="line">X_test_scaled = scaler.transform(X_test)</span><br></pre></td></tr></table></figure>
+
+
+- 如需要对测试集以及检验集做相同变换，则可使用transformer。代码为:
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">scaler = preprocessing.StandardScaler().fit(X_train)</span><br><span class="line">X_train_scaled = scaler.transform(X_train)</span><br><span class="line">X_test_scaled = scaler.transform(X_test)</span><br></pre></td></tr></table></figure>
+</code></pre><h2 id="超参数"><a href="#超参数" class="headerlink" title="超参数"></a>超参数</h2><p>机器学习模型一般有两种参数，分别为模型参数与超参数。模型参数可以直接通过数据得到，如回归系数，决策点的划分条件等。而参数数是描述模型的结构，通常需要在估计模型前制定，如决策树中的树深度，叶结点个数等。</p>
+<h1 id="交叉验证法"><a href="#交叉验证法" class="headerlink" title="交叉验证法"></a>交叉验证法</h1><p>简称CV(cross validation)，能更稳健地训练、评估和选择模型方法。\<br>具体步骤为：</p>
+<ol>
+<li><p>将数据分为k等分（通常k取10）</p>
+</li>
+<li><p>利用前k-1分训练模型，并用最后一份评估该模型</p>
+</li>
+<li><p>重复第二步，每次选取不同的样本为测试集</p>
+</li>
+<li><p>平均所有k个模型得到最终的模型</p>
+</li>
+</ol>
+<h1 id="分类回归"><a href="#分类回归" class="headerlink" title="分类回归"></a>分类回归</h1><h2 id="基本概念-1"><a href="#基本概念-1" class="headerlink" title="基本概念"></a>基本概念</h2><p>给定数据如$(x_1,y_1), (x_2, y_2), …,(x_n, y_n)$。进行有监督学习：$\hat{y_i} = f(x_i)$。将样本分为训练集与检验集。</p>
+<p>常见评估标准为第一类错误与第二类错误，同统计。</p>
+<h2 id="决策树"><a href="#决策树" class="headerlink" title="决策树"></a>决策树</h2><h3 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h3><p>决策树的目标是构造一个决策树用来分类与回归。决策树本质上是大量嵌套的if else决策。\<br>方法逻辑：首先用最好的变量构成树的根。然后重复的将训练集继续分割，每次使用一个变量，直到得到满意的叶子节点。</p>
+<h3 id="划分"><a href="#划分" class="headerlink" title="划分"></a>划分</h3><p>划分有以下几个常用的法则：</p>
+<ul>
+<li><p>Information Gain(信息增益)：基于信息熵的准则。<br>熵（Entropy）用来度量一个随机变量的不确定性，不确定性越大熵越大。数学定义为： <script type="math/tex">H(X) = - \sum_{x\in X}^{}p(x)\log_2p(x)</script></p>
+</li>
+<li><p>Gini Index, 基尼指数准则</p>
+<script type="math/tex; mode=display">\text{Gini Index} = \sum_{k = 1}^{|Y|}\sum_{k'\ne k}p_kp_{k'} = 1-\sum_jp_j^2</script></li>
+</ul>
+<h3 id="优化与评估"><a href="#优化与评估" class="headerlink" title="优化与评估"></a>优化与评估</h3><p>模型的评估有：</p>
+<ul>
+<li><p>准确率：$\frac{1}{N}\sum_{i=1}^{N}I_{(\hat{y_i}=y_i)}$\<br>sklearn中有方法accuracy_score来计算</p>
+</li>
+<li><p>查准率（1-P(第一类错误)）和查全率（1-P(第二类错误)）\<br>sklearn中有方法precision_recall_curve()</p>
+</li>
+<li><p>F1 score:取值范围为0到1，越大表示模型越好 <script type="math/tex">F1 = 2\times\frac{precision\times recall}{precision+recall}</script></p>
+</li>
+</ul>
+<h3 id="贝叶斯网络"><a href="#贝叶斯网络" class="headerlink" title="贝叶斯网络"></a>贝叶斯网络</h3><p>贝叶斯网络是一种概率图模型，其利用有向无环图(directed acyclic graph (DAG))表示随机之间的条件独立性</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
+    </div>
+</article>
+
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>Python Machine Learning</p>
+    
+    <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Tony She">Tony She</a></p>
+    <p><span class="copy-title">发布时间:</span>2019-07-29, 22:27:54</p>
+    <p><span class="copy-title">最后更新:</span>2019-07-29, 23:23:27</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/a1610b.github.io/2019/07/29/机器学习/" title="Python Machine Learning">https://github.com/a1610b/a1610b.github.io/2019/07/29/机器学习/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+    
+        <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+    });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+        src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<input type="hidden" id="MathJax-js"
+        value="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</input>
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">©2016-2020 Tony She</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class="" id="rocket" href="javascript:void(0)"></a>
+    </div>
+</div>
+<div class="acParent"></div>
+
+</body>
+<script src="//cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+
+<script src="/js/script.js?v=1.0.1" ></script>
+<script>
+    var img_resize = 'default';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': ['#python','#Math','#Stats','#Stochastic Process','#machine learning','#Finance',],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().split('\n').length - 1, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: #fafafa;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+    .post .pjax article .article-entry>ol, .post .pjax article .article-entry>ul, .post .pjax article>ol, .post .pjax article>ul{
+        border: #e2dede solid 1px;
+        border-radius: 10px;
+        padding: 10px 32px 10px 56px;
+    }
+    .post .pjax article .article-entry li>ol, .post .pjax article .article-entry li>ul,.post .pjax article li>ol, .post .pjax article li>ul{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .post .pjax article .article-entry>ol>li, .post .pjax article .article-entry>ul>li,.post .pjax article>ol>li, .post .pjax article>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    .post .pjax article .article-entry li>ol>li, .post .pjax article .article-entry li>ul>li,.post .pjax article li>ol>li, .post .pjax article li>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("https://i.loli.net/2019/07/22/5d3521411f3f169375.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>

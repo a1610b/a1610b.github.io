@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <title>金融随机过程 | Tony&#39;s Blog</title>
+  <meta name="keywords" content=" Math , Stochastic Process , Finance ">
+  <meta name="description" content="金融随机过程 | Tony&#39;s Blog">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="Basic SyntaxData StructureListList is an ordered array. The basic def is list = [a, b, c].\Function that is often used:  list.append(x), adding x at the tail of the list list.insert(a, x), adding x at">
+<meta name="keywords" content="python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python Outline">
+<meta property="og:url" content="https://github.com/a1610b/a1610b.github.io/2019/07/29/Python Outline/index.html">
+<meta property="og:site_name" content="Tony&#39;s Blog">
+<meta property="og:description" content="Basic SyntaxData StructureListList is an ordered array. The basic def is list = [a, b, c].\Function that is often used:  list.append(x), adding x at the tail of the list list.insert(a, x), adding x at">
+<meta property="og:locale" content="English and Chinese">
+<meta property="og:updated_time" content="2019-07-29T14:41:54.841Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python Outline">
+<meta name="twitter:description" content="Basic SyntaxData StructureListList is an ordered array. The basic def is list = [a, b, c].\Function that is often used:  list.append(x), adding x at the tail of the list list.insert(a, x), adding x at">
+
+
+<link rel="icon" href="/img/avatar1.jpg">
+
+<link href="/css/style.css?v=1.0.1" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.0.1" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js?v=1.0.1"></script>
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+<script src="/js/iconfont.js?v=1.0.1"></script>
+
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="false">
+  <input class="theme_blog_path" value>
+</div>
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/avatar1.jpg" />
+</a>
+<div class="author">
+    <span>Tony She</span>
+</div>
+
+<div class="icon">
+    
+        
+    
+        
+        <a title="github" href="https://github.com/a1610b" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+    
+        
+        <a title="linkedin" href="https://www.linkedin.com/in/tony-she-766853126/" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-linkedin"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+        <a title="zhihu" href="https://www.zhihu.com/people/1610/activities" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-zhihu"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+        <a title="email" href="mailto:1516076680@qq.com" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-email"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="qq" href="http://wpa.qq.com/msgrd?v=3&uin=1516076680&site=qq&menu=yes" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-qq"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li><div class="all active">全部文章<small>(7)</small></div></li>
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    </div>
+    <div></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="7">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode==13){return false;}">
+        <input class="search" type="text" placeholder="Search..." autocomplete="off"id="local-search-input" >
+        <i class="cross"></i>
+        <span>
+            <label for="tagswitch">Tags:</label>
+            <input id="tagswitch" type="checkbox" style="display: none" />
+            <i id="tagsWitchIcon"></i>
+        </span>
+    </form>
+    <div class="tags-list">
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">python</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">Math</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">Stats</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">Stochastic Process</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">machine learning</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">Finance</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a  class=""
+           href="/a1610b.github.io/2019/07/29/Python Outline/"
+           data-tag="python"
+           data-author="" >
+            <span class="post-title" title="Python Outline">Python Outline</span>
+            <span class="post-date" title="2019-07-29 22:27:54">2019/07/29</span>
+        </a>
+        
+        <a  class=""
+           href="/a1610b.github.io/2019/07/29/Statistics/"
+           data-tag="Math,Stats"
+           data-author="" >
+            <span class="post-title" title="Statistics">Statistics</span>
+            <span class="post-date" title="2019-07-29 21:14:52">2019/07/29</span>
+        </a>
+        
+        <a  class=""
+           href="/a1610b.github.io/2019/07/29/应随/"
+           data-tag="Stochastic Process"
+           data-author="" >
+            <span class="post-title" title="应用随机过程">应用随机过程</span>
+            <span class="post-date" title="2019-07-29 22:27:54">2019/07/29</span>
+        </a>
+        
+        <a  class=""
+           href="/a1610b.github.io/2019/07/29/机器学习/"
+           data-tag="python,machine learning"
+           data-author="" >
+            <span class="post-title" title="Python Machine Learning">Python Machine Learning</span>
+            <span class="post-date" title="2019-07-29 22:27:54">2019/07/29</span>
+        </a>
+        
+        <a  class=""
+           href="/a1610b.github.io/2019/07/29/金融衍生品/"
+           data-tag="Finance"
+           data-author="" >
+            <span class="post-title" title="金融衍生品">金融衍生品</span>
+            <span class="post-date" title="2019-07-29 22:27:54">2019/07/29</span>
+        </a>
+        
+        <a  class=""
+           href="/a1610b.github.io/2019/07/29/统计/"
+           data-tag="Math,Stats"
+           data-author="" >
+            <span class="post-title" title="Statistic Notes">Statistic Notes</span>
+            <span class="post-date" title="2019-07-29 22:27:54">2019/07/29</span>
+        </a>
+        
+        <a  class=""
+           href="/a1610b.github.io/2019/07/29/金融随机过程/"
+           data-tag="Math,Stochastic Process,Finance"
+           data-author="" >
+            <span class="post-title" title="金融随机过程">金融随机过程</span>
+            <span class="post-date" title="2019-07-29 22:27:54">2019/07/29</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="[post]-金融随机过程" class="article article-type-[post]" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">金融随机过程</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color5">Math</a>
+            
+            <a href="javascript:" class="color4">Stochastic Process</a>
+            
+            <a href="javascript:" class="color3">Finance</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2019-07-29 23:25:18'>2019-07-29 22:27</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#测度空间与概率空间"><span class="toc-text">测度空间与概率空间</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Lebesgue测度空间"><span class="toc-text">Lebesgue测度空间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#可测函数"><span class="toc-text">可测函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#可测函数的极限"><span class="toc-text">可测函数的极限</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-4 i,
+    .toc-level-4 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="测度空间与概率空间"><a href="#测度空间与概率空间" class="headerlink" title="测度空间与概率空间"></a>测度空间与概率空间</h1><h2 id="Lebesgue测度空间"><a href="#Lebesgue测度空间" class="headerlink" title="Lebesgue测度空间"></a>Lebesgue测度空间</h2><p>设$\Omega$是实数空间$\mathbb{R}$的一个非空子集，$\mathcal{F}$为$\Omega$的一些子集构成的集合，集合函数$\mu$定义在$\mathcal{F}$上，且满足以下条件:</p>
+<ol>
+<li><p>$\mu (\emptyset)=0$</p>
+</li>
+<li><p>$\forall A\in \mathcal(F),\mu(A)\ge0$</p>
+</li>
+<li><p>$\mu$，具有可列可加性。即如$\{A_k\}^\infty_{k=1}\subset \mathcal{F}$，且两两不相交，则<script type="math/tex">\mu(\bigcup^\infty_{k=1}A_k)=\sum_{k=1}^{\infty}\mu(A_k)</script></p>
+</li>
+</ol>
+<p>则称$\mu$为$\mathcal{F}$上的测度。</p>
+<p>通俗的来说测度就是设定的基本单位，如长度。测度的定义只是把一个计量单位所需要的内容抽象出来了。</p>
+<p>$\forall E\subset \mathbb{R}$，记<script type="math/tex">Z_E=\{\sum_{k=1}^{\infty}\lambda(I_k)|\{I_k\}^{\infty}_{k=1}\text{为区间列，且}E\subset\bigcup_{k=1}^\infty I_k\}</script> 称$m^*(E)=\inf_{\{I_k\}}\{Z_E\}$为集合E的外测度，其中$\lambda(I_k)$表示区间$I_k$的长度。</p>
+<p>外测度是一个用以定义Lebesgue测度的定义，故使用长度做为基础</p>
+<p>设$\forall A\in\mathcal{F}$，如果A总能被总长度任意小的区间列所覆盖，则称A为零集。</p>
+<p>目前似乎只局限于在实数域以长度为测度进行讨论，但是这些定理显然是可以推广的。\<br>外测度似乎是一个可以在任何空间内进行使用的特殊/通用测度？</p>
+<ol>
+<li><p>空集是零集</p>
+</li>
+<li><p>$\mathbb{R}$上可数集是零集</p>
+</li>
+<li><p>可列个零集的并仍是零集</p>
+</li>
+<li><p>$\forall E \subset \mathbb{R}$，E为零集定价于$m^*(E)=0$</p>
+</li>
+</ol>
+<p>设$E\subset \mathbb{R}$，如果对于$\forall A\subset \mathbb{R}$均有<script type="math/tex">m^*(A)=m^*(A\cap E)+m^*(A\cap E^c)</script> 则称集合E为Lebesgue可测集。用$\mathcal{M}$表示$\mathbb{R}$上全体Lebesgue可测集的集合。</p>
+<p>没有平凡的不可测集，需要进行特别构造（参考论文Lebesgue不可测集的存在性及其应用）。也就是说常见的R中的集合都是Lebesgue可测的</p>
+<ol>
+<li><p>$\mathbb{R}$中任一零集是Lebesgue可测集</p>
+</li>
+<li><p>$\mathbb{R}$中任一区间是Lebesgue可测集</p>
+</li>
+<li><p>若$E_1\in \mathcal{M}$，$E_2\in \mathcal{M}$，则$E_1\cap E_2\in \mathcal{M}$，$E_1\cap E_2 \mathcal{M}$，$E_1\cup E_2- \mathcal{M}$，$E^c\in \mathcal{M}$</p>
+</li>
+<li><p>若$E_i\in \mathcal{M}$，则$\cup_{i=1}^\infty E_i\in \mathcal{M}$,若$E_i\cap E_j\in \emptyset, i\ne j$，则<script type="math/tex">m^*(\bigcup_{i=1}^\infty E_i)=\sum_{i=1}^\infty m^*(E_i)</script></p>
+<p>注意第五个定理说明可列个的情况下求和号和求外测度是可交换的。</p>
+</li>
+</ol>
+<p>设$\Omega$是一个非空集合，$\mathcal{F}$为$\Omega$的一些子集构成的集合，如果</p>
+<ol>
+<li><p>$\Omega \in \mathcal{F}$</p>
+</li>
+<li><p>若$A\in\mathcal{F}$，则$A^c\in\mathcal{F}$</p>
+</li>
+<li><p>若$A_i\in \mathcal{F}$，则$\cup_{i=1}^\infty A_i\in\mathcal{F}$</p>
+</li>
+</ol>
+<p>则称$\mathcal{F}$为一个$\sigma$-代数。</p>
+<p>设$\Omega$是一个非空集合，$\mathcal{F}$为$\Omega$上的一个$\sigma$-代数，$\mu$为$\mathcal{F}$上的一个测度。则称$(\Omega,\mathcal{F},\mu)$为一个测度空间。</p>
+<p>称测度空间$(\mathbb{R},\mathcal{M},\mu)$为Lebesgue测度空间，称m为$\mathcal{M}$上的Lebesgue测度。</p>
+<p>m其实就是外测度，但是只作用在$\mathcal{M}$中</p>
+<p>$(\mathbb{R},\mathcal{M},\mu)$为Lebesgue测度空间，则</p>
+<ol>
+<li><p>$\mathbb{R}$上任一区间的Lebesgue测度就是该区间的长。</p>
+</li>
+<li><p>零集的Lebesgue测度为0</p>
+</li>
+<li><p>设$A,B\in \mathcal{M}$则有</p>
+<ul>
+<li><p>如果$A\subset B$，那么$m(A)\le m(B)$</p>
+</li>
+<li><p>如果$A\subset B$，且m(A)有限，那么$m(B-A)\ge m(B)-m(A)$</p>
+</li>
+</ul>
+</li>
+<li><p>m具有平移不变性。即$m(A+{t})=m(A)$，t为$\mathbb{R}$中的单点。</p>
+</li>
+<li><p>设A，$A\triangle B\in \mathcal{M}$，且$m(A\triangle B)=0$，则$B\in \mathcal{M}$，且$m(A)=m(B)$，其中<script type="math/tex">A\triangle B=(A-B)\bigcup (B-A)</script></p>
+</li>
+</ol>
+<p>$(\mathbb{R},\mathcal{M},\mu)$为Lebesgue测度空间，$m^*$为$\mathbb{R}$上的外测度，则</p>
+<ol>
+<li><p>任给$A\subset \mathbb{R}$，$\varepsilon &gt;0$，必存在开集G，使$A\subset G$，且<script type="math/tex">m(G)\le m^*(A)+\varepsilon</script></p>
+</li>
+<li><p>任给$A\subset \mathbb{R}$，必存在开集列$\{G_n\}_{n=1}^{\infty}$，使$A\subset \cap_{n=1}^{\infty}G_n$，且 <script type="math/tex">m(\bigcap_{n=1}^{\infty}G_n)=m^*(A)</script></p>
+</li>
+<li><p>任给$E\in \mathcal{M}$，$\varepsilon &gt;0$，必存在闭集F，使$F\subset E$，且<script type="math/tex">m(E-F)\le \varepsilon</script></p>
+</li>
+<li><p>任给$E\in \mathcal{M}$，必存在闭集列$\{F_n\}_{n=1}^{\infty}$，使$E\subset \cup_{n=1}^{\infty}F_n$，且 <script type="math/tex">m(\bigcup_{n=1}^{\infty}F_n)=m^*(E)</script></p>
+</li>
+</ol>
+<p>$(\mathbb{R},\mathcal{M},\mu)$为Lebesgue测度空间，$\{A_n\}_{n=1}^\infty\subset \mathcal{M}$，则</p>
+<ol>
+<li><p>如果$\{A_n\}_{n=1}^\infty$关于n单调增加，那么<script type="math/tex">m(\bigcup_{n=1}^{\infty}A_n)=\lim\limits_{n\to \infty}m(A_n)</script></p>
+</li>
+<li><p>如果$\{A_n\}_{n=1}^\infty$关于n单调减少，且$m(A_1)&lt;\infty$那么<script type="math/tex">m(\bigcap_{n=1}^{\infty}A_n)=\lim\limits_{n\to \infty}m(A_n)</script></p>
+</li>
+</ol>
+<p>以上就是$\mathbb{R}$上的Lebesgue$\sigma$-代数。\</p>
+<p>设$\mathcal{G}$是$\Omega$的一些子集构成的集族，如果$\mathcal{G}$不是一个$\sigma$-代数，称包含$\mathcal{G}$的最小$\sigma$-代数为由$\mathcal{G}$生成的$\sigma$-代数，记为$\sigma(\mathcal{G})$</p>
+<p>称由$\mathbb{R}$上所有区间生成的$\sigma$-代数为Borel $\sigma$-代数，记为$\beta(\mathcal{R})$。$\beta(\mathcal{R})$中的元素称为Borel集。</p>
+<p>$\mathbb{R}$上所有开集，闭集，任一有理数集，任一无理数集均是Borel集。</p>
+<p>以下集族生成的$\sigma$-代数均为$\beta(\mathcal{R})$：</p>
+<ol>
+<li><p>所有区间</p>
+</li>
+<li><p>所有开区间</p>
+</li>
+<li><p>所有闭区间</p>
+</li>
+<li><p>所有开集</p>
+</li>
+<li><p>所有闭集</p>
+</li>
+<li><p>集族$\{[a,+\infty)|A\in \mathbb{R}\}$</p>
+</li>
+<li><p>集族$\{(a,+\infty)|A\in \mathbb{R}\}$</p>
+</li>
+<li><p>集族$\{(-\infty,a]|A\in \mathbb{R}\}$</p>
+</li>
+<li><p>集族$\{(-\infty,a)|A\in \mathbb{R}\}$</p>
+</li>
+</ol>
+<p>$\beta(\mathcal{R})$是由所有开区间经可列交，并，余，补得到的集合。</p>
+<p>可以对两种$\sigma$-代数进行比较，得到$\beta(\mathcal{R})$是$\mathcal{M}$的真子集。</p>
+<p>设$(\Omega,\mathcal{F},\mu)$为一测度空间，如果$\mathcal{F}$的任一零集的任一子集仍属于$\mathcal{F}$，则称$(\Omega,\mathcal{F},\mu)$为完备的测度空间</p>
+<p>设$(\Omega,\mathcal{F},\mu)$为一测度空间，$\mathcal{G}$是包含$\mathcal{F}$且满足下列条件的最小$\sigma$-代数：$\forall A\in \mathcal{F}$，$E\subset A$，如果$\mu)A)=0$，那么$E\in\mathcal{G}$。<em>即$\mathcal{G}$为包含$\mathcal{F}$，且包含$\mathcal{F}$的任一零集的所有子集的最小$\sigma$-代数，则称$\mathcal{G}$为$\mathcal{F}$的完备化</em></p>
+<p>$\mathcal{M}$是$\beta(\mathcal{R})$的完备化。</p>
+<h2 id="可测函数"><a href="#可测函数" class="headerlink" title="可测函数"></a>可测函数</h2><p>设$E\in \mathcal{M}$，f是以E为定义域的函数，如果$\forall \mathcal{R}$上的一个区间I，均有<script type="math/tex">f^{-1}(I)=\{x|x\in E,f(x)\in I\}\in \mathcal{M}</script>则称f(x)为Lebesgue可测函数，简称为可测函数。如果有<script type="math/tex">f^{-1}(I)=\{x|x\in E,f(x)\in I\}\in \beta(\mathcal{R})</script>则称f(x)为Borel可测函数。</p>
+<p>f(x)为可测集E上的实函数，则以下等价：</p>
+<ol>
+<li><p>f(x)为可测函数</p>
+</li>
+<li><p>$\forall a\in \mathbb{R},f^{-1}((a,+\infty))\in \mathcal{M}$</p>
+</li>
+<li><p>$\forall a\in \mathbb{R},f^{-1}([a,+\infty))\in \mathcal{M}$</p>
+</li>
+<li><p>$\forall a\in \mathbb{R},f^{-1}((-\infty,a))\in \mathcal{M}$</p>
+</li>
+<li><p>$\forall a\in \mathbb{R},f^{-1}((-\infty,a])\in \mathcal{M}$</p>
+</li>
+</ol>
+<p>常见的可测函数有</p>
+<ol>
+<li><p>E上的常函数</p>
+</li>
+<li><p>E上的连续函数</p>
+</li>
+<li><p>E上的单调函数</p>
+</li>
+</ol>
+<p>f(x)为可测集E上的实函数，则</p>
+<ol>
+<li><p>$\forall a\in \overline{\mathbb{R}},f^{-1}(\{a\})\in \mathcal{M}$</p>
+</li>
+<li><p>$\forall c\in \mathbb{R}$，cf(x)为E上的可测函数</p>
+</li>
+<li><p>$f^+(x), f^-(x)$均为E上的可测函数，其中：$f^+(x)=\max{f(x), 0},f^-(x)=\max{-f(x),0}$</p>
+</li>
+<li><p>|f(x)|为E上的可测函数</p>
+</li>
+<li><p>如果g(x)也为E上的可测函数，则$f(x)\pm g(x),f(x)g(x)$均为E上的可测函数</p>
+</li>
+</ol>
+<p>设$\{f_n(x)\}_{n=1}^\infty$ 为可测集E上的一列可测函数，则下列函数均为E上的可测函数:\<br>max, min, sup, inf, $\overline{\lim}$, $\underline{\lim}$, lim</p>
+<h2 id="可测函数的极限"><a href="#可测函数的极限" class="headerlink" title="可测函数的极限"></a>可测函数的极限</h2><p>某一结论如果在可测集E上除一个零集以外处处成立，则称该结论在E上几乎处处成立</p>
+<p>设f，g均为可测集E上的函数，如果f是可测的，且f和g几乎处处相等，则g也是可测的。</p>
+<p>设$E\in\mathcal{M}$，f为E上的实值函数，如果 <script type="math/tex">f(x) = \begin{cases}
+            c_1, & x \in E_1\\%mathbb花体字符
+            c_2, &x \in E_2\\
+            \dots\\
+            c_n, &x\in E_n  
+            \end{cases}%\text是为了在数学公式中处理中文</script> 其中$E=\cup_{i=1}^nE_i$，且当$i\ne j$时，$E_j\cap E_i=\emptyset$，则称f为E上的简单函数</p>
+<p>设E为$\mathbb{R}$上的点集，f为E上的函数，如果$x_0\in E$，且$\forall \varepsilon&gt;0, \exists \delta&gt;0$，当$x\in E, |x-x_0|&lt;\delta$时，有$|f(x)-f(x_0)|&lt;\varepsilon$，则称f在$x_0$点连续。</p>
+<p>设$E\in \mathcal{M}$，$f_i(x)$为E上几乎处处有限的可测函数，如果$\forall \varepsilon$，均有$\lim\limits_{n\to \infty}m(\{x|x\in E, |f_n(x)-f(x)|\ge \varepsilon\})=0$则称$\{f_n(x)\}$在E上一测度收敛于f(x)，记为$f_n(x)\xrightarrow{\mu} f(x)$</p>
+<p>$\{f_n(x)\}$为E上几乎处处有限的可测函数，且$m(E)&lt;\infty$。<script type="math/tex">\{f_n(x)\}\text{在E上几乎处处收敛于可测函数}f(x)\Rightarrow \{f_n(x)\}\text{在E上依测度收敛于可测函数}f(x)</script></p>
+<p>Riesz定理：若$\{f_n(x)\}$在E上依测度收敛于可测函数f(x)，则必存在子列$\{f_{n_k}(x)\}$在E上几乎处处收敛于f(x)。</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
+    </div>
+</article>
+
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>金融随机过程</p>
+    
+    <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Tony She">Tony She</a></p>
+    <p><span class="copy-title">发布时间:</span>2019-07-29, 22:27:54</p>
+    <p><span class="copy-title">最后更新:</span>2019-07-29, 23:25:18</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/a1610b.github.io/2019/07/29/金融随机过程/" title="金融随机过程">https://github.com/a1610b/a1610b.github.io/2019/07/29/金融随机过程/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+    
+        <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+    });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+        src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<input type="hidden" id="MathJax-js"
+        value="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</input>
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">©2016-2020 Tony She</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class="" id="rocket" href="javascript:void(0)"></a>
+    </div>
+</div>
+<div class="acParent"></div>
+
+</body>
+<script src="//cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+
+<script src="/js/script.js?v=1.0.1" ></script>
+<script>
+    var img_resize = 'default';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': ['#python','#Math','#Stats','#Stochastic Process','#machine learning','#Finance',],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().split('\n').length - 1, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: #fafafa;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+    .post .pjax article .article-entry>ol, .post .pjax article .article-entry>ul, .post .pjax article>ol, .post .pjax article>ul{
+        border: #e2dede solid 1px;
+        border-radius: 10px;
+        padding: 10px 32px 10px 56px;
+    }
+    .post .pjax article .article-entry li>ol, .post .pjax article .article-entry li>ul,.post .pjax article li>ol, .post .pjax article li>ul{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .post .pjax article .article-entry>ol>li, .post .pjax article .article-entry>ul>li,.post .pjax article>ol>li, .post .pjax article>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    .post .pjax article .article-entry li>ol>li, .post .pjax article .article-entry li>ul>li,.post .pjax article li>ol>li, .post .pjax article li>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("https://i.loli.net/2019/07/22/5d3521411f3f169375.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>

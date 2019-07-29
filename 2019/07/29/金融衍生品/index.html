@@ -154,7 +154,7 @@
     
     
     </div>
-    <div></div>
+    <div><a style="border-right: 1px solid #fff; width: 49%"  class="about site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="7">
 
@@ -172,6 +172,8 @@
     </div>
     <div class="friends-content">
         <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
             
         </ul>
     </div>
@@ -193,6 +195,10 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">machine learning</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color5">Math</a>
     </li>
     
@@ -202,10 +208,6 @@
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color4">Stochastic Process</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color2">machine learning</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -227,6 +229,14 @@
         </a>
         
         <a  class=""
+           href="/a1610b.github.io/2019/07/29/机器学习/"
+           data-tag="python,machine learning"
+           data-author="" >
+            <span class="post-title" title="Python Machine Learning">Python Machine Learning</span>
+            <span class="post-date" title="2019-07-29 22:27:54">2019/07/29</span>
+        </a>
+        
+        <a  class=""
            href="/a1610b.github.io/2019/07/29/Statistics/"
            data-tag="Math,Stats"
            data-author="" >
@@ -239,14 +249,6 @@
            data-tag="Stochastic Process"
            data-author="" >
             <span class="post-title" title="应用随机过程">应用随机过程</span>
-            <span class="post-date" title="2019-07-29 22:27:54">2019/07/29</span>
-        </a>
-        
-        <a  class=""
-           href="/a1610b.github.io/2019/07/29/机器学习/"
-           data-tag="python,machine learning"
-           data-author="" >
-            <span class="post-title" title="Python Machine Learning">Python Machine Learning</span>
             <span class="post-date" title="2019-07-29 22:27:54">2019/07/29</span>
         </a>
         
@@ -333,8 +335,8 @@
     .left-col .switch-area {
         display: none;
     }
-    .toc-level-4 i,
-    .toc-level-4 ol {
+    .toc-level-3 i,
+    .toc-level-3 ol {
         display: none !important;
     }
 </style>
@@ -403,6 +405,10 @@
 </article>
 
 
+<p>
+    <a href="javascript:void(0)" class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
 
 <div class="article_copyright">
     <p><span class="copy-title">文章标题:</span>金融衍生品</p>
@@ -467,7 +473,7 @@
 
     </div>
     <div class="copyright">
-        <p class="footer-entry">©2016-2020 Tony She</p>
+        <p class="footer-entry">©2016-2019 Tony</p>
 <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
 
     </div>
@@ -484,6 +490,24 @@
 </div>
 <div class="acParent"></div>
 
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
 </body>
 <script src="//cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
 
@@ -493,7 +517,7 @@
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#python','#Math','#Stats','#Stochastic Process','#machine learning','#Finance',],
+            'data': ['#python','#machine learning','#Math','#Stats','#Stochastic Process','#Finance',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
@@ -505,6 +529,14 @@
         
 
         /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
         
 
         /*高亮代码块行号*/
@@ -536,6 +568,11 @@
     }
 
     /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
     
 
 </script>

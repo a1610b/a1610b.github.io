@@ -259,15 +259,15 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">随机过程</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color5">Math</a>
     </li>
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color1">Stats</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">随机过程</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -297,19 +297,19 @@
         </a>
         
         <a  class=""
-           href="/a1610b.github.io/2019/07/29/应随/"
-           data-tag="随机过程"
-           data-author="" >
-            <span class="post-title" title="应用随机过程">应用随机过程</span>
-            <span class="post-date" title="2019-07-29 22:27:54">2019/07/29</span>
-        </a>
-        
-        <a  class=""
            href="/a1610b.github.io/2019/07/29/Statistics/"
            data-tag="Math,Stats"
            data-author="" >
             <span class="post-title" title="Statistics">Statistics</span>
             <span class="post-date" title="2019-07-29 21:14:52">2019/07/29</span>
+        </a>
+        
+        <a  class=""
+           href="/a1610b.github.io/2019/07/29/应随/"
+           data-tag="随机过程"
+           data-author="" >
+            <span class="post-title" title="应用随机过程">应用随机过程</span>
+            <span class="post-date" title="2019-07-29 22:27:54">2019/07/29</span>
         </a>
         
         <a  class=""
@@ -368,7 +368,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-07-29 22:40:07'>2019-07-29 22:27</time>
+        创建时间:<time class="date" title='更新时间: 2019-07-29 23:16:48'>2019-07-29 22:27</time>
         
     </div>
     <div class="article-meta">
@@ -413,12 +413,24 @@
 </li>
 </ul>
 <h2 id="数据前处理"><a href="#数据前处理" class="headerlink" title="数据前处理"></a>数据前处理</h2><ul>
-<li><p>将数据分割为训练集以及测试集。代码为：\<br>X_train,X_test, y_train, y_test =\<br>sklearn.cross_validation.train_test_split(iris.data, iris.target, test_size, random_state)</p>
-</li>
-<li><p>数据标准化，使得数据的均值与方差一致。代码为：\<br>sklearn.preprocessing.scale(X_train)\<br>如需要对测试集以及检验集做相同变换，则可使用transformer。代码为:\<br>scaler = preprocessing.StandardScaler().fit(X_train)\<br>X_train_scaled = scaler.transform(X_train)\<br>X_test_scaled = scaler.transform(X_test)</p>
+<li><p>将数据分割为训练集以及测试集。代码为：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">X_train,X_test, y_train, y_test =</span><br><span class="line">    sklearn.cross_validation.train_test_split(iris.data, iris.target, test_size, random_state)</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="超参数"><a href="#超参数" class="headerlink" title="超参数"></a>超参数</h2><p>机器学习模型一般有两种参数，分别为模型参数与超参数。模型参数可以直接通过数据得到，如回归系数，决策点的划分条件等。而参数数是描述模型的结构，通常需要在估计模型前制定，如决策树中的树深度，叶结点个数等。</p>
+<ul>
+<li><p>数据标准化，使得数据的均值与方差一致。代码为：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.preprocessing.scale(X_train)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<pre><code>如需要对测试集以及检验集做相同变换，则可使用transformer。代码为:
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">scaler = preprocessing.StandardScaler().fit(X_train)</span><br><span class="line">X_train_scaled = scaler.transform(X_train)</span><br><span class="line">X_test_scaled = scaler.transform(X_test)</span><br></pre></td></tr></table></figure>
+
+
+如需要对测试集以及检验集做相同变换，则可使用transformer。代码为:
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">scaler = preprocessing.StandardScaler().fit(X_train)</span><br><span class="line">X_train_scaled = scaler.transform(X_train)</span><br><span class="line">X_test_scaled = scaler.transform(X_test)</span><br></pre></td></tr></table></figure>
+</code></pre><h2 id="超参数"><a href="#超参数" class="headerlink" title="超参数"></a>超参数</h2><p>机器学习模型一般有两种参数，分别为模型参数与超参数。模型参数可以直接通过数据得到，如回归系数，决策点的划分条件等。而参数数是描述模型的结构，通常需要在估计模型前制定，如决策树中的树深度，叶结点个数等。</p>
 <h1 id="交叉验证法"><a href="#交叉验证法" class="headerlink" title="交叉验证法"></a>交叉验证法</h1><p>简称CV(cross validation)，能更稳健地训练、评估和选择模型方法。\<br>具体步骤为：</p>
 <ol>
 <li><p>将数据分为k等分（通常k取10）</p>
@@ -430,13 +442,14 @@
 <li><p>平均所有k个模型得到最终的模型</p>
 </li>
 </ol>
-<h1 id="分类回归"><a href="#分类回归" class="headerlink" title="分类回归"></a>分类回归</h1><h2 id="基本概念-1"><a href="#基本概念-1" class="headerlink" title="基本概念"></a>基本概念</h2><p>给定数据如$(x_1,y_1), (x_2, y_2), …,(x_n, y_n)$。进行有监督学习：$\hat{y_i} = f(x_i)$。将样本分为训练集与检验集。\<br>\<br>常见评估标准为第一类错误与第二类错误，同统计。</p>
+<h1 id="分类回归"><a href="#分类回归" class="headerlink" title="分类回归"></a>分类回归</h1><h2 id="基本概念-1"><a href="#基本概念-1" class="headerlink" title="基本概念"></a>基本概念</h2><p>给定数据如$(x_1,y_1), (x_2, y_2), …,(x_n, y_n)$。进行有监督学习：$\hat{y_i} = f(x_i)$。将样本分为训练集与检验集。</p>
+<p>常见评估标准为第一类错误与第二类错误，同统计。</p>
 <h2 id="决策树"><a href="#决策树" class="headerlink" title="决策树"></a>决策树</h2><h3 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h3><p>决策树的目标是构造一个决策树用来分类与回归。决策树本质上是大量嵌套的if else决策。\<br>方法逻辑：首先用最好的变量构成树的根。然后重复的将训练集继续分割，每次使用一个变量，直到得到满意的叶子节点。</p>
 <h3 id="划分"><a href="#划分" class="headerlink" title="划分"></a>划分</h3><p>划分有以下几个常用的法则：</p>
 <ul>
-<li><p>Information Gain(信息增益)：基于信息熵的准则。\<br>熵（Entropy）用来度量一个随机变量的不确定性，不确定性越大熵越大。数学定义为： <script type="math/tex">H(X) = - \sum_{x\in X}^{}p(x)\log_2p(x)</script></p>
+<li><p>Information Gain(信息增益)：基于信息熵的准则。<br>熵（Entropy）用来度量一个随机变量的不确定性，不确定性越大熵越大。数学定义为： <script type="math/tex">H(X) = - \sum_{x\in X}^{}p(x)\log_2p(x)</script></p>
 </li>
-<li><p>Gini Index, 基尼指数准则\</p>
+<li><p>Gini Index, 基尼指数准则</p>
 <script type="math/tex; mode=display">\text{Gini Index} = \sum_{k = 1}^{|Y|}\sum_{k'\ne k}p_kp_{k'} = 1-\sum_jp_j^2</script></li>
 </ul>
 <h3 id="优化与评估"><a href="#优化与评估" class="headerlink" title="优化与评估"></a>优化与评估</h3><p>模型的评估有：</p>
@@ -466,7 +479,7 @@
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Tony She">Tony She</a></p>
     <p><span class="copy-title">发布时间:</span>2019-07-29, 22:27:54</p>
-    <p><span class="copy-title">最后更新:</span>2019-07-29, 22:40:07</p>
+    <p><span class="copy-title">最后更新:</span>2019-07-29, 23:16:48</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/a1610b.github.io/2019/07/29/机器学习/" title="Python Machine Learning">https://github.com/a1610b/a1610b.github.io/2019/07/29/机器学习/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
@@ -568,7 +581,7 @@
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#python','#随机过程','#Math','#Stats','#machine learning','#金融','#数学',],
+            'data': ['#python','#Math','#Stats','#随机过程','#machine learning','#金融','#数学',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');

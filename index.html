@@ -191,19 +191,19 @@
     <div class="tags-list">
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">Math</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">Stats</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color2">python</a>
     </li>
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color4">Stochastic Process</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">Math</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">Stats</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -221,14 +221,6 @@
     <nav id="title-list-nav">
         
         <a  class=""
-           href="/a1610b.github.io/2019/07/29/Statistics/"
-           data-tag="Math,Stats"
-           data-author="" >
-            <span class="post-title" title="Statistics">Statistics</span>
-            <span class="post-date" title="2019-07-29 21:14:52">2019/07/29</span>
-        </a>
-        
-        <a  class=""
            href="/a1610b.github.io/2019/07/29/Python Outline/"
            data-tag="python"
            data-author="" >
@@ -242,6 +234,14 @@
            data-author="" >
             <span class="post-title" title="应用随机过程">应用随机过程</span>
             <span class="post-date" title="2019-07-29 22:27:54">2019/07/29</span>
+        </a>
+        
+        <a  class=""
+           href="/a1610b.github.io/2019/07/29/Statistics/"
+           data-tag="Math,Stats"
+           data-author="" >
+            <span class="post-title" title="Statistics">Statistics</span>
+            <span class="post-date" title="2019-07-29 21:14:52">2019/07/29</span>
         </a>
         
         <a  class=""
@@ -262,7 +262,7 @@
         
         <a  class=""
            href="/a1610b.github.io/2019/07/29/金融随机过程/"
-           data-tag="Math,Stochastic Process,Finance"
+           data-tag="Stochastic Process,Math,Finance"
            data-author="" >
             <span class="post-title" title="金融随机过程">金融随机过程</span>
             <span class="post-date" title="2019-07-29 22:27:54">2019/07/29</span>
@@ -291,7 +291,7 @@
         <article class="index">
             <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Tony’s-Blog"><span class="toc-text">Tony’s Blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#About-Me"><span class="toc-text">About Me</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#博客平台"><span class="toc-text">博客平台</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Tony’s-Blog"><span class="toc-text">Tony’s Blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#About"><span class="toc-text">About</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#博客平台"><span class="toc-text">博客平台</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -305,7 +305,9 @@
 </style>
 </div>
             <h1 id="Tony’s-Blog"><a href="#Tony’s-Blog" class="headerlink" title="Tony’s Blog"></a>Tony’s Blog</h1><p>博客主要记录一些我学习的笔记和平时看到有趣的内容和伴随产生的想法。大致分为专业类和随笔类两种</p>
-<h2 id="About-Me"><a href="#About-Me" class="headerlink" title="About Me"></a>About Me</h2><p>本科数学专业，准备从事二级市场工作的大四学生。</p>
+<h2 id="About"><a href="#About" class="headerlink" title="About"></a>About</h2><p>本科数学专业，准备从事二级市场工作的大四学生。</p>
+<p>到目前为止已经写了<code class="article_number">&lt;/code&gt;篇文章， 共<code class="site_word_count"></code>字。</p>
+<p>本站访问人数：<code class="site_uv">&lt;/code&gt;人次 ， 访问量：<code class="site_pv"></code>次</p>
 <h2 id="博客平台"><a href="#博客平台" class="headerlink" title="博客平台"></a>博客平台</h2><p>这个博客通过 <a href="https://hexo.io/">Hexo</a> 生成，部署在 <a href="https://pages.github.com/">GitHub Pages</a>，主题 <a href="https://github.com/yelog/hexo-theme-3-hexo">3-hexo</a> 已经在github上开源</p>
 
         </article>
@@ -361,7 +363,7 @@
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#Math','#Stats','#python','#Stochastic Process','#machine learning','#Finance',],
+            'data': ['#python','#Stochastic Process','#Math','#Stats','#machine learning','#Finance',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');

@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="基础知识Limit TheoremsLaw of Large NumberThe Weak Law of Large Number$X_1, X_2, …, X_i,…$ 为独立的随机序列，且$E(X_i) = \mu,  \text{Var}(X_i) = \sigma^2$。记$\bar{X}_n = \sum{X_i}/n$。那么，对于任意的$\varepsilon&amp;gt;0$，就有  P(">
+<meta name="description" content="统计学笔记，中英文混用，仅供参考">
 <meta name="keywords" content="Math,Stats">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Statistics">
 <meta property="og:url" content="https://github.com/a1610b/a1610b.github.io/2019/07/29/Statistics/index.html">
 <meta property="og:site_name" content="Tony&#39;s Blog">
-<meta property="og:description" content="基础知识Limit TheoremsLaw of Large NumberThe Weak Law of Large Number$X_1, X_2, …, X_i,…$ 为独立的随机序列，且$E(X_i) = \mu,  \text{Var}(X_i) = \sigma^2$。记$\bar{X}_n = \sum{X_i}/n$。那么，对于任意的$\varepsilon&amp;gt;0$，就有  P(">
+<meta property="og:description" content="统计学笔记，中英文混用，仅供参考">
 <meta property="og:locale" content="English and Chinese">
-<meta property="og:updated_time" content="2019-08-06T13:49:04.667Z">
+<meta property="og:updated_time" content="2019-08-06T15:05:40.661Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Statistics">
-<meta name="twitter:description" content="基础知识Limit TheoremsLaw of Large NumberThe Weak Law of Large Number$X_1, X_2, …, X_i,…$ 为独立的随机序列，且$E(X_i) = \mu,  \text{Var}(X_i) = \sigma^2$。记$\bar{X}_n = \sum{X_i}/n$。那么，对于任意的$\varepsilon&amp;gt;0$，就有  P(">
+<meta name="twitter:description" content="统计学笔记，中英文混用，仅供参考">
 
 
 
@@ -352,7 +352,10 @@
       
 
       
-        <h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><h3 id="Limit-Theorems"><a href="#Limit-Theorems" class="headerlink" title="Limit Theorems"></a>Limit Theorems</h3><h4 id="Law-of-Large-Number"><a href="#Law-of-Large-Number" class="headerlink" title="Law of Large Number"></a>Law of Large Number</h4><h5 id="The-Weak-Law-of-Large-Number"><a href="#The-Weak-Law-of-Large-Number" class="headerlink" title="The Weak Law of Large Number"></a>The Weak Law of Large Number</h5><p>$X_1, X_2, …, X_i,…$ 为独立的随机序列，且$E(X_i) = \mu,  \text{Var}(X_i) = \sigma^2$。记$\bar{X}_n = \sum{X_i}/n$。那么，对于任意的$\varepsilon&gt;0$，就有</p>
+        <p>统计学笔记，中英文混用，仅供参考</p>
+<a id="more"></a>
+<h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><h3 id="符号规定"><a href="#符号规定" class="headerlink" title="符号规定"></a>符号规定</h3><p>$\bold{X}$ 代表随机变量序列$X_1,…,X_n$, 而$\bold{x}$代表样本$x_1,…,x_n$。</p>
+<h3 id="Limit-Theorems"><a href="#Limit-Theorems" class="headerlink" title="Limit Theorems"></a>Limit Theorems</h3><h4 id="Law-of-Large-Number"><a href="#Law-of-Large-Number" class="headerlink" title="Law of Large Number"></a>Law of Large Number</h4><h5 id="The-Weak-Law-of-Large-Number"><a href="#The-Weak-Law-of-Large-Number" class="headerlink" title="The Weak Law of Large Number"></a>The Weak Law of Large Number</h5><p>$X_1, X_2, …, X_i,…$ 为独立的随机序列，且$E(X_i) = \mu,  \text{Var}(X_i) = \sigma^2$。记$\bar{X}_n = \sum{X_i}/n$。那么，对于任意的$\varepsilon&gt;0$，就有</p>
 <script type="math/tex; mode=display">
 P(|\bar{X}_n-\mu|>\varepsilon) \rightarrow 0 \ \ \ \  \ \text{     as }n\rightarrow \infty</script><details>
 <summary>Click to see proof</summary>
@@ -427,6 +430,14 @@ P(\lim_{n\rightarrow\infty}X_n=X) = 1</script><ul>
 </ul>
 <script type="math/tex; mode=display">
 \lim_{n\rightarrow\infty}E\vert X_n-X\vert^r=0</script><h2 id="Statistical-Inference"><a href="#Statistical-Inference" class="headerlink" title="Statistical Inference"></a>Statistical Inference</h2><p>basically a process of learning the distribution that generates the data with a given data.</p>
+<h3 id="Data-Reduction"><a href="#Data-Reduction" class="headerlink" title="Data Reduction"></a>Data Reduction</h3><p>Data reduction is trying to summarize the whole data set with some key features. </p>
+<p>A statistic(统计量) $T(\bold{X})$, defines a method of data reduction. So for an experimenter he will get $T(\bold{x})$ as a result. In this sense, sample $\bold{x} \text{ and } \bold{y}$  are the same in this statistic if and only if $T(\bold{x}) = T(\bold{y})$. </p>
+<p>统计量的作用本质上就是将样本映射到$\mathbb{R}$上。</p>
+<p>那么问题就在于如何评价一个统计量的优劣？</p>
+<p>统计学上有三个常见的对于统计量的要求如下</p>
+<h4 id="Sufficiency-Principle"><a href="#Sufficiency-Principle" class="headerlink" title="Sufficiency Principle"></a>Sufficiency Principle</h4><p>A <strong>sufficient statistic</strong>(充分统计量)  for a parameter $\theta$ is a statistic captures all the information about $\theta$ in the sample. 这是一个较为直观但是无法量化的定义，故引入数学上的定义以量化的来刻画充分统计量。</p>
+<p>If $T(\bold{X})$ is a sufficient statistic for $\theta$ and $\bold{x} \text{ and } \bold{y}$ are two sample such that $T(\bold{x}) = T(\bold{y})$, then the inference on $\theta$ should be the same whether $\bold{X} = \bold{x}$ or $\bold{X} = \bold{y}$ is observed. </p>
+<p>就是说只要充分统计量相同，那么推测参数必然相同。</p>
 <h3 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h3><p>There are two types of model:</p>
 <ol>
 <li><p>Parametric models: a set that can be parameterized by a finite number of parameters. In general a parametric model takes the form </p>
@@ -457,7 +468,7 @@ F = \{f(x;\theta):\theta \in \Theta\}</script><p>where $\theta$ is an unknown pa
 <script type="math/tex; mode=display">
 \mathbb{P}_{\theta}\left(\theta \in C_{n}\right) \geq 1-\alpha, \text { for all } \theta \in \Theta</script><p>For a normal distribution, it is common to set the confidence interval around the mean and use the standard deviation as unit to measure $\alpha$.</p>
 <h3 id="Hypothesis-Testing"><a href="#Hypothesis-Testing" class="headerlink" title="Hypothesis Testing"></a>Hypothesis Testing</h3><p>In a hypothesis testing, we start with a <strong>null hypothesis</strong>. We will ask if the data is strong enough to reject the null hypothesis. If not we will keep the null hypothesis, else we reject null hypothesis and choose the alternative hypothesis. As a common habit, people use $H_0$ to note for null hypothesis and $H_1$ to note for alternative hypothesis.</p>
-<h3 id="Data-Reduction"><a href="#Data-Reduction" class="headerlink" title="Data Reduction"></a>Data Reduction</h3><p> Statistic: a function of the data, defined as $T_n = g(X_1,…, X_n)$.  </p>
+<h3 id="Data-Reduction-1"><a href="#Data-Reduction-1" class="headerlink" title="Data Reduction"></a>Data Reduction</h3><p> Statistic: a function of the data, defined as $T_n = g(X_1,…, X_n)$.  </p>
 <h3 id="Bootstrap"><a href="#Bootstrap" class="headerlink" title="Bootstrap"></a>Bootstrap</h3><p>A method for estimating standard errors and computing confidence intervals. </p>
 <script type="math/tex; mode=display">
 \left. \begin{array}{l}{ \frac { 1 } { B } \sum _ { j = 1 } ^ { B } ( Y _ { j } - \overline { Y } ) ^ { 2 } = \frac { 1 } { B } \sum _ { j = 1 } ^ { B } Y _ { j } ^ { 2 } - ( \frac { 1 } { B } \sum _ { j = 1 } ^ { B } Y _ { j } ) ^ { 2 } }\\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ { \stackrel { P } { \rightarrow } \int y ^ { 2 } d F ( y ) - ( \int y d F ( y ) ) ^ { 2 } = V ( Y ) }\end{array} \right.</script><h3 id="Asymptotic-Evaluation"><a href="#Asymptotic-Evaluation" class="headerlink" title="Asymptotic Evaluation"></a>Asymptotic Evaluation</h3><h3 id="Analysis-of-Variance-and-Regression"><a href="#Analysis-of-Variance-and-Regression" class="headerlink" title="Analysis of Variance and Regression"></a>Analysis of Variance and Regression</h3><h2 id="Models"><a href="#Models" class="headerlink" title="Models"></a>Models</h2><h2 id="Causal-Inference"><a href="#Causal-Inference" class="headerlink" title="Causal Inference"></a>Causal Inference</h2>
@@ -577,7 +588,7 @@ F = \{f(x;\theta):\theta \in \Theta\}</script><p>where $\theta$ is an unknown pa
               
                 <a href="/a1610b.github.io/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -588,7 +599,7 @@ F = \{f(x;\theta):\theta \in \Theta\}</script><p>where $\theta$ is an unknown pa
               
               <div class="site-state-item site-state-categories">
                 <a href="/a1610b.github.io/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -599,7 +610,7 @@ F = \{f(x;\theta):\theta \in \Theta\}</script><p>where $\theta$ is an unknown pa
               
               <div class="site-state-item site-state-tags">
                 <a href="/a1610b.github.io/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -632,7 +643,7 @@ F = \{f(x;\theta):\theta \in \Theta\}</script><p>where $\theta$ is an unknown pa
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础知识"><span class="nav-number">1.</span> <span class="nav-text">基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Limit-Theorems"><span class="nav-number">1.1.</span> <span class="nav-text">Limit Theorems</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Law-of-Large-Number"><span class="nav-number">1.1.1.</span> <span class="nav-text">Law of Large Number</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#The-Weak-Law-of-Large-Number"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">The Weak Law of Large Number</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#The-Strong-Law-of-Large-Number"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">The Strong Law of Large Number</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Central-Limit-Theorem"><span class="nav-number">1.1.2.</span> <span class="nav-text">Central Limit Theorem</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Common-Distributions"><span class="nav-number">1.2.</span> <span class="nav-text">Common Distributions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#泊松分布"><span class="nav-number">1.2.1.</span> <span class="nav-text">泊松分布</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#正态分布"><span class="nav-number">1.2.2.</span> <span class="nav-text">正态分布</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#chi-2-Distribution"><span class="nav-number">1.2.3.</span> <span class="nav-text">$\chi^2$ Distribution</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#t-Distribution"><span class="nav-number">1.2.4.</span> <span class="nav-text">t Distribution</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#F-Distribution"><span class="nav-number">1.2.5.</span> <span class="nav-text">F Distribution</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Convergence"><span class="nav-number">1.3.</span> <span class="nav-text">Convergence</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Statistical-Inference"><span class="nav-number">2.</span> <span class="nav-text">Statistical Inference</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Intro"><span class="nav-number">2.1.</span> <span class="nav-text">Intro</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Point-Estimation"><span class="nav-number">2.2.</span> <span class="nav-text">Point Estimation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Confidence-Sets"><span class="nav-number">2.3.</span> <span class="nav-text">Confidence Sets</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hypothesis-Testing"><span class="nav-number">2.4.</span> <span class="nav-text">Hypothesis Testing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Data-Reduction"><span class="nav-number">2.5.</span> <span class="nav-text">Data Reduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bootstrap"><span class="nav-number">2.6.</span> <span class="nav-text">Bootstrap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Asymptotic-Evaluation"><span class="nav-number">2.7.</span> <span class="nav-text">Asymptotic Evaluation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Analysis-of-Variance-and-Regression"><span class="nav-number">2.8.</span> <span class="nav-text">Analysis of Variance and Regression</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Models"><span class="nav-number">3.</span> <span class="nav-text">Models</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Causal-Inference"><span class="nav-number">4.</span> <span class="nav-text">Causal Inference</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础知识"><span class="nav-number">1.</span> <span class="nav-text">基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#符号规定"><span class="nav-number">1.1.</span> <span class="nav-text">符号规定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Limit-Theorems"><span class="nav-number">1.2.</span> <span class="nav-text">Limit Theorems</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Law-of-Large-Number"><span class="nav-number">1.2.1.</span> <span class="nav-text">Law of Large Number</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#The-Weak-Law-of-Large-Number"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">The Weak Law of Large Number</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#The-Strong-Law-of-Large-Number"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">The Strong Law of Large Number</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Central-Limit-Theorem"><span class="nav-number">1.2.2.</span> <span class="nav-text">Central Limit Theorem</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Common-Distributions"><span class="nav-number">1.3.</span> <span class="nav-text">Common Distributions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#泊松分布"><span class="nav-number">1.3.1.</span> <span class="nav-text">泊松分布</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#正态分布"><span class="nav-number">1.3.2.</span> <span class="nav-text">正态分布</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#chi-2-Distribution"><span class="nav-number">1.3.3.</span> <span class="nav-text">$\chi^2$ Distribution</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#t-Distribution"><span class="nav-number">1.3.4.</span> <span class="nav-text">t Distribution</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#F-Distribution"><span class="nav-number">1.3.5.</span> <span class="nav-text">F Distribution</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Convergence"><span class="nav-number">1.4.</span> <span class="nav-text">Convergence</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Statistical-Inference"><span class="nav-number">2.</span> <span class="nav-text">Statistical Inference</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Data-Reduction"><span class="nav-number">2.1.</span> <span class="nav-text">Data Reduction</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Sufficiency-Principle"><span class="nav-number">2.1.1.</span> <span class="nav-text">Sufficiency Principle</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Intro"><span class="nav-number">2.2.</span> <span class="nav-text">Intro</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Point-Estimation"><span class="nav-number">2.3.</span> <span class="nav-text">Point Estimation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Confidence-Sets"><span class="nav-number">2.4.</span> <span class="nav-text">Confidence Sets</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hypothesis-Testing"><span class="nav-number">2.5.</span> <span class="nav-text">Hypothesis Testing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Data-Reduction-1"><span class="nav-number">2.6.</span> <span class="nav-text">Data Reduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bootstrap"><span class="nav-number">2.7.</span> <span class="nav-text">Bootstrap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Asymptotic-Evaluation"><span class="nav-number">2.8.</span> <span class="nav-text">Asymptotic Evaluation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Analysis-of-Variance-and-Regression"><span class="nav-number">2.9.</span> <span class="nav-text">Analysis of Variance and Regression</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Models"><span class="nav-number">3.</span> <span class="nav-text">Models</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Causal-Inference"><span class="nav-number">4.</span> <span class="nav-text">Causal Inference</span></a></li></ol></div>
             
 
           </div>

@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Tony&#39;s Blog">
 <meta property="og:description" content="统计学笔记，中英文混用，仅供参考">
 <meta property="og:locale" content="English and Chinese">
-<meta property="og:updated_time" content="2019-08-06T15:05:40.661Z">
+<meta property="og:updated_time" content="2019-08-06T15:10:10.549Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Statistics">
 <meta name="twitter:description" content="统计学笔记，中英文混用，仅供参考">
@@ -354,7 +354,7 @@
       
         <p>统计学笔记，中英文混用，仅供参考</p>
 <a id="more"></a>
-<h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><h3 id="符号规定"><a href="#符号规定" class="headerlink" title="符号规定"></a>符号规定</h3><p>$\bold{X}$ 代表随机变量序列$X_1,…,X_n$, 而$\bold{x}$代表样本$x_1,…,x_n$。</p>
+<h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><h3 id="符号规定"><a href="#符号规定" class="headerlink" title="符号规定"></a>符号规定</h3><p>$\boldsymbol{X}$ 代表随机变量序列$X_1,…,X_n$, 而$\boldsymbol{x}$代表样本$x_1,…,x_n$。</p>
 <h3 id="Limit-Theorems"><a href="#Limit-Theorems" class="headerlink" title="Limit Theorems"></a>Limit Theorems</h3><h4 id="Law-of-Large-Number"><a href="#Law-of-Large-Number" class="headerlink" title="Law of Large Number"></a>Law of Large Number</h4><h5 id="The-Weak-Law-of-Large-Number"><a href="#The-Weak-Law-of-Large-Number" class="headerlink" title="The Weak Law of Large Number"></a>The Weak Law of Large Number</h5><p>$X_1, X_2, …, X_i,…$ 为独立的随机序列，且$E(X_i) = \mu,  \text{Var}(X_i) = \sigma^2$。记$\bar{X}_n = \sum{X_i}/n$。那么，对于任意的$\varepsilon&gt;0$，就有</p>
 <script type="math/tex; mode=display">
 P(|\bar{X}_n-\mu|>\varepsilon) \rightarrow 0 \ \ \ \  \ \text{     as }n\rightarrow \infty</script><details>
@@ -431,12 +431,12 @@ P(\lim_{n\rightarrow\infty}X_n=X) = 1</script><ul>
 <script type="math/tex; mode=display">
 \lim_{n\rightarrow\infty}E\vert X_n-X\vert^r=0</script><h2 id="Statistical-Inference"><a href="#Statistical-Inference" class="headerlink" title="Statistical Inference"></a>Statistical Inference</h2><p>basically a process of learning the distribution that generates the data with a given data.</p>
 <h3 id="Data-Reduction"><a href="#Data-Reduction" class="headerlink" title="Data Reduction"></a>Data Reduction</h3><p>Data reduction is trying to summarize the whole data set with some key features. </p>
-<p>A statistic(统计量) $T(\bold{X})$, defines a method of data reduction. So for an experimenter he will get $T(\bold{x})$ as a result. In this sense, sample $\bold{x} \text{ and } \bold{y}$  are the same in this statistic if and only if $T(\bold{x}) = T(\bold{y})$. </p>
+<p>A statistic(统计量) $T(\boldsymbol{X})$, defines a method of data reduction. So for an experimenter he will get $T(\boldsymbol{x})$ as a result. In this sense, sample $\boldsymbol{x} \text{ and } \boldsymbol{y}$  are the same in this statistic if and only if $T(\boldsymbol{x}) = T(\boldsymbol{y})$. </p>
 <p>统计量的作用本质上就是将样本映射到$\mathbb{R}$上。</p>
 <p>那么问题就在于如何评价一个统计量的优劣？</p>
 <p>统计学上有三个常见的对于统计量的要求如下</p>
 <h4 id="Sufficiency-Principle"><a href="#Sufficiency-Principle" class="headerlink" title="Sufficiency Principle"></a>Sufficiency Principle</h4><p>A <strong>sufficient statistic</strong>(充分统计量)  for a parameter $\theta$ is a statistic captures all the information about $\theta$ in the sample. 这是一个较为直观但是无法量化的定义，故引入数学上的定义以量化的来刻画充分统计量。</p>
-<p>If $T(\bold{X})$ is a sufficient statistic for $\theta$ and $\bold{x} \text{ and } \bold{y}$ are two sample such that $T(\bold{x}) = T(\bold{y})$, then the inference on $\theta$ should be the same whether $\bold{X} = \bold{x}$ or $\bold{X} = \bold{y}$ is observed. </p>
+<p>If $T(\boldsymbol{X})$ is a sufficient statistic for $\theta$ and $\boldsymbol{x} \text{ and } \boldsymbol{y}$ are two sample such that $T(\boldsymbol{x}) = T(\boldsymbol{y})$, then the inference on $\theta$ should be the same whether $\boldsymbol{X} = \boldsymbol{x}$ or $\boldsymbol{X} = \boldsymbol{y}$ is observed. </p>
 <p>就是说只要充分统计量相同，那么推测参数必然相同。</p>
 <h3 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h3><p>There are two types of model:</p>
 <ol>

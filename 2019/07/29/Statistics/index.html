@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Tony&#39;s Blog">
 <meta property="og:description" content="统计学笔记，中英文混用，仅供参考">
 <meta property="og:locale" content="English and Chinese">
-<meta property="og:updated_time" content="2019-08-06T15:10:10.549Z">
+<meta property="og:updated_time" content="2019-08-10T09:41:29.381Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Statistics">
 <meta name="twitter:description" content="统计学笔记，中英文混用，仅供参考">
@@ -435,9 +435,12 @@ P(\lim_{n\rightarrow\infty}X_n=X) = 1</script><ul>
 <p>统计量的作用本质上就是将样本映射到$\mathbb{R}$上。</p>
 <p>那么问题就在于如何评价一个统计量的优劣？</p>
 <p>统计学上有三个常见的对于统计量的要求如下</p>
-<h4 id="Sufficiency-Principle"><a href="#Sufficiency-Principle" class="headerlink" title="Sufficiency Principle"></a>Sufficiency Principle</h4><p>A <strong>sufficient statistic</strong>(充分统计量)  for a parameter $\theta$ is a statistic captures all the information about $\theta$ in the sample. 这是一个较为直观但是无法量化的定义，故引入数学上的定义以量化的来刻画充分统计量。</p>
+<h4 id="Sufficiency-Principle"><a href="#Sufficiency-Principle" class="headerlink" title="Sufficiency Principle"></a>Sufficiency Principle</h4><p>A <strong>sufficient statistic</strong>(充分统计量)  for a parameter $\theta$ is a statistic that captures all the information about $\theta$ in the sample. 这是一个较为直观但是无法量化的定义，故引入数学上的定义以量化的来刻画充分统计量。</p>
 <p>If $T(\boldsymbol{X})$ is a sufficient statistic for $\theta$ and $\boldsymbol{x} \text{ and } \boldsymbol{y}$ are two sample such that $T(\boldsymbol{x}) = T(\boldsymbol{y})$, then the inference on $\theta$ should be the same whether $\boldsymbol{X} = \boldsymbol{x}$ or $\boldsymbol{X} = \boldsymbol{y}$ is observed. </p>
 <p>就是说只要充分统计量相同，那么推测参数必然相同。</p>
+<p>一种等价的定义的方式是：</p>
+<p>A statistic $T(\boldsymbol{X})$ is a <em>sufficient statistic</em> for $\theta$ if the conditional distribution of the sample $\boldsymbol{X}$ given the value of $T(\boldsymbol{X})$ does not depend on $\theta$. </p>
+<p>不妨采用离散的情况来理解，那么条件分布就可以看成对于不同的$\boldsymbol{x}$的$P(\boldsymbol{X}=\boldsymbol{x}|T(\boldsymbol{X})=T(\boldsymbol{x}))$ </p>
 <h3 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h3><p>There are two types of model:</p>
 <ol>
 <li><p>Parametric models: a set that can be parameterized by a finite number of parameters. In general a parametric model takes the form </p>
@@ -458,10 +461,12 @@ F = \{f(x;\theta):\theta \in \Theta\}</script><p>where $\theta$ is an unknown pa
 <script type="math/tex; mode=display">
 \mathrm{MSE}=\mathbb{E}_{\theta}\left(\widehat{\theta}_{n}-\theta\right)^{2}</script><p>By expanding the square we can get</p>
 <script type="math/tex; mode=display">
-\mathrm{MSE}=\operatorname{bias}^{2}\left(\widehat{\theta}_{n}\right)+\mathbb{V}_{\theta}\left(\widehat{\theta}_{n}\right)</script><p><details></details></p>
-<p><summary>Click to see proof</summary></p>
-<script type="math/tex; mode=display">
-\begin{aligned} \mathbb{E}_{\theta}\left(\hat{\theta}_{n}-\theta\right)^{2} &=\mathbb{E}_{\theta}\left(\hat{\theta}_{n}-\overline{\theta}_{n}+\overline{\theta}_{n}-\theta\right)^{2} \\ &=\mathbb{E}_{\theta}\left(\widehat{\theta}_{n}-\overline{\theta}_{n}\right)^{2}+2\left(\overline{\theta}_{n}-\theta\right) \mathbb{E}_{\theta}\left(\widehat{\theta}_{n}-\overline{\theta}_{n}\right)+\mathbb{E}_{\theta}\left(\overline{\theta}_{n}-\theta\right)^{2} \\ &=\left(\overline{\theta}_{n}-\theta\right)^{2}+\mathbb{E}_{\theta}\left(\widehat{\theta}_{n}-\overline{\theta}_{n}\right)^{2} \\ &=\operatorname{bias}^{2}\left(\widehat{\theta}_{n}\right)+\mathbb{V}\left(\widehat{\theta}_{n}\right) \end{aligned}</script><p>&lt;/details&gt;<br>So we know that if bias $\rightarrow$ 0 and se $\rightarrow$ 0 as n $\rightarrow$ 0, then $\hat{\theta}_n$ is consistent. Proof is trivial, since MSE $\rightarrow$ 0, then $\hat{\theta}_n$ converge to $\theta$ in $L^2$, which indicates that they converge by possibility. Hence the estimator is consistent.</p>
+\mathrm{MSE}=\operatorname{bias}^{2}\left(\widehat{\theta}_{n}\right)+\mathbb{V}_{\theta}\left(\widehat{\theta}_{n}\right)</script><details>
+<summary>Click to see proof</summary>
+$$\begin{aligned} \mathbb{E}_{\theta}\left(\hat{\theta}_{n}-\theta\right)^{2} &=\mathbb{E}_{\theta}\left(\hat{\theta}_{n}-\overline{\theta}_{n}+\overline{\theta}_{n}-\theta\right)^{2} \\ &=\mathbb{E}_{\theta}\left(\widehat{\theta}_{n}-\overline{\theta}_{n}\right)^{2}+2\left(\overline{\theta}_{n}-\theta\right) \mathbb{E}_{\theta}\left(\widehat{\theta}_{n}-\overline{\theta}_{n}\right)+\mathbb{E}_{\theta}\left(\overline{\theta}_{n}-\theta\right)^{2} \\ &=\left(\overline{\theta}_{n}-\theta\right)^{2}+\mathbb{E}_{\theta}\left(\widehat{\theta}_{n}-\overline{\theta}_{n}\right)^{2} \\ &=\operatorname{bias}^{2}\left(\widehat{\theta}_{n}\right)+\mathbb{V}\left(\widehat{\theta}_{n}\right) \end{aligned}$$
+</details>
+
+<p>So we know that if bias $\rightarrow$ 0 and se $\rightarrow$ 0 as n $\rightarrow$ 0, then $\hat{\theta}_n$ is consistent. Proof is trivial, since MSE $\rightarrow$ 0, then $\hat{\theta}_n$ converge to $\theta$ in $L^2$, which indicates that they converge by possibility. Hence the estimator is consistent.</p>
 <p>An estimator is <strong>asymptotically Normal</strong> if:</p>
 <script type="math/tex; mode=display">
 \frac{\widehat{\theta}_{n}-\theta}{\mathrm{se}} \leadsto N(0,1)</script><h3 id="Confidence-Sets"><a href="#Confidence-Sets" class="headerlink" title="Confidence Sets"></a>Confidence Sets</h3><p>A $1-\alpha$  confidence interval for a parameter $\theta$ is an interval $C_n = (a, b)$ are functions of the data such that:</p>
@@ -471,7 +476,8 @@ F = \{f(x;\theta):\theta \in \Theta\}</script><p>where $\theta$ is an unknown pa
 <h3 id="Data-Reduction-1"><a href="#Data-Reduction-1" class="headerlink" title="Data Reduction"></a>Data Reduction</h3><p> Statistic: a function of the data, defined as $T_n = g(X_1,…, X_n)$.  </p>
 <h3 id="Bootstrap"><a href="#Bootstrap" class="headerlink" title="Bootstrap"></a>Bootstrap</h3><p>A method for estimating standard errors and computing confidence intervals. </p>
 <script type="math/tex; mode=display">
-\left. \begin{array}{l}{ \frac { 1 } { B } \sum _ { j = 1 } ^ { B } ( Y _ { j } - \overline { Y } ) ^ { 2 } = \frac { 1 } { B } \sum _ { j = 1 } ^ { B } Y _ { j } ^ { 2 } - ( \frac { 1 } { B } \sum _ { j = 1 } ^ { B } Y _ { j } ) ^ { 2 } }\\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ { \stackrel { P } { \rightarrow } \int y ^ { 2 } d F ( y ) - ( \int y d F ( y ) ) ^ { 2 } = V ( Y ) }\end{array} \right.</script><h3 id="Asymptotic-Evaluation"><a href="#Asymptotic-Evaluation" class="headerlink" title="Asymptotic Evaluation"></a>Asymptotic Evaluation</h3><h3 id="Analysis-of-Variance-and-Regression"><a href="#Analysis-of-Variance-and-Regression" class="headerlink" title="Analysis of Variance and Regression"></a>Analysis of Variance and Regression</h3><h2 id="Models"><a href="#Models" class="headerlink" title="Models"></a>Models</h2><h2 id="Causal-Inference"><a href="#Causal-Inference" class="headerlink" title="Causal Inference"></a>Causal Inference</h2>
+\left. \begin{array}{l}{ \frac { 1 } { B } \sum _ { j = 1 } ^ { B } ( Y _ { j } - \overline { Y } ) ^ { 2 } = \frac { 1 } { B } \sum _ { j = 1 } ^ { B } Y _ { j } ^ { 2 } - ( \frac { 1 } { B } \sum _ { j = 1 } ^ { B } Y _ { j } ) ^ { 2 } }\\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ { \stackrel { P } { \rightarrow } \int y ^ { 2 } d F ( y ) - ( \int y d F ( y ) ) ^ { 2 } = V ( Y ) }\end{array} \right.</script><h3 id="Asymptotic-Evaluation"><a href="#Asymptotic-Evaluation" class="headerlink" title="Asymptotic Evaluation"></a>Asymptotic Evaluation</h3><h3 id="Analysis-of-Variance-and-Regression"><a href="#Analysis-of-Variance-and-Regression" class="headerlink" title="Analysis of Variance and Regression"></a>Analysis of Variance and Regression</h3><h2 id="Models"><a href="#Models" class="headerlink" title="Models"></a>Models</h2><h2 id="Causal-Inference"><a href="#Causal-Inference" class="headerlink" title="Causal Inference"></a>Causal Inference</h2><script type="math/tex; mode=display">
+\sum_{k=0}^k\frac{C^k_m}{C^k_{m+n-1}}=?</script>
       
     </div>
     
@@ -509,8 +515,8 @@ F = \{f(x;\theta):\theta \in \Theta\}</script><p>where $\theta$ is an unknown pa
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/a1610b.github.io/2019/07/29/统计/" rel="prev" title="Statistic Notes">
-                Statistic Notes <i class="fa fa-chevron-right"></i>
+              <a href="/a1610b.github.io/2019/07/29/金融随机过程/" rel="prev" title="金融随机过程">
+                金融随机过程 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

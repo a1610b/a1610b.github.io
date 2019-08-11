@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Tony&#39;s Blog">
 <meta property="og:description" content="统计学笔记，中英文混用，仅供参考">
 <meta property="og:locale" content="English and Chinese">
-<meta property="og:updated_time" content="2019-08-10T09:41:29.381Z">
+<meta property="og:updated_time" content="2019-08-11T12:52:36.790Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Statistics">
 <meta name="twitter:description" content="统计学笔记，中英文混用，仅供参考">
@@ -298,7 +298,19 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2019-08-11T20:52:36+08:00">
+                2019-08-11
+              </time>
             
           </span>
 
@@ -354,7 +366,7 @@
       
         <p>统计学笔记，中英文混用，仅供参考</p>
 <a id="more"></a>
-<h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><h3 id="符号规定"><a href="#符号规定" class="headerlink" title="符号规定"></a>符号规定</h3><p>$\boldsymbol{X}$ 代表随机变量序列$X_1,…,X_n$, 而$\boldsymbol{x}$代表样本$x_1,…,x_n$。</p>
+<h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><h3 id="符号规定"><a href="#符号规定" class="headerlink" title="符号规定"></a>符号规定</h3><p>$\mathbf{X}$ 代表随机变量序列$X_1,…,X_n$, 而$\mathbf{x}$代表样本$x_1,…,x_n$。</p>
 <h3 id="Limit-Theorems"><a href="#Limit-Theorems" class="headerlink" title="Limit Theorems"></a>Limit Theorems</h3><h4 id="Law-of-Large-Number"><a href="#Law-of-Large-Number" class="headerlink" title="Law of Large Number"></a>Law of Large Number</h4><h5 id="The-Weak-Law-of-Large-Number"><a href="#The-Weak-Law-of-Large-Number" class="headerlink" title="The Weak Law of Large Number"></a>The Weak Law of Large Number</h5><p>$X_1, X_2, …, X_i,…$ 为独立的随机序列，且$E(X_i) = \mu,  \text{Var}(X_i) = \sigma^2$。记$\bar{X}_n = \sum{X_i}/n$。那么，对于任意的$\varepsilon&gt;0$，就有</p>
 <script type="math/tex; mode=display">
 P(|\bar{X}_n-\mu|>\varepsilon) \rightarrow 0 \ \ \ \  \ \text{     as }n\rightarrow \infty</script><details>
@@ -431,16 +443,56 @@ P(\lim_{n\rightarrow\infty}X_n=X) = 1</script><ul>
 <script type="math/tex; mode=display">
 \lim_{n\rightarrow\infty}E\vert X_n-X\vert^r=0</script><h2 id="Statistical-Inference"><a href="#Statistical-Inference" class="headerlink" title="Statistical Inference"></a>Statistical Inference</h2><p>basically a process of learning the distribution that generates the data with a given data.</p>
 <h3 id="Data-Reduction"><a href="#Data-Reduction" class="headerlink" title="Data Reduction"></a>Data Reduction</h3><p>Data reduction is trying to summarize the whole data set with some key features. </p>
-<p>A statistic(统计量) $T(\boldsymbol{X})$, defines a method of data reduction. So for an experimenter he will get $T(\boldsymbol{x})$ as a result. In this sense, sample $\boldsymbol{x} \text{ and } \boldsymbol{y}$  are the same in this statistic if and only if $T(\boldsymbol{x}) = T(\boldsymbol{y})$. </p>
+<p>A statistic(统计量) $T(\mathbf{X})$, defines a method of data reduction. So for an experimenter he will get $T(\mathbf{x})$ as a result. In this sense, sample $\mathbf{x} \text{ and } \mathbf{y}$  are the same in this statistic if and only if $T(\mathbf{x}) = T(\mathbf{y})$. </p>
 <p>统计量的作用本质上就是将样本映射到$\mathbb{R}$上。</p>
 <p>那么问题就在于如何评价一个统计量的优劣？</p>
 <p>统计学上有三个常见的对于统计量的要求如下</p>
 <h4 id="Sufficiency-Principle"><a href="#Sufficiency-Principle" class="headerlink" title="Sufficiency Principle"></a>Sufficiency Principle</h4><p>A <strong>sufficient statistic</strong>(充分统计量)  for a parameter $\theta$ is a statistic that captures all the information about $\theta$ in the sample. 这是一个较为直观但是无法量化的定义，故引入数学上的定义以量化的来刻画充分统计量。</p>
-<p>If $T(\boldsymbol{X})$ is a sufficient statistic for $\theta$ and $\boldsymbol{x} \text{ and } \boldsymbol{y}$ are two sample such that $T(\boldsymbol{x}) = T(\boldsymbol{y})$, then the inference on $\theta$ should be the same whether $\boldsymbol{X} = \boldsymbol{x}$ or $\boldsymbol{X} = \boldsymbol{y}$ is observed. </p>
+<h5 id="What-is-a-sufficient-statistic"><a href="#What-is-a-sufficient-statistic" class="headerlink" title="What is a sufficient statistic?"></a>What is a sufficient statistic?</h5><p>If $T(\mathbf{X})$ is a sufficient statistic for $\theta$ and $\mathbf{x} \text{ and } \mathbf{y}$ are two sample such that $T(\mathbf{x}) = T(\mathbf{y})$, then the inference on $\theta$ should be the same whether $\mathbf{X} = \mathbf{x}$ or $\mathbf{X} = \mathbf{y}$ is observed. </p>
 <p>就是说只要充分统计量相同，那么推测参数必然相同。</p>
 <p>一种等价的定义的方式是：</p>
-<p>A statistic $T(\boldsymbol{X})$ is a <em>sufficient statistic</em> for $\theta$ if the conditional distribution of the sample $\boldsymbol{X}$ given the value of $T(\boldsymbol{X})$ does not depend on $\theta$. </p>
-<p>不妨采用离散的情况来理解，那么条件分布就可以看成对于不同的$\boldsymbol{x}$的$P(\boldsymbol{X}=\boldsymbol{x}|T(\boldsymbol{X})=T(\boldsymbol{x}))$ </p>
+<p>A statistic $T(\mathbf{X})$ is a <em>sufficient statistic</em> for $\theta$ if the conditional distribution of the sample $\mathbf{X}$ given the value of $T(\mathbf{X})$ does not depend on $\theta$. </p>
+<p>不妨采用离散的情况来理解，那么条件分布就可以看成对于不同的$\mathbf{x}$的$P_{\theta}(\mathbf{X}=\mathbf{x}|T(\mathbf{X})=T(\mathbf{x}))$ 。那么当$T$是一个充分统计量的时候，一旦知道$T(\mathbf{X})$的值就可以在不知道$\theta$ 的情况下知道$\mathbf{X}$的分布。这里的关键在于$T(\mathbf{X})$是一个随机变量而$T(\mathbf{x})$是一个常数。（troubled me for awhile）</p>
+<p>不妨采用离散的情况来理解，那么条件分布就可以看成对于不同的 $T(\mathbf{X})$和$\theta$的 $P_{\theta}(\mathbf{X}=\mathbf{x}|T(\mathbf{X})=T(\mathbf{x}))$。那么当$T(\mathbf{X})$是一个充分统计量的时候，一旦知道$T(\mathbf{X})$的值就可以在不知道$\theta$的情况下知道$\mathbf{X}$的条件分布。这里的关键在于$\mathbf{X}$是一个随机变量而$\mathbf{x}$是一个常数。（troubled me for awhile）</p>
+<h5 id="How-to-verify"><a href="#How-to-verify" class="headerlink" title="How to verify?"></a>How to verify?</h5><p>We can start from the last definition based on the conditional distribution to verify.</p>
+<p>So we want to verify if $P_{\theta}(\mathbf{X}=\mathbf{x}|T(\mathbf{X})=T(\mathbf{x}))$ is the same for all values of $\theta$. Since $\{\mathbf{X} = \mathbf{x}\}$ is a subset of $\{T(\mathbf{X}) = T(\mathbf{x})\}$, we have:</p>
+<script type="math/tex; mode=display">
+\begin{aligned} P_{\theta}(\mathbf{X}=\mathbf{x} | T(\mathbf{X})=T(\mathbf{x})) &=\frac{P_{\theta}\{\mathbf{X}=\mathbf{x} \text { and } T(\mathbf{X})=T(\mathbf{x}))}{P_{\theta}(T(\mathbf{X})=T(\mathbf{x}))} \\ &=\frac{P_{\theta}(\mathbf{X}=\mathbf{x})}{P_{\theta}(T(\mathbf{X})}=T(\mathbf{x}) ) \\ &=\frac{p(\mathbf{x} | \theta)}{q(T(\mathbf{x}) | \theta)} \end{aligned}</script><p>So we can check if $\frac{p(\mathbf{x} | \theta)}{q(T(\mathbf{x}) | \theta)}$ is a constant as a function of $\theta$. </p>
+<p>Then we can easily get theorem:</p>
+<blockquote>
+<p>$p(\mathbf{x}|\theta)$ is the joint pdf or pmf of $\mathbf{X}$ and $q(\mathbf{x}|\theta)$ is the joint pdf or pmf of $T(\mathbf{X})$.</p>
+<p>$\frac{p(\mathbf{x} | \theta)}{q(T(\mathbf{x}) | \theta)}$ is a constant as a function of $\theta$ $\Longrightarrow$ $T(\mathbf{X})$ is a sufficient statistics for $\theta$. </p>
+</blockquote>
+<p>We also have the famous factorization theorem to do the same work:</p>
+<blockquote>
+<p>$f(\mathbf{x}|\theta)$ is the joint pdf or pmf of $\mathbf{X}$.</p>
+<p>$T(\mathbf{X})$ is a sufficient statistics for $\theta$ $\Longleftrightarrow$ $\exists g(t|\theta) \text{ and } h(\mathbf{x}), \text{ s.t. } \forall \mathbf{x} \and \theta\\f(\mathbf{x}|\theta)=g(T(\mathbf{x})|\theta)h(\mathbf{x})$</p>
+</blockquote>
+<details>
+<summary>Click to see proof</summary>
+只证明离散情况下的情况。
+假设$T(\mathbf{X})$是充分统计量。那么令$g(t|\theta)=P_{\theta}(T(\mathbf{X})=t)$和$h(\mathbf{x}) = P(\mathbf{X} = \mathbf{x}|T(\mathbf{X})=T(\mathbf{x}))$。由$T(\mathbf{X})$是充分统计量，故由定义知$h(\mathbf{x})$与$\theta$无关，那么就有$$\begin{aligned} f(\mathbf{x} | \theta) &=P_{\theta}(\mathbf{X}=\mathbf{x}) \\ &=P_{\theta}(\mathbf{X}=\mathbf{x} \text { and } T(\mathbf{X})=T(\mathbf{x})) \\ &=P_{\theta}(T(\mathbf{X})=T(\mathbf{x})) P(\mathbf{X}=\mathbf{x} | T(\mathbf{X})=T(\mathbf{x})) \\ &=g(T(\mathbf{x}) | \theta) h(\mathbf{x}) \end{aligned}$$于是$\Longrightarrow$得证。<br>
+先假设$f(\mathbf{x}|\theta)$可被分解，记$q(t|\theta)$是$T(\mathbf{X})$的pmf。定义$A_{T(\mathbf{x})}=\{\mathbf{y}:T(\mathbf{y}=T(\mathbf{x})\}$。那么就有：$$\begin{aligned} \frac{f(\mathbf{x} | \theta)}{q(T(\mathbf{x}) | \theta)} &=\frac{g(T(\mathbf{x}) | \theta) h(\mathbf{x})}{q(T(\mathbf{x}) | \theta)} \\ &=\frac{g(T(\mathbf{x}) | \theta) h(\mathbf{x})}{\Sigma_{A_{T(\mathbf{x})}} g(T(\mathbf{y}) | \theta) h(\mathbf{y})} \\ &=\frac{g(T(\mathbf{x}) | \theta) h(\mathbf{x})}{g(T(\mathbf{x}) | \theta) \Sigma_{A_{T(x)}} h(\mathbf{y})} \\ &=\frac{h(\mathbf{x})}{\Sigma_{A_{T(x)}} h(\mathbf{y})} \end{aligned}$$利用上个定理可知$T(\mathbf{X})$是一个充分统计量。故$\Longleftarrow$得证
+</details>
+Since the exponential family of distribution is very commonly seen, so we derive its unique form of factorization theorem:
+
+> $X_1, X_2, .., X_n$ is iid observation from $f(\mathbf{x}|\mathbf{\theta})$ that belongs to :
+> $$
+> f(\mathbf{x}|\mathbf{\theta})=h(\mathbf{x})c(\mathbf{\theta})\exp(\sum_{i=1}^{k}w_i(\mathbf{\theta})t_i(x))
+> $$
+> where $\mathbf{\theta} = (\theta_1,...,\theta_d), d \leq k$. Then
+> $$
+> T(\mathbf{X})=(\sum_{j=1}^nt_1(X_j),...,\sum_{j=1}^nt_k(X_j))
+> $$
+> is a sufficient statistic for $\theta$. 
+
+<details>
+<summary>Click to see proof</summary>
+待补全
+</details>
+
+<h5 id="Minimal-Sufficient-Statistics"><a href="#Minimal-Sufficient-Statistics" class="headerlink" title="Minimal Sufficient Statistics"></a>Minimal Sufficient Statistics</h5><p>There often exist more than one sufficient statistics for each model, so we need to value on which is the best statistics to do our estimation. So the concept of minimal sufficient statistics is introduced as the smallest statistics that can carry all the information. Then we define it as:</p>
+<p>A sufficient statistic $T(\mathbf{X})$ is a <em>minimal sufficient statistics</em> if, for any other sufficient statistic $T’(\mathbf{X})$, $T(\mathbf{x})$ is a function of $T’(\mathbf{x})$. </p>
 <h3 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h3><p>There are two types of model:</p>
 <ol>
 <li><p>Parametric models: a set that can be parameterized by a finite number of parameters. In general a parametric model takes the form </p>
@@ -476,8 +528,7 @@ $$\begin{aligned} \mathbb{E}_{\theta}\left(\hat{\theta}_{n}-\theta\right)^{2} &=
 <h3 id="Data-Reduction-1"><a href="#Data-Reduction-1" class="headerlink" title="Data Reduction"></a>Data Reduction</h3><p> Statistic: a function of the data, defined as $T_n = g(X_1,…, X_n)$.  </p>
 <h3 id="Bootstrap"><a href="#Bootstrap" class="headerlink" title="Bootstrap"></a>Bootstrap</h3><p>A method for estimating standard errors and computing confidence intervals. </p>
 <script type="math/tex; mode=display">
-\left. \begin{array}{l}{ \frac { 1 } { B } \sum _ { j = 1 } ^ { B } ( Y _ { j } - \overline { Y } ) ^ { 2 } = \frac { 1 } { B } \sum _ { j = 1 } ^ { B } Y _ { j } ^ { 2 } - ( \frac { 1 } { B } \sum _ { j = 1 } ^ { B } Y _ { j } ) ^ { 2 } }\\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ { \stackrel { P } { \rightarrow } \int y ^ { 2 } d F ( y ) - ( \int y d F ( y ) ) ^ { 2 } = V ( Y ) }\end{array} \right.</script><h3 id="Asymptotic-Evaluation"><a href="#Asymptotic-Evaluation" class="headerlink" title="Asymptotic Evaluation"></a>Asymptotic Evaluation</h3><h3 id="Analysis-of-Variance-and-Regression"><a href="#Analysis-of-Variance-and-Regression" class="headerlink" title="Analysis of Variance and Regression"></a>Analysis of Variance and Regression</h3><h2 id="Models"><a href="#Models" class="headerlink" title="Models"></a>Models</h2><h2 id="Causal-Inference"><a href="#Causal-Inference" class="headerlink" title="Causal Inference"></a>Causal Inference</h2><script type="math/tex; mode=display">
-\sum_{k=0}^k\frac{C^k_m}{C^k_{m+n-1}}=?</script>
+\left. \begin{array}{l}{ \frac { 1 } { B } \sum _ { j = 1 } ^ { B } ( Y _ { j } - \overline { Y } ) ^ { 2 } = \frac { 1 } { B } \sum _ { j = 1 } ^ { B } Y _ { j } ^ { 2 } - ( \frac { 1 } { B } \sum _ { j = 1 } ^ { B } Y _ { j } ) ^ { 2 } }\\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ { \stackrel { P } { \rightarrow } \int y ^ { 2 } d F ( y ) - ( \int y d F ( y ) ) ^ { 2 } = V ( Y ) }\end{array} \right.</script><h3 id="Asymptotic-Evaluation"><a href="#Asymptotic-Evaluation" class="headerlink" title="Asymptotic Evaluation"></a>Asymptotic Evaluation</h3><h3 id="Analysis-of-Variance-and-Regression"><a href="#Analysis-of-Variance-and-Regression" class="headerlink" title="Analysis of Variance and Regression"></a>Analysis of Variance and Regression</h3><h2 id="Models"><a href="#Models" class="headerlink" title="Models"></a>Models</h2><h2 id="Causal-Inference"><a href="#Causal-Inference" class="headerlink" title="Causal Inference"></a>Causal Inference</h2>
       
     </div>
     
@@ -515,8 +566,8 @@ $$\begin{aligned} \mathbb{E}_{\theta}\left(\hat{\theta}_{n}-\theta\right)^{2} &=
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/a1610b.github.io/2019/07/29/金融随机过程/" rel="prev" title="金融随机过程">
-                金融随机过程 <i class="fa fa-chevron-right"></i>
+              <a href="/a1610b.github.io/2019/07/29/统计/" rel="prev" title="Statistic Notes">
+                Statistic Notes <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -605,7 +656,7 @@ $$\begin{aligned} \mathbb{E}_{\theta}\left(\hat{\theta}_{n}-\theta\right)^{2} &=
               
               <div class="site-state-item site-state-categories">
                 <a href="/a1610b.github.io/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -649,7 +700,7 @@ $$\begin{aligned} \mathbb{E}_{\theta}\left(\hat{\theta}_{n}-\theta\right)^{2} &=
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础知识"><span class="nav-number">1.</span> <span class="nav-text">基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#符号规定"><span class="nav-number">1.1.</span> <span class="nav-text">符号规定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Limit-Theorems"><span class="nav-number">1.2.</span> <span class="nav-text">Limit Theorems</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Law-of-Large-Number"><span class="nav-number">1.2.1.</span> <span class="nav-text">Law of Large Number</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#The-Weak-Law-of-Large-Number"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">The Weak Law of Large Number</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#The-Strong-Law-of-Large-Number"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">The Strong Law of Large Number</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Central-Limit-Theorem"><span class="nav-number">1.2.2.</span> <span class="nav-text">Central Limit Theorem</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Common-Distributions"><span class="nav-number">1.3.</span> <span class="nav-text">Common Distributions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#泊松分布"><span class="nav-number">1.3.1.</span> <span class="nav-text">泊松分布</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#正态分布"><span class="nav-number">1.3.2.</span> <span class="nav-text">正态分布</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#chi-2-Distribution"><span class="nav-number">1.3.3.</span> <span class="nav-text">$\chi^2$ Distribution</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#t-Distribution"><span class="nav-number">1.3.4.</span> <span class="nav-text">t Distribution</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#F-Distribution"><span class="nav-number">1.3.5.</span> <span class="nav-text">F Distribution</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Convergence"><span class="nav-number">1.4.</span> <span class="nav-text">Convergence</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Statistical-Inference"><span class="nav-number">2.</span> <span class="nav-text">Statistical Inference</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Data-Reduction"><span class="nav-number">2.1.</span> <span class="nav-text">Data Reduction</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Sufficiency-Principle"><span class="nav-number">2.1.1.</span> <span class="nav-text">Sufficiency Principle</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Intro"><span class="nav-number">2.2.</span> <span class="nav-text">Intro</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Point-Estimation"><span class="nav-number">2.3.</span> <span class="nav-text">Point Estimation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Confidence-Sets"><span class="nav-number">2.4.</span> <span class="nav-text">Confidence Sets</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hypothesis-Testing"><span class="nav-number">2.5.</span> <span class="nav-text">Hypothesis Testing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Data-Reduction-1"><span class="nav-number">2.6.</span> <span class="nav-text">Data Reduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bootstrap"><span class="nav-number">2.7.</span> <span class="nav-text">Bootstrap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Asymptotic-Evaluation"><span class="nav-number">2.8.</span> <span class="nav-text">Asymptotic Evaluation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Analysis-of-Variance-and-Regression"><span class="nav-number">2.9.</span> <span class="nav-text">Analysis of Variance and Regression</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Models"><span class="nav-number">3.</span> <span class="nav-text">Models</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Causal-Inference"><span class="nav-number">4.</span> <span class="nav-text">Causal Inference</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础知识"><span class="nav-number">1.</span> <span class="nav-text">基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#符号规定"><span class="nav-number">1.1.</span> <span class="nav-text">符号规定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Limit-Theorems"><span class="nav-number">1.2.</span> <span class="nav-text">Limit Theorems</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Law-of-Large-Number"><span class="nav-number">1.2.1.</span> <span class="nav-text">Law of Large Number</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#The-Weak-Law-of-Large-Number"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">The Weak Law of Large Number</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#The-Strong-Law-of-Large-Number"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">The Strong Law of Large Number</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Central-Limit-Theorem"><span class="nav-number">1.2.2.</span> <span class="nav-text">Central Limit Theorem</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Common-Distributions"><span class="nav-number">1.3.</span> <span class="nav-text">Common Distributions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#泊松分布"><span class="nav-number">1.3.1.</span> <span class="nav-text">泊松分布</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#正态分布"><span class="nav-number">1.3.2.</span> <span class="nav-text">正态分布</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#chi-2-Distribution"><span class="nav-number">1.3.3.</span> <span class="nav-text">$\chi^2$ Distribution</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#t-Distribution"><span class="nav-number">1.3.4.</span> <span class="nav-text">t Distribution</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#F-Distribution"><span class="nav-number">1.3.5.</span> <span class="nav-text">F Distribution</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Convergence"><span class="nav-number">1.4.</span> <span class="nav-text">Convergence</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Statistical-Inference"><span class="nav-number">2.</span> <span class="nav-text">Statistical Inference</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Data-Reduction"><span class="nav-number">2.1.</span> <span class="nav-text">Data Reduction</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Sufficiency-Principle"><span class="nav-number">2.1.1.</span> <span class="nav-text">Sufficiency Principle</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#What-is-a-sufficient-statistic"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">What is a sufficient statistic?</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#How-to-verify"><span class="nav-number">2.1.1.2.</span> <span class="nav-text">How to verify?</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Minimal-Sufficient-Statistics"><span class="nav-number">2.1.1.3.</span> <span class="nav-text">Minimal Sufficient Statistics</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Intro"><span class="nav-number">2.2.</span> <span class="nav-text">Intro</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Point-Estimation"><span class="nav-number">2.3.</span> <span class="nav-text">Point Estimation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Confidence-Sets"><span class="nav-number">2.4.</span> <span class="nav-text">Confidence Sets</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hypothesis-Testing"><span class="nav-number">2.5.</span> <span class="nav-text">Hypothesis Testing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Data-Reduction-1"><span class="nav-number">2.6.</span> <span class="nav-text">Data Reduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bootstrap"><span class="nav-number">2.7.</span> <span class="nav-text">Bootstrap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Asymptotic-Evaluation"><span class="nav-number">2.8.</span> <span class="nav-text">Asymptotic Evaluation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Analysis-of-Variance-and-Regression"><span class="nav-number">2.9.</span> <span class="nav-text">Analysis of Variance and Regression</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Models"><span class="nav-number">3.</span> <span class="nav-text">Models</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Causal-Inference"><span class="nav-number">4.</span> <span class="nav-text">Causal Inference</span></a></li></ol></div>
             
 
           </div>
@@ -880,6 +931,9 @@ $$\begin{aligned} \mathbb{E}_{\theta}\left(\hat{\theta}_{n}-\theta\right)^{2} &=
 
 
   
+  <script type="text/javascript" src="/a1610b.github.io/js/src/js.cookie.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/a1610b.github.io/js/src/scroll-cookie.js?v=5.1.4"></script>
+
 
   
 

@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="python,machine learning,">
+  <meta name="keywords" content="Journal,Quant,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="上课时记录的非常简单的机器学习笔记，后期将会扩充并加入代码的应用">
-<meta name="keywords" content="python,machine learning">
+<meta name="description" content="今天学习到的内容、经历与想法速记">
+<meta name="keywords" content="Journal,Quant">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python Machine Learning">
-<meta property="og:url" content="https://github.com/a1610b/a1610b.github.io/2019/07/29/机器学习/index.html">
+<meta property="og:title" content="19-08-12">
+<meta property="og:url" content="https://github.com/a1610b/a1610b.github.io/2019/08/12/19-08-12/index.html">
 <meta property="og:site_name" content="Tony&#39;s Blog">
-<meta property="og:description" content="上课时记录的非常简单的机器学习笔记，后期将会扩充并加入代码的应用">
+<meta property="og:description" content="今天学习到的内容、经历与想法速记">
 <meta property="og:locale" content="English and Chinese">
-<meta property="og:updated_time" content="2019-08-06T14:54:59.256Z">
+<meta property="og:updated_time" content="2019-08-12T15:14:18.807Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python Machine Learning">
-<meta name="twitter:description" content="上课时记录的非常简单的机器学习笔记，后期将会扩充并加入代码的应用">
+<meta name="twitter:title" content="19-08-12">
+<meta name="twitter:description" content="今天学习到的内容、经历与想法速记">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://github.com/a1610b/a1610b.github.io/2019/07/29/机器学习/">
+  <link rel="canonical" href="https://github.com/a1610b/a1610b.github.io/2019/08/12/19-08-12/">
 
 
 
 
 
-  <title>Python Machine Learning | Tony's Blog</title>
+  <title>19-08-12 | Tony's Blog</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/a1610b/a1610b.github.io/a1610b.github.io/2019/07/29/机器学习/">
+    <link itemprop="mainEntityOfPage" href="https://github.com/a1610b/a1610b.github.io/a1610b.github.io/2019/08/12/19-08-12/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tony She">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Python Machine Learning</h1>
+          <h1 class="post-title" itemprop="name headline">19-08-12</h1>
         
 
         <div class="post-meta">
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-29T22:27:54+08:00">
-                2019-07-29
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-12T22:57:41+08:00">
+                2019-08-12
               </time>
             
 
@@ -308,8 +308,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2019-08-06T22:54:59+08:00">
-                2019-08-06
+              <time title="Post modified" itemprop="dateModified" datetime="2019-08-12T23:14:18+08:00">
+                2019-08-12
               </time>
             
           </span>
@@ -327,8 +327,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/a1610b.github.io/categories/Notes/" itemprop="url" rel="index">
-                    <span itemprop="name">Notes</span>
+                  <a href="/a1610b.github.io/categories/Journal/" itemprop="url" rel="index">
+                    <span itemprop="name">Journal</span>
                   </a>
                 </span>
 
@@ -364,65 +364,15 @@
       
 
       
-        <p>上课时记录的非常简单的机器学习笔记，后期将会扩充并加入代码的应用</p>
+        <p>今天学习到的内容、经历与想法速记</p>
 <a id="more"></a>
-<h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><p>从数据进行学习和预测的模型方法或算法。主要分为有监督学习和无监督学习</p>
-<ul>
-<li><p>有监督学习：对特定的目标变量进行预测，并且有目标变量的数据可以利用。在监督学习Supervised leanring,有一个变量可以对照，优化是一般有比较明确的目标。E.g. 回归、变量分类</p>
-</li>
-<li><p>无监督学习：无特定的目标变量，目的是探索数据内的规律。E.g. 聚类</p>
-</li>
-</ul>
-<h2 id="数据前处理"><a href="#数据前处理" class="headerlink" title="数据前处理"></a>数据前处理</h2><ul>
-<li><p>将数据分割为训练集以及测试集。代码为：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">X_train,X_test, y_train, y_test =</span><br><span class="line">    sklearn.cross_validation.train_test_split(iris.data, iris.target, test_size, random_state)</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ul>
-<li><p>数据标准化，使得数据的均值与方差一致。代码为：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sklearn.preprocessing.scale(X_train)</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<pre><code>- 如需要对测试集以及检验集做相同变换，则可使用transformer。代码为:
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">scaler = preprocessing.StandardScaler().fit(X_train)</span><br><span class="line">X_train_scaled = scaler.transform(X_train)</span><br><span class="line">X_test_scaled = scaler.transform(X_test)</span><br></pre></td></tr></table></figure>
-
-
-- 如需要对测试集以及检验集做相同变换，则可使用transformer。代码为:
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">scaler = preprocessing.StandardScaler().fit(X_train)</span><br><span class="line">X_train_scaled = scaler.transform(X_train)</span><br><span class="line">X_test_scaled = scaler.transform(X_test)</span><br></pre></td></tr></table></figure>
-</code></pre><h2 id="超参数"><a href="#超参数" class="headerlink" title="超参数"></a>超参数</h2><p>机器学习模型一般有两种参数，分别为模型参数与超参数。模型参数可以直接通过数据得到，如回归系数，决策点的划分条件等。而参数数是描述模型的结构，通常需要在估计模型前制定，如决策树中的树深度，叶结点个数等。</p>
-<h1 id="交叉验证法"><a href="#交叉验证法" class="headerlink" title="交叉验证法"></a>交叉验证法</h1><p>简称CV(cross validation)，能更稳健地训练、评估和选择模型方法。\<br>具体步骤为：</p>
-<ol>
-<li><p>将数据分为k等分（通常k取10）</p>
-</li>
-<li><p>利用前k-1分训练模型，并用最后一份评估该模型</p>
-</li>
-<li><p>重复第二步，每次选取不同的样本为测试集</p>
-</li>
-<li><p>平均所有k个模型得到最终的模型</p>
-</li>
-</ol>
-<h1 id="分类回归"><a href="#分类回归" class="headerlink" title="分类回归"></a>分类回归</h1><h2 id="基本概念-1"><a href="#基本概念-1" class="headerlink" title="基本概念"></a>基本概念</h2><p>给定数据如$(x_1,y_1), (x_2, y_2), …,(x_n, y_n)$。进行有监督学习：$\hat{y_i} = f(x_i)$。将样本分为训练集与检验集。</p>
-<p>常见评估标准为第一类错误与第二类错误，同统计。</p>
-<h2 id="决策树"><a href="#决策树" class="headerlink" title="决策树"></a>决策树</h2><h3 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h3><p>决策树的目标是构造一个决策树用来分类与回归。决策树本质上是大量嵌套的if else决策。\<br>方法逻辑：首先用最好的变量构成树的根。然后重复的将训练集继续分割，每次使用一个变量，直到得到满意的叶子节点。</p>
-<h3 id="划分"><a href="#划分" class="headerlink" title="划分"></a>划分</h3><p>划分有以下几个常用的法则：</p>
-<ul>
-<li><p>Information Gain(信息增益)：基于信息熵的准则。<br>熵（Entropy）用来度量一个随机变量的不确定性，不确定性越大熵越大。数学定义为： <script type="math/tex">H(X) = - \sum_{x\in X}^{}p(x)\log_2p(x)</script></p>
-</li>
-<li><p>Gini Index, 基尼指数准则</p>
-<script type="math/tex; mode=display">\text{Gini Index} = \sum_{k = 1}^{|Y|}\sum_{k'\ne k}p_kp_{k'} = 1-\sum_jp_j^2</script></li>
-</ul>
-<h3 id="优化与评估"><a href="#优化与评估" class="headerlink" title="优化与评估"></a>优化与评估</h3><p>模型的评估有：</p>
-<ul>
-<li><p>准确率：$\frac{1}{N}\sum_{i=1}^{N}I_{(\hat{y_i}=y_i)}$\<br>sklearn中有方法accuracy_score来计算</p>
-</li>
-<li><p>查准率（1-P(第一类错误)）和查全率（1-P(第二类错误)）\<br>sklearn中有方法precision_recall_curve()</p>
-</li>
-<li><p>F1 score:取值范围为0到1，越大表示模型越好 <script type="math/tex">F1 = 2\times\frac{precision\times recall}{precision+recall}</script></p>
-</li>
-</ul>
-<h3 id="贝叶斯网络"><a href="#贝叶斯网络" class="headerlink" title="贝叶斯网络"></a>贝叶斯网络</h3><p>贝叶斯网络是一种概率图模型，其利用有向无环图(directed acyclic graph (DAG))表示随机之间的条件独立性</p>
+<p>今天上班的时候居然把手机忘在车上了！！</p>
+<p>还好随身带了一点现金不然真的要走路去上班了。。。</p>
+<p>不过试了一天没有手机的工作时间真的效率高了不少，一天完成了两篇报告和修补代码一半的工作。甚至现在还仿佛已经是周二干了两天活了233。</p>
+<p>第一篇报告主要讲述了从历史数据上来看美国股市对比全球股市的优势和成长股指数与价值股指数的差异性。一直以为成长股的期望收益率会更高一些，但也不知是数据选择原因还是其他导致加入股息后成长股指数与价值股指数收益率几乎相等。。。</p>
+<p>第二篇报告主要讲述了从客观角度为何MSCI新兴市场指数对于A股的配置偏低。其实在我看来并不低，因为有大量的港股和美股上市的中国公司没有记入15%中，所以让单老师觉得偏低。Anyway 不管要写什么方向总是有很多理由的，也顺便理清了自己对中国股票市场的认识。</p>
+<p>下班后感觉小说和视频都越发的索然无味，昨天按摩完肩膀痛到今天也无心运动于是只好看看统计的内容。感觉之前学的确实太过潦草，居然连许多概念定义都感觉是首次引入，但是印象里已经用过这些概念做过不少题了，也不知道自己之前是怎么做的。。。Anyway 总算马上要进入似然函数然后就可以对于普遍的检验方法进行复习了。就在我觉得统计学习效率比较慢，而且用处不一定很大的时候我去看了一篇量化的报告散散心，然后发现这里面的统计我虽然看得懂但是自己却写不出来。。。果然应该继续多学习啊，太浮躁的去做量化模型结果肯定不会太好。不过最好还是两手都要抓。</p>
+<p>今天学习的报告依然是川总的文章，<a href="https://zhuanlan.zhihu.com/p/76164296" target="_blank" rel="noopener">Book-to-Market 整容记：哪家 BM 比较强？</a>。 讲的正好和我做的第一个project很契合，是研究BM对于股市收益率的影响的。感觉川总的文章比我做的专业许多，真的是不比不知道啊。统计学复习到了后主要要学习的就是川总这篇文章中的方法论，其实对于BM的修饰确实很多，川总提出的几个论文观点也都很有价值，但是如果以后还要再看一遍的话我希望我能够觉得我自己也能做出一样的结果。跟上次看到川总的文章不同，这次看完只是觉得差距极大，还有很多的进步空间，顺便还需要多读paper，充实自己。</p>
 
       
     </div>
@@ -440,9 +390,9 @@
       
         <div class="post-tags">
           
-            <a href="/a1610b.github.io/tags/python/" rel="tag"># python</a>
+            <a href="/a1610b.github.io/tags/Journal/" rel="tag"># Journal</a>
           
-            <a href="/a1610b.github.io/tags/machine-learning/" rel="tag"># machine learning</a>
+            <a href="/a1610b.github.io/tags/Quant/" rel="tag"># Quant</a>
           
         </div>
       
@@ -455,8 +405,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/a1610b.github.io/2019/07/29/应随/" rel="next" title="应用随机过程">
-                <i class="fa fa-chevron-left"></i> 应用随机过程
+              <a href="/a1610b.github.io/2019/08/07/19-8-7笔记/" rel="next" title="19/8/7">
+                <i class="fa fa-chevron-left"></i> 19/8/7
               </a>
             
           </div>
@@ -464,10 +414,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/a1610b.github.io/2019/07/29/Python Outline/" rel="prev" title="Python Outline">
-                Python Outline <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -519,17 +465,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -589,22 +526,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基本概念"><span class="nav-number">1.</span> <span class="nav-text">基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据前处理"><span class="nav-number">1.1.</span> <span class="nav-text">数据前处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#超参数"><span class="nav-number">1.2.</span> <span class="nav-text">超参数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#交叉验证法"><span class="nav-number">2.</span> <span class="nav-text">交叉验证法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分类回归"><span class="nav-number">3.</span> <span class="nav-text">分类回归</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本概念-1"><span class="nav-number">3.1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#决策树"><span class="nav-number">3.2.</span> <span class="nav-text">决策树</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本介绍"><span class="nav-number">3.2.1.</span> <span class="nav-text">基本介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#划分"><span class="nav-number">3.2.2.</span> <span class="nav-text">划分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#优化与评估"><span class="nav-number">3.2.3.</span> <span class="nav-text">优化与评估</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#贝叶斯网络"><span class="nav-number">3.2.4.</span> <span class="nav-text">贝叶斯网络</span></a></li></ol></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       

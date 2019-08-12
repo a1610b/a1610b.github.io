@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Tony&#39;s Blog">
 <meta property="og:description" content="统计学笔记，中英文混用，仅供参考">
 <meta property="og:locale" content="English and Chinese">
-<meta property="og:updated_time" content="2019-08-12T14:33:26.001Z">
+<meta property="og:updated_time" content="2019-08-12T14:39:30.504Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Statistics">
 <meta name="twitter:description" content="统计学笔记，中英文混用，仅供参考">
@@ -308,7 +308,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2019-08-12T22:33:26+08:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2019-08-12T22:39:30+08:00">
                 2019-08-12
               </time>
             
@@ -466,7 +466,7 @@ P(\lim_{n\rightarrow\infty}X_n=X) = 1</script><ul>
 <p>We also have the famous factorization theorem to do the same work:</p>
 <blockquote>
 <p>$f(\mathbf{x}|\theta)$ is the joint pdf or pmf of $\mathbf{X}$.</p>
-<p>$T(\mathbf{X})$ is a sufficient statistics for $\theta$ $\Longleftrightarrow$ $\exists g(t|\theta) \text{ and } h(\mathbf{x}), \text{ s.t. } \forall \mathbf{x} \and \theta\\f(\mathbf{x}|\theta)=g(T(\mathbf{x})|\theta)h(\mathbf{x})$</p>
+<p>$T(\mathbf{X})$ is a sufficient statistics for $\theta$ $\Longleftrightarrow$ $\exists g(t|\theta) \text{ and } h(\mathbf{x}), \text{ s.t. } \forall \mathbf{x} \text{ and }\theta , f(\mathbf{x}|\theta)=g(T(\mathbf{x})|\theta)h(\mathbf{x})$</p>
 </blockquote>
 <details>
 <summary>Click to see proof</summary>
@@ -476,15 +476,15 @@ P(\lim_{n\rightarrow\infty}X_n=X) = 1</script><ul>
 </details>
 Since the exponential family of distribution is very commonly seen, so we derive its unique form of factorization theorem:
 
-> $X_1, X_2, .., X_n$ is iid observation from $f(\mathbf{x}|\mathbf{\theta})$ that belongs to :
-> $$
-> f(\mathbf{x}|\mathbf{\theta})=h(\mathbf{x})c(\mathbf{\theta})\exp(\sum_{i=1}^{k}w_i(\mathbf{\theta})t_i(x))
-> $$
-> where $\mathbf{\theta} = (\theta_1,...,\theta_d), d \leq k$. Then
-> $$
-> T(\mathbf{X})=(\sum_{j=1}^nt_1(X_j),...,\sum_{j=1}^nt_k(X_j))
-> $$
-> is a sufficient statistic for $\theta$. 
+$X_1, X_2, .., X_n$ is iid observation from $f(\mathbf{x}|\mathbf{\theta})$ that belongs to :
+$$
+f(\mathbf{x}|\mathbf{\theta})=h(\mathbf{x})c(\mathbf{\theta})\exp(\sum_{i=1}^{k}w_i(\mathbf{\theta})t_i(x))
+$$
+where $\mathbf{\theta} = (\theta_1,...,\theta_d), d \leq k$. Then
+$$
+T(\mathbf{X})=(\sum_{j=1}^nt_1(X_j),...,\sum_{j=1}^nt_k(X_j))
+$$
+is a sufficient statistic for $\theta$. 
 
 <details>
 <summary>Click to see proof</summary>
@@ -503,7 +503,7 @@ Since the exponential family of distribution is very commonly seen, so we derive
 <summary>Click to see proof</summary>
 Assume $f(\mathbf{x}|\theta) > 0$ for all $\mathbf{x}$ and $\theta$ to simplification.<br>
 Firstly, we need to prove the $T(\mathbf{X})$ is a sufficient statistic. Since $$f(\mathbf{x}|\theta) = \frac{f(\mathbf{x}_{T(\mathbf{x})}|\theta)f(\mathbf{x}|\theta)}{f(\mathbf{x}_{T(\mathbf{x})}|\theta)}$$ We just need to prove that $f(\mathbf{x}|\theta)/f(\mathbf{x}_{T(\mathbf{x})}|\theta)$ is a constant as a function of $\theta$, which is given, and f(\mathbf{x}_{T(\mathbf{x})}|\theta) can be written in the form of $g(t|\theta)$, which also trivial. Thus by factorization theorem, we know that $T(\mathbf{X})$ is a sufficient statistic for $\theta$.<br>
-Then we will prove that $T(\mathbf{X})$ is minimal, which in other word for any other sufficient statistic $T'(\mathbf{X})$, if $T'(\mathbf{x}) = T'(\mathbf{y})$ then $T(\mathbf{x}) = T(\mathbf{y})$. Then by factorization theorem, for any sufficient statistic $T'(\mathbf{X})$, there always exist $g'$ and $h'$ such that $f'(\mathbf{x}|\theta) = g'(T'(\mathbf{x})|\theta)h'(\mathbf{x}). For any two sample points with $T'(\mathbf{x}) = T'(\mathbf{y})$, there is $$\frac{f'(\mathbf{x}|\theta)}{f'(\mathbf{y}|\theta)}=\frac{g'(T'(\mathbf{x})|\theta)h'(\mathbf{x})}{g'(T'(\mathbf{y}))h'(\mathbf{y})} = \frac{h'(\mathbf{x})}{h'(\mathbf{y})}$$
+Then we will prove that $T(\mathbf{X})$ is minimal, which in other word for any other sufficient statistic $T'(\mathbf{X})$, if $T'(\mathbf{x}) = T'(\mathbf{y})$ then $T(\mathbf{x}) = T(\mathbf{y})$. Then by factorization theorem, for any sufficient statistic $T'(\mathbf{X})$, there always exist $g'$ and $h'$ such that $f'(\mathbf{x}|\theta) = g'(T'(\mathbf{x})|\theta)h'(\mathbf{x})$. For any two sample points with $T'(\mathbf{x}) = T'(\mathbf{y})$, there is $$\frac{f'(\mathbf{x}|\theta)}{f'(\mathbf{y}|\theta)}=\frac{g'(T'(\mathbf{x})|\theta)h'(\mathbf{x})}{g'(T'(\mathbf{y}))h'(\mathbf{y})} = \frac{h'(\mathbf{x})}{h'(\mathbf{y})}$$
 Since this ratio is independent of $\theta$, then we know that $T(\mathbf{x})=T(\mathbf{y})$. Thus $\T(\mathbf{x})$ is a minimal sufficient statistics. 
 </details>
 
@@ -586,8 +586,8 @@ $$\begin{aligned} \mathbb{E}_{\theta}\left(\hat{\theta}_{n}-\theta\right)^{2} &=
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/a1610b.github.io/2019/07/29/统计/" rel="prev" title="Statistic Notes">
-                Statistic Notes <i class="fa fa-chevron-right"></i>
+              <a href="/a1610b.github.io/2019/07/29/金融随机过程/" rel="prev" title="金融随机过程">
+                金融随机过程 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -665,7 +665,7 @@ $$\begin{aligned} \mathbb{E}_{\theta}\left(\hat{\theta}_{n}-\theta\right)^{2} &=
               
                 <a href="/a1610b.github.io/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

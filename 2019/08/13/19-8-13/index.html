@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Tony&#39;s Blog">
 <meta property="og:description" content="今天学习到的内容、经历与想法速记">
 <meta property="og:locale" content="English and Chinese">
-<meta property="og:updated_time" content="2019-08-13T14:14:31.675Z">
+<meta property="og:updated_time" content="2019-08-13T14:44:15.564Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="19-8-13">
 <meta name="twitter:description" content="今天学习到的内容、经历与想法速记">
@@ -308,7 +308,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2019-08-13T22:14:31+08:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2019-08-13T22:44:15+08:00">
                 2019-08-13
               </time>
             
@@ -364,17 +364,46 @@
       
 
       
-        <p>今天学习到的内容、经历与想法速记</p>
-<a id="more"></a>
-<p>A normal day as usual. 下班去优衣库买了两套衬衫+裤子居然要一千元。。。物价真是高啊，不过无所谓了，反正一年大概买一次也够了，所以基本还是可以接受的。主要的问题就是未来这些衣服都要烫，毕竟天天送去干洗店也不是个办法。又要学习新技巧了233</p>
-<p>今天上班终于把改进后的代码成功运行了。希望今天晚上能够成功度过，不要出什么太多bug，不过由于运算速度太慢我觉得甚至可以考虑只对特定标的进行计算，anyway看了一下特定的策略依然能够产生一定的超额收益，但是效果估计肯定不会有之后那么好了，毕竟之前算是作弊来着的</p>
-<p>单老师布置的新任务就是对于目前所做的关于美股和A股的分析进行总结，并说明为什么美股比A股更有吸引力，而A股如何能够赶上。首先我觉得这个想法太linear了，其次我们也不在证监会工作，提出建议有啥用啊233，最后建议其实大家都知道，就是没有人实施而已。比如说加强监管鬼都知道，资本自由流动也是，但是明显有其他因素导致他不能实现啊。。。</p>
-<p>尉叔叔今天问了我一个很好的问题，就是通过实习经历发现了自己什么不足？</p>
-<p>首先在专业上我就感觉到收到了许多限制，特别是统计方法上的，非常真实，这也就是为什么现在我在疯狂更新我的统计笔记。越学越发现自己当初没有学好。</p>
-<p>其次就是编程上的水平，感觉自己开发的回测方式还是太过浅显，而且没想到居然效率这么低。怪不得去WQ的时候都说python先测试能不能行，具体的运算还是要用C++去做。太真实了，希望我回北京后能把python代码移植到gpu上去跑，毕竟我的1070还没有真正的满速运算过呢（CPU好歹是被辣鸡excel坑过）</p>
-<p>最后就是写报告的水平，感觉语言组织能力确实有限。写出的报告也就那些东西，没有特别多的干货（也可能是因为topic限制）</p>
-<p>还有一个没有用到但是我觉得我比较欠缺的东西就是我对行业研究接触的很浅，最多就是在一些课程上做过一些粗浅的研究。下学期有空一定要去搞一搞财务报表分析，对行业进行深度的了解。不过可能用不上就是了，或者找单老师看看教材？</p>
-
+        <script src="/a1610b.github.io/js/crypto-js.js"></script>
+<script>
+function doDecrypt (pwd, onError) {
+	console.log('in doDecrypt');
+	const txt = document.getElementById('enc_content').innerHTML;
+	let plantext;
+	try {
+		const bytes = CryptoJS.AES.decrypt(txt, pwd);
+		var plaintext = bytes.toString(CryptoJS.enc.Utf8);
+	} catch(err) {
+		if(onError) {
+			onError(err);
+		}
+		return;
+	}
+	document.getElementById('enc_content').innerHTML = plaintext;
+	document.getElementById('enc_content').style.display = 'block';
+	document.getElementById('enc_passwd').style.display = 'none';
+	if(typeof MathJax !== 'undefined') {
+		MathJax.Hub.Queue(
+			['resetEquationNumbers', MathJax.InputJax.TeX],
+			['PreProcess', MathJax.Hub],
+			['Reprocess', MathJax.Hub]
+		);
+	}
+}
+</script>
+<div id="enc_content" style="display:none">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</div>
+<div id="enc_passwd"> <input id="enc_pwd_input" type="password" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div>
+<script>
+var onError = function(error) {
+	document.getElementById("enc_error").innerHTML = "password error!"
+};
+function decrypt() {
+var passwd = document.getElementById("enc_pwd_input").value;
+console.log(passwd);
+doDecrypt(passwd, onError);
+}
+</script>
+</div>
       
     </div>
     
@@ -415,6 +444,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/a1610b.github.io/2019/08/13/To-Jene/" rel="prev" title="To Jene">
+                To Jene <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -482,7 +515,7 @@
               
                 <a href="/a1610b.github.io/archives/">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -504,7 +537,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/a1610b.github.io/tags/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

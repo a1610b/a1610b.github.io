@@ -82,14 +82,14 @@
 <meta name="description" content="Trend project is a quantitative trading strategy that use machine learning method to  analyze data in a trend to give prediction to the future.">
 <meta name="keywords" content="Quant,Python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="trend Project">
+<meta property="og:title" content="Trend Project">
 <meta property="og:url" content="https://github.com/a1610b/a1610b.github.io/2019/08/18/trendProject/index.html">
 <meta property="og:site_name" content="Tony&#39;s Blog">
 <meta property="og:description" content="Trend project is a quantitative trading strategy that use machine learning method to  analyze data in a trend to give prediction to the future.">
 <meta property="og:locale" content="English and Chinese">
-<meta property="og:updated_time" content="2019-08-18T14:23:52.304Z">
+<meta property="og:updated_time" content="2019-08-29T10:06:14.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="trend Project">
+<meta name="twitter:title" content="Trend Project">
 <meta name="twitter:description" content="Trend project is a quantitative trading strategy that use machine learning method to  analyze data in a trend to give prediction to the future.">
 
 
@@ -126,7 +126,7 @@
 
 
 
-  <title>trend Project | Tony's Blog</title>
+  <title>Trend Project | Tony's Blog</title>
   
 
 
@@ -230,6 +230,16 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/a1610b.github.io/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>
+            
+            Schedule
+          </a>
+        </li>
+      
 
       
     </ul>
@@ -280,7 +290,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">trend Project</h1>
+          <h1 class="post-title" itemprop="name headline">Trend Project</h1>
         
 
         <div class="post-meta">
@@ -308,8 +318,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2019-08-18T22:23:52+08:00">
-                2019-08-18
+              <time title="Post modified" itemprop="dateModified" datetime="2019-08-29T18:06:14+08:00">
+                2019-08-29
               </time>
             
           </span>
@@ -366,6 +376,83 @@
       
         <p>Trend project is a quantitative trading strategy that use machine learning method to  analyze data in a trend to give prediction to the future.</p>
 <a id="more"></a>
+<p>Key factor that the model takes into consideration:</p>
+<ul>
+<li>open, close, high, low</li>
+<li>percentage change for previous day’s open and today’s open price.</li>
+<li>Turnover rate</li>
+</ul>
+<p>Why do I need to list factors with so such redundant?</p>
+<p>Because the decision tree model is very stupid and can’t identify linear combination of exist factors. This can be a good thing(so all the combination is under my control, the only thing the machine can learn is the coefficient of the factor while I control all of the terms)</p>
+<h2 id="Model-Development"><a href="#Model-Development" class="headerlink" title="Model Development"></a>Model Development</h2><h3 id="Update-Todo"><a href="#Update-Todo" class="headerlink" title="Update Todo"></a>Update Todo</h3><ul>
+<li>The way that I set up strong trend and weak trend used future information. </li>
+<li>How the industry optimal parameter used future information. </li>
+<li>How I merge the data will create a problem with discontinuity of trend, need to be fixed</li>
+</ul>
+<h3 id="Version-Updates"><a href="#Version-Updates" class="headerlink" title="Version Updates"></a>Version Updates</h3><p>V0.0: Create the basic model that can determine the trend of asset. </p>
+<ul>
+<li>Use merge method to get a approximation of the trend. </li>
+<li>Run a for loop through 5~15 days length trend</li>
+<li>Create Decision tree based on close price time series </li>
+</ul>
+<p>V0.1: Add in more parameter on trend determination and find the best parameter for each industry.</p>
+<ul>
+<li>Add in minimum change as a hard requirement for a trend</li>
+<li>Set two minimum change so that there will be a strong trend and a weak trend</li>
+<li>Find each industry’s optimal parameter<ul>
+<li>designed a method to test if the parameter fits the industry</li>
+</ul>
+</li>
+</ul>
+<p>V0.2: Improve the decision tree training</p>
+<ul>
+<li>Improve the decision tree training parameters</li>
+<li>Add in more factors:<ul>
+<li>Turnover rate</li>
+<li>All the derived factors since decision tree can’t deal with anything else but linear coefficient of factors</li>
+</ul>
+</li>
+<li>Add in multi-class decision tree since in real trading it is completely different if the return is different</li>
+</ul>
+<p>V0.3: Improve the mutli-class decision tree</p>
+<ul>
+<li>Since the multi-class decision tree model can identify different level of return, then I add in score(weight) to judge the prediction result.</li>
+</ul>
+<p>V0.4: Create back test system for the model</p>
+<ul>
+<li>Create a day level back test system</li>
+<li>The strategy is acting daily and the result is too good to be true</li>
+</ul>
+<p>V1.0: Finally figures the problem in the model and changed it</p>
+<ul>
+<li>The trimming action in the trend determination has a lot of problem</li>
+<li>Correct the splitting and dividend problem that cause discontinuity in stock price  </li>
+</ul>
+<p>V2.0: Add in rolling calculation model:</p>
+<ul>
+<li>Rolling calculation make the calculation much slower, but the effect has a significant change</li>
+<li><strong>Should always do rolling in machine learning</strong></li>
+</ul>
+<p>V2.1: Add in more advance machine learning algorithm to the model:</p>
+<ul>
+<li>SVM is a great model since it can automatically study the linear relationship among different factors. But it is extremely time consuming to train and will add in some distraction terms to the model.</li>
+<li>Random forest algorithm is an enhanced decision tree. The cost of training is acceptable and the improvement is significant. So currently this is the main algorithm I will continue to use</li>
+</ul>
+<p>v2.21: Add in more factors:</p>
+<ul>
+<li>Add in more fundamental factors: open, low, high</li>
+<li>Add in more derived factors</li>
+</ul>
+<p>V2.22: Improve the result of random forest </p>
+<ul>
+<li>Since the random forest model will give a confidence level on how sure it is on the result, I can improve the model by only selecting results that random forest is more certain.</li>
+</ul>
+<p>V2.3: Combined last two version and made some changes for efficiency purpose.</p>
+<ul>
+<li>Changed to create a new model every 250 days for efficiency reason. The average correction rate is around 75% for binary prediction.</li>
+<li>Create a new back test</li>
+<li>correct the give signal method </li>
+</ul>
 
       
     </div>
@@ -462,8 +549,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -523,6 +619,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Model-Development"><span class="nav-number">1.</span> <span class="nav-text">Model Development</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Update-Todo"><span class="nav-number">1.1.</span> <span class="nav-text">Update Todo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Version-Updates"><span class="nav-number">1.2.</span> <span class="nav-text">Version Updates</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

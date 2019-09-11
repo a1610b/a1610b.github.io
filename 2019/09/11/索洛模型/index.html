@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="English and Chinese">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/a1610b.github.io/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/a1610b.github.io/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/a1610b.github.io/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/a1610b.github.io/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/a1610b.github.io/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/a1610b.github.io/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/a1610b.github.io/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Economic,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="关于索洛模型的学习笔记">
+<meta name="keywords" content="Economic">
+<meta property="og:type" content="article">
+<meta property="og:title" content="索洛模型">
+<meta property="og:url" content="https://github.com/a1610b/a1610b.github.io/2019/09/11/索洛模型/index.html">
+<meta property="og:site_name" content="Tony&#39;s Blog">
+<meta property="og:description" content="关于索洛模型的学习笔记">
+<meta property="og:locale" content="English and Chinese">
+<meta property="og:updated_time" content="2019-09-11T14:37:27.661Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="索洛模型">
+<meta name="twitter:description" content="关于索洛模型的学习笔记">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/a1610b.github.io/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://github.com/a1610b/a1610b.github.io/2019/09/11/索洛模型/">
+
+
+
+
+
+  <title>索洛模型 | Tony's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="English and Chinese">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/a1610b.github.io/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Tony's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/a1610b.github.io/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/a1610b.github.io/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/a1610b.github.io/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/a1610b.github.io/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/a1610b.github.io/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/a1610b.github.io/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>
+            
+            Schedule
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/a1610b/a1610b.github.io/a1610b.github.io/2019/09/11/索洛模型/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tony She">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/a1610b.github.io/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tony's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">索洛模型</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-11T22:36:15+08:00">
+                2019-09-11
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2019-09-11T22:37:27+08:00">
+                2019-09-11
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/a1610b.github.io/categories/Notes/" itemprop="url" rel="index">
+                    <span itemprop="name">Notes</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>关于索洛模型的学习笔记</p>
+<a id="more"></a>
+<h3 id="生产函数"><a href="#生产函数" class="headerlink" title="生产函数"></a>生产函数</h3><p>研究生产函数，因为实际GDP本质上就是当年的生产量。(但是实际GDP似乎不是一个很好的衡量指标，故本身整个框架似乎就建立的不够牢固)</p>
+<p>最简单的生产函数由两个要素组成：</p>
+<ul>
+<li><strong>资本存量</strong> K<ul>
+<li>如企业的机器、厂房等</li>
+</ul>
+</li>
+<li><strong>劳动力</strong> L<ul>
+<li>工人的人数</li>
+<li>注：此模型下所有劳动力都是同质的，即不涉及人力资本的概念</li>
+</ul>
+</li>
+</ul>
+<p>而最终产出由生产函数与技术水平组成</p>
+<ul>
+<li><strong>生产函数</strong> F<ul>
+<li>决定K和L是如何影响最终产出的</li>
+</ul>
+</li>
+<li><strong>技术水平</strong> A<ul>
+<li>衡量国家的总体生产率，但是增长具有不确定性，不连续性等因素</li>
+</ul>
+</li>
+</ul>
+<p>那么GDP可以写为：</p>
+<script type="math/tex; mode=display">
+Y = A\cdot F(K, L)</script><h4 id="边际产品"><a href="#边际产品" class="headerlink" title="边际产品"></a>边际产品</h4><p>自边际理论被提出后边际计算代替了传统的计算方法(就如微积分改变物理一样)</p>
+<ul>
+<li>资本的边际产品 MPK(Marginal product per capital)<ul>
+<li>每一单位的额外资本对于产出的影响</li>
+<li>$MPK = \frac{\partial Y}{\partial K}$ </li>
+</ul>
+</li>
+<li>劳动的边际产品 MPL(Marginal product per labor)<ul>
+<li>每一单位的额外劳动力对于产出的影响</li>
+<li>$MPL = \frac{\partial Y}{\partial L}$ </li>
+</ul>
+</li>
+</ul>
+<h4 id="模型假设"><a href="#模型假设" class="headerlink" title="模型假设"></a>模型假设</h4><p><strong>边际产品始终大于0</strong>：即</p>
+<script type="math/tex; mode=display">
+MPK > 0\\
+MPL > 0</script><ul>
+<li>Q:为何不是大于等于？</li>
+</ul>
+<p><strong>当K或L为0时无产出</strong></p>
+<p><strong>边际产品递减</strong>：无论是对于资本还是劳动都会存在边际产品递减效应，即</p>
+<script type="math/tex; mode=display">
+\frac{\partial MPK}{\partial K} = \frac{\partial^2 Y}{\partial K^2} \leq 0\\
+\frac{\partial MPL}{\partial L} = \frac{\partial^2 Y}{\partial L^2} \leq 0</script><p><strong>规模报酬不变</strong>：F是一次齐次函数，即</p>
+<script type="math/tex; mode=display">
+cF(K, L) = F(cK, cL)\ \ \ \forall c\in \mathbb{R}</script><ul>
+<li>在这个假设下我们可以简化劳动人均产出$y = \frac{Y}{L}$为</li>
+</ul>
+<script type="math/tex; mode=display">
+y = \frac{Y}{L} = A\cdot F(\frac{K}{L}, 1)=Af(k)</script><ul>
+<li>注：劳动人均均用小写字母表示，这里的劳动人均不是除以总人口，是处于所有有工作的劳动力</li>
+</ul>
+<h3 id="增长核算"><a href="#增长核算" class="headerlink" title="增长核算"></a>增长核算</h3><p>在建立生产函数后，我们想要通过分析A, K, L的变化对Y的影响。</p>
+<script type="math/tex; mode=display">
+\frac{\partial Y}{\partial t}\frac{1}{Y} =\frac{\partial(A\cdot F(K, L))}{\partial t}\frac{1}{A\cdot F(K, L)}=\frac{\partial A}{\partial t}\frac{F(K, L)}{A\cdot F(K, L)}+\frac{\partial F(K, L)}{\partial t} \frac{A}{A\cdot F(K, L)}\\=
+\frac{\partial A}{\partial t}\frac{1}{A}+(\frac{\partial F(K, L)}{\partial K}\frac{\partial K}{\partial t}+\frac{\partial F(K, L)}{\partial L}\frac{\partial L}{\partial t})\frac{1}{F(K,L)}</script><p>而由规模报酬不变的假设知</p>
+<script type="math/tex; mode=display">
+\frac{\partial F(K, L)}{\partial K}\frac{1}{F(K, L)}=\alpha \frac{1}{K}\\
+\frac{\partial F(K, L)}{\partial L}\frac{1}{F(K, L)}=\beta \frac{1}{L}\\
+\alpha+\beta = 1 \ \text{and }\alpha, \beta\in \mathbb{R}</script><p>那么上式就可以写为</p>
+<script type="math/tex; mode=display">
+\frac{\partial Y}{\partial t}\frac{1}{Y} =
+\frac{\partial A}{\partial t}\frac{1}{A}+(\frac{\partial F(K, L)}{\partial K}\frac{\partial K}{\partial t}+\frac{\partial F(K, L)}{\partial L}\frac{\partial L}{\partial t})\frac{1}{F(K,L)}\\
+= \frac{\partial A}{\partial t}\frac{1}{A}+\alpha\frac{\partial K}{\partial t}\frac{1}{K}+(1-\alpha)\frac{\partial L}{\partial t}\frac{1}{L}</script><p>也就是说我们可以将GDP的变化率分解为技术的增长率和资本劳动的加权平均增长率。其中$\alpha$ 是由F唯一确定的。</p>
+<p>注：可将$\frac{\partial Y}{\partial t}$写为$\Delta Y$，其他变量同理</p>
+<h3 id="索洛模型"><a href="#索洛模型" class="headerlink" title="索洛模型"></a>索洛模型</h3><h4 id="假设"><a href="#假设" class="headerlink" title="假设"></a>假设</h4><p><strong>失业率为常数</strong>：模型不考虑失业率的变化，即劳动人口以固定比例计算为劳动L。</p>
+<p><strong>劳动力参与率为常数</strong>：模型不考虑劳动力参与率的变化，即劳动人口占总人口的比例不变</p>
+<ul>
+<li>通过以上两条假设可以得到L的增长率等于认可的增长率<ul>
+<li>明显不合实际，因为人口增长对于劳动力的影响要20年以后才能产生</li>
+</ul>
+</li>
+</ul>
+<p><strong>政府对经济没有影响</strong>：经济中无税收、货币、公共支出、财富转移政策等</p>
+<p><strong>封闭经济</strong>：即没有国际贸易</p>
+<p><strong>储蓄率为常数</strong>：每个家庭的收入都以比例$s$划分给储蓄，$1-s$划分给消费</p>
+<p><strong>资本折旧率为常数</strong>：假设所有资本折旧率都为常数$\delta$ </p>
+<p><strong>人口增长率为常数</strong>：假设人口增长率为常数$n$ </p>
+<h4 id="增长核算-1"><a href="#增长核算-1" class="headerlink" title="增长核算"></a>增长核算</h4><p>首先假设技术水平不变，那么增长核算方程就为</p>
+<script type="math/tex; mode=display">
+\frac{\partial Y}{\partial t}\frac{1}{Y} =\alpha\frac{\partial K}{\partial t}\frac{1}{K}+(1-\alpha)\frac{\partial L}{\partial t}\frac{1}{L}</script><p>通过之前的经验，我们发现研究劳动人均产出是一个容易推进的方向，那么</p>
+<script type="math/tex; mode=display">
+\frac{\partial Y}{\partial t}\frac{1}{Y}=\frac{\partial yL}{\partial t}\frac{1}{yL}=\frac{\partial y}{\partial t}\frac{L}{yL}+\frac{\partial L}{\partial t}\frac{y}{yL}=\frac{\partial y}{\partial t}\frac{1}{y}+\frac{\partial L}{\partial t}\frac{1}{L}</script><p>整理后就有</p>
+<script type="math/tex; mode=display">
+\frac{\partial y}{\partial t}\frac{1}{y}=\frac{\partial Y}{\partial t}\frac{1}{Y}-\frac{\partial L}{\partial t}\frac{1}{L}</script><p>这个式子的含有充分的经济学含义：劳动人均产出的增长率 = 实际产出的增长率 $-$ 劳动增长率</p>
+<p>那么同理，对于劳动人均资本的增长率我们有：</p>
+<script type="math/tex; mode=display">
+\frac{\partial k}{\partial t}\frac{1}{k}=\frac{\partial K}{\partial t}\frac{1}{K}-\frac{\partial L}{\partial t}\frac{1}{L}</script><p>劳动人均资本的增长率 = 资本增长率 $-$ 劳动增长率</p>
+<p>再将以上两式带入增资核算方程就有</p>
+<script type="math/tex; mode=display">
+\frac{\partial Y}{\partial t}\frac{1}{Y} -\frac{\partial L}{\partial t}\frac{1}{L}=\alpha\frac{\partial K}{\partial t}\frac{1}{K}-\alpha\frac{\partial L}{\partial t}\frac{1}{L}\\
+\frac{\partial y}{\partial t}\frac{1}{y} = \alpha\frac{\partial k}{\partial t}\frac{1}{k}</script><p>也就是说劳动人均产出的增长率只和劳动人均的资本增长率和系数$\alpha$相关，而劳动人均的资本增长率又和资本增长率和劳动增长率相关。故为了研究劳动人均产出的增长率必须对以上两个增长率进行研究。</p>
+<h5 id="资本存量的增资率"><a href="#资本存量的增资率" class="headerlink" title="资本存量的增资率"></a>资本存量的增资率</h5><p>由于$Y$只计算了产出而没有计算折旧带来的损失，故国民的实际收入应为$Y-\delta K$. 故</p>
+<script type="math/tex; mode=display">
+S = s(Y-\delta K)\\
+Y-\delta K=C+S = C+s(Y-\delta K)</script><p>而由于经济封闭且没有政府干预，$Y = C+I$ 。那么</p>
+<script type="math/tex; mode=display">
+Y-\delta K = C+(I-\delta K)</script><p>将$I-\delta K$定义为净投资。由以上关系就可以推得</p>
+<script type="math/tex; mode=display">
+I-\delta K = s(Y-\delta K)</script><p>而由投资定义就可知</p>
+<script type="math/tex; mode=display">
+\frac{\partial K}{\partial t} = I-\delta K =s(Y-\delta K)\\
+\frac{\partial K}{\partial t} \frac{1}{K} = s\frac{Y}{K}-s\delta</script><h5 id="劳动增长率"><a href="#劳动增长率" class="headerlink" title="劳动增长率"></a>劳动增长率</h5><p>由假设可知劳动增长率等于人口增长率$n$。那么就有</p>
+<script type="math/tex; mode=display">
+\frac{\partial L}{\partial t} \frac{1}{L} = n</script><p>此时我们可以回到劳动人均资本增长率的式子中</p>
+<script type="math/tex; mode=display">
+\frac{\partial k}{\partial t}\frac{1}{k}=\frac{\partial K}{\partial t}\frac{1}{K}-\frac{\partial L}{\partial t}\frac{1}{L}=s\frac{Y}{K}-s\delta-n=s\frac{y}{k}-s\delta-n</script><p>这就是索罗模型的重要结果，可以直接带入增长核算的式子中得到</p>
+<script type="math/tex; mode=display">
+\frac{\partial y}{\partial t}\frac{1}{y}=\alpha(s\frac{y}{k}-s\delta-n)</script><h5 id="稳态"><a href="#稳态" class="headerlink" title="稳态"></a>稳态</h5><p>由增长核算公式和假设可知，唯一影响劳动人均产出的变量为$\frac{y}{k}$。只需要证明存在稳态，且$k$会趋近于稳态即可。</p>
+<p>当$\frac{\partial k}{\partial t}\frac{1}{k}=0$时显然达到稳态，此时需要满足$s\frac{y}{k}-s\delta-n = 0$，即当$s(y-\delta k)=nk$时达到稳态。此时对于$k$求解，就有$k$必满足</p>
+<script type="math/tex; mode=display">
+\frac{y}{k} = \delta +\frac{n}{s}=\frac{A\cdot f(k)}{k}</script><p>经济学上的含义为劳动人均的储蓄等于新劳动力所需资本时达到稳态。 </p>
+<h3 id="长期索洛模型"><a href="#长期索洛模型" class="headerlink" title="长期索洛模型"></a>长期索洛模型</h3><p>在短期可以采纳上个模型的假设，即储蓄率、人口增速和技术水平不变。但是在长期模型中必须考虑到这些因素也会改变，故进行长期模型的搭建与分析</p>
+<h4 id="储蓄率的变化"><a href="#储蓄率的变化" class="headerlink" title="储蓄率的变化"></a>储蓄率的变化</h4><p>可以直接观察短期模型中的最终结果就可以得到不同储蓄率对于增长的影响。</p>
+<p>首先当$s$约大时$\delta +\frac{n}{s}$越小，则达到均衡的$\frac{A\cdot f(k)}{k}$约小，这就需要$k$更大。故得到结论就是储蓄率上升会导致稳态的劳动人均资本上升。</p>
+<p>其次在向稳态过度的速度由$\frac{\partial k}{\partial t}\frac{1}{k}$决定，那么直接研究$s$大小对其的影响即可。需要注意的是，大多数情况下越高的$s$代表着更快的过度速度，但是也有情况下过高的储蓄率会降低过度的速度。</p>
+<h4 id="技术水平的变化"><a href="#技术水平的变化" class="headerlink" title="技术水平的变化"></a>技术水平的变化</h4><p>从稳态的角度出发，可以得到$\delta +\frac{n}{s}=\frac{A\cdot f(k)}{k}$。那么在其他因素不变时$A$上升就代表着稳态$k$必须跟着上升，故技术水平上升代表着稳态的劳动人均资本上升。</p>
+<p>而在未达到稳态前，$A$上升代表着$y$上升，故如果$y$在上升时技术水平高会导致更快的过度速度，反之亦然。</p>
+<h4 id="劳动投入和人口增长率的变化"><a href="#劳动投入和人口增长率的变化" class="headerlink" title="劳动投入和人口增长率的变化"></a>劳动投入和人口增长率的变化</h4><p>通过观察稳态$k$的条件可知$L$的变化不会影响稳态$k$的结果，也不会影响短期内的变化(如果$n$没有随之改变的话)。</p>
+<p>那么如果$n$上升的话通过稳态的要求可以看到稳态$k$必将减少，而过度向稳态的过程速度也可按前面的方法进行分析。</p>
+<h4 id="趋同"><a href="#趋同" class="headerlink" title="趋同"></a>趋同</h4><p>通过上述分析我们发现稳态$k$其实非常容易刻画，即</p>
+<script type="math/tex; mode=display">
+k^* = k^*(s, A, n, \delta)</script><p>也就是说如果这些参数对于一个国家来说都是不一样的话，那么国家之间是不存在趋同的劳动人均资本的。</p>
+<p>Comments: 但是现实告诉我们，其实这些参数大多不是外生变量，他们跟经济体的整体经济水平有着巨大的影响。如：经济水平上升的过程中人口增长率、技术水平增速、储蓄率都会下跌。所以实际上还是会进行趋同</p>
+<h3 id="继续的改进"><a href="#继续的改进" class="headerlink" title="继续的改进"></a>继续的改进</h3><h4 id="AK模型"><a href="#AK模型" class="headerlink" title="AK模型"></a>AK模型</h4><p>如果我们把资本广义的理解为人力资本和实物资本的结合体，那么$y$就可以写成：</p>
+<script type="math/tex; mode=display">
+y = Ak</script><p>那么$\frac{y}{k} = A$，把这个结果带回劳动人均资本增长率的公式就有</p>
+<script type="math/tex; mode=display">
+\frac{\partial k}{\partial t}\frac{1}{k}=sA-s\delta-n</script><p>那么此时这个增速就与$y$和$k$无关，变为一个常量了。</p>
+<h4 id="外生技术进步"><a href="#外生技术进步" class="headerlink" title="外生技术进步"></a>外生技术进步</h4><p>如果我们假设技术水平以一个不变的速率$g$进行增长，即</p>
+<script type="math/tex; mode=display">
+\frac{\partial A}{\partial t} \frac{1}{A} = g</script><p>那么我们回到假设技术水平不变的前一步</p>
+<script type="math/tex; mode=display">
+\frac{\partial Y}{\partial t}\frac{1}{Y} = \frac{\partial A}{\partial t}\frac{1}{A}+\alpha\frac{\partial K}{\partial t}\frac{1}{K}+(1-\alpha)\frac{\partial L}{\partial t}\frac{1}{L}</script><p>此时代入$g$和$n$就有</p>
+<script type="math/tex; mode=display">
+\frac{\partial Y}{\partial t}\frac{1}{Y} = g+\alpha\frac{\partial K}{\partial t}\frac{1}{K}+(1-\alpha)n</script><p>再利用</p>
+<script type="math/tex; mode=display">
+\frac{\partial y}{\partial t}\frac{1}{y} = \frac{\partial Y}{\partial t}\frac{1}{Y}-n</script><p>就有</p>
+<script type="math/tex; mode=display">
+\frac{\partial y}{\partial t}\frac{1}{y}=g+\alpha(\frac{\partial K}{\partial t}\frac{1}{K}-n)</script><p>且</p>
+<script type="math/tex; mode=display">
+\frac{\partial k}{\partial t}\frac{1}{k}=\frac{\partial K}{\partial t}\frac{1}{K}-n</script><p>所以就有</p>
+<script type="math/tex; mode=display">
+\frac{\partial y}{\partial t}\frac{1}{y}=g+\alpha\frac{\partial k}{\partial t}\frac{1}{k}</script><p>那么我们就可以对于之前的结果进行改进为</p>
+<script type="math/tex; mode=display">
+\frac{\partial y}{\partial t}\frac{1}{y}=g+\alpha(s\frac{y}{k}-s\delta-n)</script><p>那么此时稳态就不存在了，只存在稳态增长。此时$\frac{y}{k}$为常数而劳动人均资本增速也为常数。稳态下就有</p>
+<script type="math/tex; mode=display">
+\frac{\partial y}{\partial t}\frac{1}{y}=\frac{\partial k}{\partial t}\frac{1}{k}\\
+\frac{\partial y}{\partial t}\frac{1}{y}=g+\alpha*\frac{\partial k}{\partial t}\frac{1}{k}\\
+\frac{\partial y}{\partial t}\frac{1}{y}=\frac{g}{1-\alpha}</script><h4 id="稳态储蓄"><a href="#稳态储蓄" class="headerlink" title="稳态储蓄"></a>稳态储蓄</h4><script type="math/tex; mode=display">
+\frac{\partial k}{\partial t}\frac{1}{k}=s\frac{y}{k}-s\delta-n\\
+\frac{g}{1-\alpha}=s\frac{y}{k}-s\delta-n\\
+s(\frac{y}{k}-\delta)=n+\frac{g}{1-\alpha}\\
+s(y-\delta k)=nk+\frac{gk}{1-\alpha}</script><p>此时左边就是劳动人均储蓄量。而右边的$nk$就是新增劳动所需要的资本和</p>
+<script type="math/tex; mode=display">
+\frac{gk}{1-\alpha}=\frac{\partial k}{\partial t}</script><p>已有劳动增加的资本之和。</p>
+<h4 id="过渡和趋同"><a href="#过渡和趋同" class="headerlink" title="过渡和趋同"></a>过渡和趋同</h4><p>此时趋同\过渡的速度并不会因为g的引入而变化，因为g是对整体$k$加一个变化量，但是不影响绝对的差距，过度的速度依然和之前计算的一样。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/a1610b.github.io/tags/Economic/" rel="tag"># Economic</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/a1610b.github.io/2019/08/24/2019-08-24/" rel="next" title="19-08-24">
+                <i class="fa fa-chevron-left"></i> 19-08-24
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/a1610b.github.io/2019/09/11/18-09-11/" rel="prev" title="18-09-11">
+                18-09-11 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Tony She</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/a1610b.github.io/archives/">
+              
+                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/a1610b.github.io/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/a1610b.github.io/tags/index.html">
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#生产函数"><span class="nav-number">1.</span> <span class="nav-text">生产函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#边际产品"><span class="nav-number">1.1.</span> <span class="nav-text">边际产品</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模型假设"><span class="nav-number">1.2.</span> <span class="nav-text">模型假设</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#增长核算"><span class="nav-number">2.</span> <span class="nav-text">增长核算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#索洛模型"><span class="nav-number">3.</span> <span class="nav-text">索洛模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#假设"><span class="nav-number">3.1.</span> <span class="nav-text">假设</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#增长核算-1"><span class="nav-number">3.2.</span> <span class="nav-text">增长核算</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#资本存量的增资率"><span class="nav-number">3.2.1.</span> <span class="nav-text">资本存量的增资率</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#劳动增长率"><span class="nav-number">3.2.2.</span> <span class="nav-text">劳动增长率</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#稳态"><span class="nav-number">3.2.3.</span> <span class="nav-text">稳态</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#长期索洛模型"><span class="nav-number">4.</span> <span class="nav-text">长期索洛模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#储蓄率的变化"><span class="nav-number">4.1.</span> <span class="nav-text">储蓄率的变化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#技术水平的变化"><span class="nav-number">4.2.</span> <span class="nav-text">技术水平的变化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#劳动投入和人口增长率的变化"><span class="nav-number">4.3.</span> <span class="nav-text">劳动投入和人口增长率的变化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#趋同"><span class="nav-number">4.4.</span> <span class="nav-text">趋同</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#继续的改进"><span class="nav-number">5.</span> <span class="nav-text">继续的改进</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#AK模型"><span class="nav-number">5.1.</span> <span class="nav-text">AK模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#外生技术进步"><span class="nav-number">5.2.</span> <span class="nav-text">外生技术进步</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#稳态储蓄"><span class="nav-number">5.3.</span> <span class="nav-text">稳态储蓄</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#过渡和趋同"><span class="nav-number">5.4.</span> <span class="nav-text">过渡和趋同</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Tony She</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/a1610b.github.io/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/a1610b.github.io/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/a1610b.github.io/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/a1610b.github.io/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/a1610b.github.io/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/a1610b.github.io/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/a1610b.github.io/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/a1610b.github.io/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/a1610b.github.io/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/a1610b.github.io/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/a1610b.github.io/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/a1610b.github.io/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/a1610b.github.io/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+  <script type="text/javascript" src="/a1610b.github.io/js/src/js.cookie.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/a1610b.github.io/js/src/scroll-cookie.js?v=5.1.4"></script>
+
+
+  
+
+</body>
+</html>

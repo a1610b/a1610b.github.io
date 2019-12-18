@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Quant,Python,">
+  <meta name="keywords" content="Economic,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Trend project is a quantitative trading strategy that use machine learning method to  analyze data in a trend to give prediction to the future.">
-<meta name="keywords" content="Quant,Python">
+<meta name="description" content="关于周期均衡模型的学习笔记">
+<meta name="keywords" content="Economic">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Trend Project">
-<meta property="og:url" content="https://github.com/a1610b/a1610b.github.io/2019/08/18/trendProject/index.html">
+<meta property="og:title" content="周期均衡模型">
+<meta property="og:url" content="https://github.com/a1610b/a1610b.github.io/2019/12/18/经济波动/index.html">
 <meta property="og:site_name" content="Tony&#39;s Blog">
-<meta property="og:description" content="Trend project is a quantitative trading strategy that use machine learning method to  analyze data in a trend to give prediction to the future.">
+<meta property="og:description" content="关于周期均衡模型的学习笔记">
 <meta property="og:locale" content="English and Chinese">
-<meta property="og:updated_time" content="2019-09-01T02:55:47.591Z">
+<meta property="og:updated_time" content="2019-12-18T06:36:29.287Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Trend Project">
-<meta name="twitter:description" content="Trend project is a quantitative trading strategy that use machine learning method to  analyze data in a trend to give prediction to the future.">
+<meta name="twitter:title" content="周期均衡模型">
+<meta name="twitter:description" content="关于周期均衡模型的学习笔记">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://github.com/a1610b/a1610b.github.io/2019/08/18/trendProject/">
+  <link rel="canonical" href="https://github.com/a1610b/a1610b.github.io/2019/12/18/经济波动/">
 
 
 
 
 
-  <title>Trend Project | Tony's Blog</title>
+  <title>周期均衡模型 | Tony's Blog</title>
   
 
 
@@ -273,7 +273,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/a1610b/a1610b.github.io/a1610b.github.io/2019/08/18/trendProject/">
+    <link itemprop="mainEntityOfPage" href="https://github.com/a1610b/a1610b.github.io/a1610b.github.io/2019/12/18/经济波动/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tony She">
@@ -290,7 +290,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Trend Project</h1>
+          <h1 class="post-title" itemprop="name headline">周期均衡模型</h1>
         
 
         <div class="post-meta">
@@ -302,8 +302,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-18T22:18:10+08:00">
-                2019-08-18
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-18T14:25:00+08:00">
+                2019-12-18
               </time>
             
 
@@ -318,8 +318,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2019-09-01T10:55:47+08:00">
-                2019-09-01
+              <time title="Post modified" itemprop="dateModified" datetime="2019-12-18T14:36:29+08:00">
+                2019-12-18
               </time>
             
           </span>
@@ -337,8 +337,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/a1610b.github.io/categories/Project/" itemprop="url" rel="index">
-                    <span itemprop="name">Project</span>
+                  <a href="/a1610b.github.io/categories/Notes/" itemprop="url" rel="index">
+                    <span itemprop="name">Notes</span>
                   </a>
                 </span>
 
@@ -374,90 +374,124 @@
       
 
       
-        <p>Trend project is a quantitative trading strategy that use machine learning method to  analyze data in a trend to give prediction to the future.</p>
+        <p>关于周期均衡模型的学习笔记</p>
 <a id="more"></a>
-<p>Key factor that the model takes into consideration:</p>
+<h1 id="经济波动"><a href="#经济波动" class="headerlink" title="经济波动"></a>经济波动</h1><p>本节模型假设：</p>
 <ul>
-<li>open, close, high, low</li>
-<li>percentage change for previous day’s open and today’s open price.</li>
-<li>Turnover rate</li>
-</ul>
-<p>Why do I need to list factors with so such redundant?</p>
-<p>Because the decision tree model is very stupid and can’t identify linear combination of exist factors. This can be a good thing(so all the combination is under my control, the only thing the machine can learn is the coefficient of the factor while I control all of the terms)</p>
-<h2 id="Model-Development"><a href="#Model-Development" class="headerlink" title="Model Development"></a>Model Development</h2><h3 id="Update-Todo"><a href="#Update-Todo" class="headerlink" title="Update Todo"></a>Update Todo</h3><ul>
-<li>The way that I set up strong trend and weak trend used future information. </li>
-<li>How the industry optimal parameter used future information. </li>
-<li>How I merge the data will create a problem with discontinuity of trend, need to be fixed</li>
-</ul>
-<h3 id="Version-Updates"><a href="#Version-Updates" class="headerlink" title="Version Updates"></a>Version Updates</h3><p>V0.0: Create the basic model that can determine the trend of asset. </p>
+<li>工人、消费者、生产者都无法影响市场</li>
+<li><p>家庭执行了经济中的所有职能</p>
 <ul>
-<li>Use merge method to get a approximation of the trend. </li>
-<li>Run a for loop through 5~15 days length trend</li>
-<li>Create Decision tree based on close price time series </li>
-</ul>
-<p>V0.1: Add in more parameter on trend determination and find the best parameter for each industry.</p>
-<ul>
-<li>Add in minimum change as a hard requirement for a trend</li>
-<li>Set two minimum change so that there will be a strong trend and a weak trend</li>
-<li>Find each industry’s optimal parameter<ul>
-<li>designed a method to test if the parameter fits the industry</li>
+<li>家庭在商品市场出售他们生产的所有商品</li>
+<li>家庭可以在商品市场消费和购买资本（投资）</li>
+<li>家庭在劳动市场中提供劳动</li>
+<li>家庭会将多余的资本租赁出去（租赁市场）</li>
+<li>家庭会将多余的资金借贷出去（债券市场）</li>
 </ul>
 </li>
-</ul>
-<p>V0.2: Improve the decision tree training</p>
-<ul>
-<li>Improve the decision tree training parameters</li>
-<li>Add in more factors:<ul>
-<li>Turnover rate</li>
-<li>All the derived factors since decision tree can’t deal with anything else but linear coefficient of factors</li>
-</ul>
+<li><p>没有通货膨胀</p>
 </li>
-<li>Add in multi-class decision tree since in real trading it is completely different if the return is different</li>
+<li>债券具有完美流动性，且没有风险</li>
+<li>家庭持有名义货币的量不变</li>
 </ul>
-<p>V0.3: Improve the mutli-class decision tree</p>
+<h3 id="市场与价格"><a href="#市场与价格" class="headerlink" title="市场与价格"></a>市场与价格</h3><p>P：商品市场中的价格</p>
+<p>M：名义项，$M/P$为实际项</p>
+<p>$w$：名义工资率（美元/小时）</p>
+<p>L：均衡劳动量</p>
+<p>$wL^s$：名义工资收入</p>
+<p>$w/P$：实际工资率</p>
+<p>$R$：名义租赁价格</p>
+<p>$K$：资本量</p>
+<p>$R/P$：实际租赁价格</p>
+<p>$i$：实际利率/名义利率</p>
+<p>$B$：债券量</p>
+<h3 id="预算约束"><a href="#预算约束" class="headerlink" title="预算约束"></a>预算约束</h3><h4 id="收入"><a href="#收入" class="headerlink" title="收入"></a>收入</h4><h5 id="利润"><a href="#利润" class="headerlink" title="利润"></a>利润</h5><script type="math/tex; mode=display">
+Y= AF(K^d, L^d)\\
+利润=营收-成本\\
+\Pi = PY - (wL^d+RK^d)=PAF(K^d, L^d) - (wL^d+RK^d)</script><h5 id="工资收入"><a href="#工资收入" class="headerlink" title="工资收入"></a>工资收入</h5><script type="math/tex; mode=display">
+wL</script><h5 id="租金收入"><a href="#租金收入" class="headerlink" title="租金收入"></a>租金收入</h5><script type="math/tex; mode=display">
+净名义租金收入=名义租金收入-折旧\\
+ = RK-\delta PK\\
+ 拥有资本的收益率 = R/P - \delta</script><h5 id="利息收入"><a href="#利息收入" class="headerlink" title="利息收入"></a>利息收入</h5><script type="math/tex; mode=display">
+iB</script><h5 id="家庭总收入"><a href="#家庭总收入" class="headerlink" title="家庭总收入"></a>家庭总收入</h5><script type="math/tex; mode=display">
+\Pi +wL+(R/P-\delta)PK+iB</script><h4 id="支出"><a href="#支出" class="headerlink" title="支出"></a>支出</h4><p>消费：PC</p>
+<h4 id="资产变化"><a href="#资产变化" class="headerlink" title="资产变化"></a>资产变化</h4><p>不妨从个人的资产负债表和现金流量表的形式去理解。显然期初的资产负债表和期末的现金流量表可以导出期末的现金流量表。</p>
+<p>模型中资产和负债的项目资产和债券。由于市场均衡，那么资产和债券的收益率应该相等，就有</p>
+<script type="math/tex; mode=display">
+i = R/P-\delta</script><p>不妨将资产全部认为等价的债券以方便计算。</p>
+<p>影响现金流量的项目为</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>收入</th>
+<th>支出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>工资收入</td>
+<td>消费</td>
+</tr>
+<tr>
+<td>利息收入</td>
+<td>利息支出</td>
+</tr>
+<tr>
+<td>利润</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>未支出的收入则在期末记为增加的债券。未收入的支出则在期末记为减少的债券</p>
+<p>就有家庭约束</p>
+<script type="math/tex; mode=display">
+\Delta B+P\Delta K +PC= \Pi +wL + i(B+PK)\\
+名义储蓄+名义消费=名义收入</script><h3 id="市场出清"><a href="#市场出清" class="headerlink" title="市场出清"></a>市场出清</h3><p>在均衡市场下，有</p>
+<script type="math/tex; mode=display">
+w/P = MPL = \frac{\partial F(K, L)}{\partial L}\\
+R/P = MPK = \frac{\partial F(K, L)}{\partial K}\\
+i = R/P - \delta</script><p>模型中的商家利润为</p>
+<script type="math/tex; mode=display">
+\Pi /P = AF(K,L)-MPL*L-MPK*K = 0</script><h2 id="消费的选择"><a href="#消费的选择" class="headerlink" title="消费的选择"></a>消费的选择</h2><p>显然消费决定了储蓄，而储蓄决定了投资，故只需要研究消费的选择就可以推算出经济中的储蓄和投资。</p>
+<p>单期情况显然家庭不会进行储蓄，故从两期模型开始考虑</p>
+<h3 id="两期模型"><a href="#两期模型" class="headerlink" title="两期模型"></a>两期模型</h3><p>扩展上一节中的预算约束即可得到两期的预算约束</p>
+<script type="math/tex; mode=display">
+B_2/P+K_2=(1+i_1)(1+i_0)(B_0/P+K_0)+(1+i_1)(w/P)_1L-(1+i_1)C_1+(w/P)_2L-C_2\\
+第二期结束的资产 = 第0期结束时持有的资产的现值+第一期（工资收入-消费）的现值+第二期（工资收入-消费）</script><h4 id="对于效用函数的假设"><a href="#对于效用函数的假设" class="headerlink" title="对于效用函数的假设"></a>对于效用函数的假设</h4><ul>
+<li>家庭偏好在不同的时点按相似的水平消费</li>
+<li>效用关于消费是增函数</li>
+</ul>
+<p>收入效应：资金来源增加会导致每年的消费都增加</p>
+<p>替代效应：因为利率的作用，使得一单位的$C_2$成本等于$C_1/(1+i)$，故利率上升时更有激励在第二期进行消费</p>
+<p>多期模型，自行拓展即可，形同二期模型</p>
+<h2 id="均衡经济周期模型"><a href="#均衡经济周期模型" class="headerlink" title="均衡经济周期模型"></a>均衡经济周期模型</h2><p>认为GDP变化有两个贡献量：趋势性变化和周期性变化。其中周期性变化主要由技术冲击导致。</p>
+<p>此模型下L和K的供给都是固定的</p>
+<p>关于劳动：</p>
+<script type="math/tex; mode=display">
+A\uparrow\Longrightarrow MPL\uparrow\Longrightarrow L^d\uparrow\Longrightarrow w/P\uparrow</script><p>关于资本：</p>
+<script type="math/tex; mode=display">
+A\uparrow\Longrightarrow MPK\uparrow\Longrightarrow K^d\uparrow\Longrightarrow R/P\uparrow\Longrightarrow i\uparrow</script><p>那么根据收入效应，当期消费增加。根据替代效应，当期消费减少。具体的变化要根据效应的强弱而定。当A的变化持续性较强时，收入效应更强。</p>
+<p>考虑投资时，因mpc必然小于1，故投资不管什么情况都会增加。</p>
+<p>问题：</p>
 <ul>
-<li>Since the multi-class decision tree model can identify different level of return, then I add in score(weight) to judge the prediction result.</li>
+<li>固定了$L^s$，故无法对于$L$的变化做出解释</li>
+<li>固定了$K^s$，故无法对于$K$的变化做出解释</li>
+<li>固定了P，故无法对通货膨胀做出解释</li>
 </ul>
-<p>V0.4: Create back test system for the model</p>
-<ul>
-<li>Create a day level back test system</li>
-<li>The strategy is acting daily and the result is too good to be true</li>
-</ul>
-<p>V1.0: Finally figures the problem in the model and changed it</p>
-<ul>
-<li>The trimming action in the trend determination has a lot of problem</li>
-<li>Correct the splitting and dividend problem that cause discontinuity in stock price  </li>
-</ul>
-<p>V2.0: Add in rolling calculation model:</p>
-<ul>
-<li>Rolling calculation make the calculation much slower, but the effect has a significant change</li>
-<li><strong>Should always do rolling in machine learning</strong></li>
-</ul>
-<p>V2.1: Add in more advance machine learning algorithm to the model:</p>
-<ul>
-<li>SVM is a great model since it can automatically study the linear relationship among different factors. But it is extremely time consuming to train and will add in some distraction terms to the model.</li>
-<li>Random forest algorithm is an enhanced decision tree. The cost of training is acceptable and the improvement is significant. So currently this is the main algorithm I will continue to use</li>
-</ul>
-<p>v2.21: Add in more factors:</p>
-<ul>
-<li>Add in more fundamental factors: open, low, high</li>
-<li>Add in more derived factors</li>
-</ul>
-<p>V2.22: Improve the result of random forest </p>
-<ul>
-<li>Since the random forest model will give a confidence level on how sure it is on the result, I can improve the model by only selecting results that random forest is more certain.</li>
-</ul>
-<p>V2.3: Combined last two version and made some changes for efficiency purpose.</p>
-<ul>
-<li>Changed to create a new model every 250 days for efficiency reason. The average correction rate is around 75% for binary prediction.</li>
-<li>Create a new back test</li>
-<li>correct the give signal method </li>
-</ul>
-<p>V2.4: Correct many errors. The code finally works as expected. Still more to complete in next version</p>
-<h2 id="Error-Log"><a href="#Error-Log" class="headerlink" title="Error Log"></a>Error Log</h2><ul>
-<li>solve why the actual prediction result in back test is very different from the rf_test result</li>
-<li></li>
-</ul>
+<p>改进</p>
+<p>将闲暇时间加入效用函数。此时就存在闲暇时间和工作之间的权衡取舍。当实际工资率上升时，家庭得到工作的激励。</p>
+<p>收入效应：</p>
+<p>当工资暂时性上升时，收入效应强于替代效应，家庭将会多工作。</p>
+<p>工资长期上升后，变化就不确定了。</p>
+<p>替代效应：</p>
+<p>同之前的跨期替代效应</p>
+<p>劳动力的闲暇本质上就是劳动力的利用率问题，那么同理，我们也可以将其引申到资本上。即资本的利用率，而其成本就是折旧。</p>
+<p>此时引入资本利用率$\kappa$并把折旧转化为$\delta(\kappa)$。折旧显然是一个凹函数。</p>
+<script type="math/tex; mode=display">
+资本收益率=\max_{\kappa}(R/P\kappa K-\delta(\kappa))=i</script><p>$R/P \uparrow \Longrightarrow \kappa\uparrow$，这也就解释了资本的顺周期性。</p>
+<p>对于通货膨胀的计算只需要引入公式</p>
+<script type="math/tex; mode=display">
+M = PL(Y,i)</script><p>其中L关于Y和i都是增的，那么$Y\uparrow \Longrightarrow P\downarrow$，即P是逆周期的</p>
 
       
     </div>
@@ -475,9 +509,7 @@
       
         <div class="post-tags">
           
-            <a href="/a1610b.github.io/tags/Quant/" rel="tag"># Quant</a>
-          
-            <a href="/a1610b.github.io/tags/Python/" rel="tag"># Python</a>
+            <a href="/a1610b.github.io/tags/Economic/" rel="tag"># Economic</a>
           
         </div>
       
@@ -490,8 +522,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/a1610b.github.io/2019/08/13/To-Jene/" rel="next" title="To Jene">
-                <i class="fa fa-chevron-left"></i> To Jene
+              <a href="/a1610b.github.io/2019/11/01/Model/" rel="next" title="OLG Model">
+                <i class="fa fa-chevron-left"></i> OLG Model
               </a>
             
           </div>
@@ -500,8 +532,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/a1610b.github.io/2019/08/18/portfolioProject/" rel="prev" title="Portfolio Project">
-                Portfolio Project <i class="fa fa-chevron-right"></i>
+              <a href="/a1610b.github.io/2019/12/18/货币与经济周期/" rel="prev" title="货币与经济周期">
+                货币与经济周期 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -634,7 +666,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Model-Development"><span class="nav-number">1.</span> <span class="nav-text">Model Development</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Update-Todo"><span class="nav-number">1.1.</span> <span class="nav-text">Update Todo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Version-Updates"><span class="nav-number">1.2.</span> <span class="nav-text">Version Updates</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Error-Log"><span class="nav-number">2.</span> <span class="nav-text">Error Log</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#经济波动"><span class="nav-number">1.</span> <span class="nav-text">经济波动</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#市场与价格"><span class="nav-number">1.0.1.</span> <span class="nav-text">市场与价格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#预算约束"><span class="nav-number">1.0.2.</span> <span class="nav-text">预算约束</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#收入"><span class="nav-number">1.0.2.1.</span> <span class="nav-text">收入</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#利润"><span class="nav-number">1.0.2.1.1.</span> <span class="nav-text">利润</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#工资收入"><span class="nav-number">1.0.2.1.2.</span> <span class="nav-text">工资收入</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#租金收入"><span class="nav-number">1.0.2.1.3.</span> <span class="nav-text">租金收入</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#利息收入"><span class="nav-number">1.0.2.1.4.</span> <span class="nav-text">利息收入</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#家庭总收入"><span class="nav-number">1.0.2.1.5.</span> <span class="nav-text">家庭总收入</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#支出"><span class="nav-number">1.0.2.2.</span> <span class="nav-text">支出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#资产变化"><span class="nav-number">1.0.2.3.</span> <span class="nav-text">资产变化</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#市场出清"><span class="nav-number">1.0.3.</span> <span class="nav-text">市场出清</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#消费的选择"><span class="nav-number">1.1.</span> <span class="nav-text">消费的选择</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#两期模型"><span class="nav-number">1.1.1.</span> <span class="nav-text">两期模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#对于效用函数的假设"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">对于效用函数的假设</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#均衡经济周期模型"><span class="nav-number">1.2.</span> <span class="nav-text">均衡经济周期模型</span></a></li></ol></div>
             
 
           </div>

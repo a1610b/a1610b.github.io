@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Journal,Quant,">
+  <meta name="keywords" content="Economic,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="今天学习到的内容、经历与想法速记">
-<meta name="keywords" content="Journal,Quant">
+<meta name="description" content="关于货币需求模型的学习笔记">
+<meta name="keywords" content="Economic">
 <meta property="og:type" content="article">
-<meta property="og:title" content="19-8-13">
-<meta property="og:url" content="https://github.com/a1610b/a1610b.github.io/2019/08/13/19-8-13/index.html">
+<meta property="og:title" content="货币需求模型">
+<meta property="og:url" content="https://github.com/a1610b/a1610b.github.io/2019/12/23/货币需求模型/index.html">
 <meta property="og:site_name" content="Tony&#39;s Blog">
-<meta property="og:description" content="今天学习到的内容、经历与想法速记">
+<meta property="og:description" content="关于货币需求模型的学习笔记">
 <meta property="og:locale" content="English and Chinese">
-<meta property="og:updated_time" content="2019-08-13T14:44:16.000Z">
+<meta property="og:updated_time" content="2019-12-23T11:38:25.857Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="19-8-13">
-<meta name="twitter:description" content="今天学习到的内容、经历与想法速记">
+<meta name="twitter:title" content="货币需求模型">
+<meta name="twitter:description" content="关于货币需求模型的学习笔记">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://github.com/a1610b/a1610b.github.io/2019/08/13/19-8-13/">
+  <link rel="canonical" href="https://github.com/a1610b/a1610b.github.io/2019/12/23/货币需求模型/">
 
 
 
 
 
-  <title>19-8-13 | Tony's Blog</title>
+  <title>货币需求模型 | Tony's Blog</title>
   
 
 
@@ -273,7 +273,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/a1610b/a1610b.github.io/a1610b.github.io/2019/08/13/19-8-13/">
+    <link itemprop="mainEntityOfPage" href="https://github.com/a1610b/a1610b.github.io/a1610b.github.io/2019/12/23/货币需求模型/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tony She">
@@ -290,7 +290,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">19-8-13</h1>
+          <h1 class="post-title" itemprop="name headline">货币需求模型</h1>
         
 
         <div class="post-meta">
@@ -302,8 +302,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-13T18:50:54+08:00">
-                2019-08-13
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-23T19:25:00+08:00">
+                2019-12-23
               </time>
             
 
@@ -318,8 +318,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2019-08-13T22:44:16+08:00">
-                2019-08-13
+              <time title="Post modified" itemprop="dateModified" datetime="2019-12-23T19:38:25+08:00">
+                2019-12-23
               </time>
             
           </span>
@@ -337,8 +337,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/a1610b.github.io/categories/Journal/" itemprop="url" rel="index">
-                    <span itemprop="name">Journal</span>
+                  <a href="/a1610b.github.io/categories/Notes/" itemprop="url" rel="index">
+                    <span itemprop="name">Notes</span>
                   </a>
                 </span>
 
@@ -374,46 +374,157 @@
       
 
       
-        <script src="/a1610b.github.io/js/crypto-js.js"></script>
-<script>
-function doDecrypt (pwd, onError) {
-	console.log('in doDecrypt');
-	const txt = document.getElementById('enc_content').innerHTML;
-	let plantext;
-	try {
-		const bytes = CryptoJS.AES.decrypt(txt, pwd);
-		var plaintext = bytes.toString(CryptoJS.enc.Utf8);
-	} catch(err) {
-		if(onError) {
-			onError(err);
-		}
-		return;
-	}
-	document.getElementById('enc_content').innerHTML = plaintext;
-	document.getElementById('enc_content').style.display = 'block';
-	document.getElementById('enc_passwd').style.display = 'none';
-	if(typeof MathJax !== 'undefined') {
-		MathJax.Hub.Queue(
-			['resetEquationNumbers', MathJax.InputJax.TeX],
-			['PreProcess', MathJax.Hub],
-			['Reprocess', MathJax.Hub]
-		);
-	}
-}
-</script>
-<div id="enc_content" style="display:none">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</div>
-<div id="enc_passwd"> <input id="enc_pwd_input" type="password" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div>
-<script>
-var onError = function(error) {
-	document.getElementById("enc_error").innerHTML = "password error!"
-};
-function decrypt() {
-var passwd = document.getElementById("enc_pwd_input").value;
-console.log(passwd);
-doDecrypt(passwd, onError);
-}
-</script>
-</div>
+        <p>关于货币需求模型的学习笔记</p>
+<a id="more"></a>
+<h1 id="货币需求模型"><a href="#货币需求模型" class="headerlink" title="货币需求模型"></a>货币需求模型</h1><h2 id="传统的货币数量论"><a href="#传统的货币数量论" class="headerlink" title="传统的货币数量论"></a>传统的货币数量论</h2><h3 id="现金交易说"><a href="#现金交易说" class="headerlink" title="现金交易说"></a>现金交易说</h3><p>费雪</p>
+<ul>
+<li>卖方价值等于买方价值，即费雪等式: MV=PY</li>
+<li>V和Y在短期内都是常数</li>
+</ul>
+<p>以上两条可以推出货币供给量只会对价格和名义变量产生影响，而不会影响实际变量。即货币中性</p>
+<ul>
+<li>货币需求完全是交易所需，无需作为价值储藏和增值的手段，故与利率无关<ul>
+<li>货币需求是名义收入水平的函数</li>
+<li>而实际货币余额只于实际因素有关</li>
+</ul>
+</li>
+<li>从宏观角度出发，因为PY衡量的是一定时期内经济中发生总交易的规模，从总交易来推算社会需求的货币量。也是就说为了完全这个交易规模而不得不需求多少货币数量</li>
+</ul>
+<h3 id="现金余额说"><a href="#现金余额说" class="headerlink" title="现金余额说"></a>现金余额说</h3><p>剑桥学派：马歇尔和庇古</p>
+<p>早期凯恩斯</p>
+<ul>
+<li>货币具有交易媒介职能和价值储藏的职能</li>
+<li>同意费雪关于交易量和货币需求的关系式</li>
+<li>但是认为人们的财富水平和持有货币的机会成本也会影响货币需求<ul>
+<li>持有货币的机会成本就是利率</li>
+</ul>
+</li>
+<li>交易恒等式：M=kPY<ul>
+<li>k是反映名义货币量占国民收入的比例或是人们愿意以货币形式持有的国民收入的比例</li>
+<li>认为k在短期内是一个常数</li>
+<li>可以看到如果令$k=\frac 1 V$，那么形式上与费雪一样</li>
+<li>但是这里的V指的是货币的收入流通速度<ul>
+<li>只有最终产品才计入收入</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>剑桥学派从微观的角度强调人们想要持有多少货币，即从个人的资产选择的角度对于货币需求进行分析</li>
+<li>认为货币需求受到利率影响，但是没有进行量化</li>
+</ul>
+<h2 id="凯恩斯"><a href="#凯恩斯" class="headerlink" title="凯恩斯"></a>凯恩斯</h2><p>认为持有货币有三种动机</p>
+<ul>
+<li>交易<ul>
+<li>特点：需求确定，与收入水平正相关</li>
+</ul>
+</li>
+<li>预防<ul>
+<li>特点：需求不确定，与收入水平正相关</li>
+</ul>
+</li>
+<li>投机<ul>
+<li>主要是对于债券(国债)的投机</li>
+<li>当利率低于预期的时候，人们认为债券价格会下降，故持有更多货币，反之亦然</li>
+<li>需求是利率水平的减函数</li>
+</ul>
+</li>
+</ul>
+<p>流动性陷阱</p>
+<ul>
+<li>$r &lt; r^E \Longrightarrow$人们抛售债券，获取流动性$\Longrightarrow$政府扩张货币供给$\Longrightarrow r\downarrow\Longrightarrow$人们继续抛售债券，流动性进一步被榨干</li>
+<li>凯恩斯和费里德曼对于流动性陷阱的存在持有否定的看法</li>
+<li>克鲁格曼指出1990年代的日本利率低(负利率)且总需求连续下降<ul>
+<li>克鲁格曼认为这就是流动性陷阱显然是有问题的，因为利率刺激经济只是在特定情形下有效，而在日本的情形下无效并不能说明日本陷入了流动性陷阱，相反日本持有/发行了大量的政府债券且都有较好的流动性</li>
+</ul>
+</li>
+</ul>
+<p>货币需求函数</p>
+<script type="math/tex; mode=display">
+M^d = M_1^d(Y)+M_2^d(r)\\
+M^d/P = f(Y,r)</script><h3 id="交易性货币需求理论"><a href="#交易性货币需求理论" class="headerlink" title="交易性货币需求理论"></a>交易性货币需求理论</h3><p>特点：强调利率的影响</p>
+<p>开创的工作是有鲍莫尔和托宾完成的(BT model)</p>
+<p>即使是交易动机之下，人们也不会完全持有现金，而是也会持有非现金资产。而决定是否持有非现金资产取决于转换成本与非现金资产的收益。那么当利率越高，货币需求就越少</p>
+<h4 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h4><p>设T为交易者在一年内要用于交易的收入。</p>
+<p>设每次支取K，则支取次数为$T/K$。</p>
+<script type="math/tex; mode=display">
+机会损失 = Kr/2\\
+转换成本 = Tb / K\\
+TC = Kr /2 + Tb/K\\
+\min_{K}TC \Longrightarrow K=\sqrt{\frac{2bT} r}\\
+持有交易性货币余额 = K/2 = \sqrt{\frac{bT}{2r}}</script><h3 id="预防性货币需求理论"><a href="#预防性货币需求理论" class="headerlink" title="预防性货币需求理论"></a>预防性货币需求理论</h3><p>惠伦</p>
+<p>可以把每个时间段的突发支出看作一个随机变量来研究。支出为$S\sim N(0,\sigma^2)$。</p>
+<p>利用切比雪夫不等式</p>
+<script type="math/tex; mode=display">
+P\{|X-E(X)|\geq \varepsilon\}\leq \frac{D(X)}{\varepsilon^2}\\
+E(S) = 0, D(S) = \sigma^2\\
+P\{S\geq M\} \leq \frac{\sigma^2}{M^2}</script><p>依然考虑机会损失和转换成本。</p>
+<p>那么期初持有M元预防性货币额，成本分别为</p>
+<script type="math/tex; mode=display">
+机会损失 = rM\\
+转换成本 = bP\{S \geq M\} \approx bP\{S > M\}\leq \frac{\sigma^2}{M^2}\\
+TC \leq rM + \frac{\sigma^2}{M^2}\\
+为了简化，不妨让TC = rM + \frac{\sigma^2}{M^2}\\
+\min_{M}TC \Longrightarrow M=\sqrt[3]{\frac{2b\sigma^2} r}\\</script><h3 id="投机性货币需求理论"><a href="#投机性货币需求理论" class="headerlink" title="投机性货币需求理论"></a>投机性货币需求理论</h3><p>托宾的工作：个人会持有货币和债券组成的组合</p>
+<p>这个组合的夏普比率为常数，故比与最优无差异曲线像切，则切点为最优资产配置点</p>
+<p>结论是投机性货币需求与利率负相关</p>
+<h2 id="弗里德曼"><a href="#弗里德曼" class="headerlink" title="弗里德曼"></a>弗里德曼</h2><p>于凯恩斯的相似点</p>
+<ul>
+<li>将货币视为一种资产，并从选择的角度分析货币需求</li>
+<li>看重流动性偏好</li>
+<li>货币需求函数与凯恩斯的一致</li>
+</ul>
+<p>区别于凯恩斯的点</p>
+<ul>
+<li>重心不在人们持有货币的动机上</li>
+<li>资产的概念更宽泛</li>
+<li>引入了人力财富和非人力财富的概念</li>
+<li>提出了恒久收入</li>
+<li>货币需求函数更复杂</li>
+</ul>
+<h3 id="模型-1"><a href="#模型-1" class="headerlink" title="模型"></a>模型</h3><script type="math/tex; mode=display">
+M_d = f(P, w, Y, r_b-\frac 1 {r_b}\frac{dr_b}{dt}, r_e+\frac{1}{P}\frac{dP}{dt}-\frac{1}{r_e}\frac{dr_e}{dt}, \frac{1}{P}\frac{dP}{dt},u)</script><ul>
+<li>$r_b-\frac 1 {r_b}\frac{dr_b}{dt}$：债券收益率 - 资本损益</li>
+<li>$r_e+\frac{1}{P}\frac{dP}{dt}-\frac{1}{r_e}\frac{dr_e}{dt}$：股权收益率 - 价格水平变化 - 资本损益</li>
+<li><p>$\frac{1}{P}\frac{dP}{dt}$：价格水平变化，此处特指实物资产报酬率的变化</p>
+</li>
+<li><p>$u$：个人偏好</p>
+</li>
+<li>$Y$：恒久收入</li>
+<li>$w$：非人力财务 / 人力财富</li>
+</ul>
+<p>这些因素可以归为三类：</p>
+<ul>
+<li>总财富，即收入</li>
+<li>各类财富的价格与收益情况，即债券、股权、和实物资产</li>
+<li>财富所有者的偏好，即w和u</li>
+</ul>
+<p>货币需求函数是物价水平和恒久收入的一次齐次函数</p>
+<p>此时货币流动速度就变得可以测量、预测。并认为经济并非货币中性的</p>
+<p>弗里德曼的核心思想为：</p>
+<ul>
+<li>货币在经济中极端重要(非中性)</li>
+<li>货币需求对于利率不敏感</li>
+<li>货币需求主要对持久性收入产生反应</li>
+<li>货币需求函数是稳定的</li>
+<li>货币流动速度也是稳定的、可预测的</li>
+</ul>
+<h2 id="实证结果"><a href="#实证结果" class="headerlink" title="实证结果"></a>实证结果</h2><ul>
+<li>货币需求对利率敏感</li>
+<li>流动性陷阱不存在(至少还没有发生过)</li>
+<li>货币需求函数只在特定情况下稳定，在1974年后的美国并不稳定</li>
+<li>货币流动速度具有顺周期性<ul>
+<li>凯恩斯的解释：<ul>
+<li>利率具有顺周期性，$r\uparrow \Longrightarrow M^d\downarrow\Longrightarrow V \uparrow$ </li>
+</ul>
+</li>
+<li>弗里德曼的解释：<ul>
+<li>恒久收入是顺周期性的，故流通速度是顺周期的</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
       
     </div>
     
@@ -430,9 +541,7 @@ doDecrypt(passwd, onError);
       
         <div class="post-tags">
           
-            <a href="/a1610b.github.io/tags/Journal/" rel="tag"># Journal</a>
-          
-            <a href="/a1610b.github.io/tags/Quant/" rel="tag"># Quant</a>
+            <a href="/a1610b.github.io/tags/Economic/" rel="tag"># Economic</a>
           
         </div>
       
@@ -445,8 +554,8 @@ doDecrypt(passwd, onError);
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/a1610b.github.io/2019/08/12/19-08-12/" rel="next" title="19-08-12">
-                <i class="fa fa-chevron-left"></i> 19-08-12
+              <a href="/a1610b.github.io/2019/12/18/经济波动/" rel="next" title="周期均衡模型">
+                <i class="fa fa-chevron-left"></i> 周期均衡模型
               </a>
             
           </div>
@@ -454,10 +563,6 @@ doDecrypt(passwd, onError);
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/a1610b.github.io/2019/08/13/To-Jene/" rel="prev" title="To Jene">
-                To Jene <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -509,8 +614,17 @@ doDecrypt(passwd, onError);
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -570,6 +684,22 @@ doDecrypt(passwd, onError);
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#货币需求模型"><span class="nav-number">1.</span> <span class="nav-text">货币需求模型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#传统的货币数量论"><span class="nav-number">1.1.</span> <span class="nav-text">传统的货币数量论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#现金交易说"><span class="nav-number">1.1.1.</span> <span class="nav-text">现金交易说</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#现金余额说"><span class="nav-number">1.1.2.</span> <span class="nav-text">现金余额说</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#凯恩斯"><span class="nav-number">1.2.</span> <span class="nav-text">凯恩斯</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#交易性货币需求理论"><span class="nav-number">1.2.1.</span> <span class="nav-text">交易性货币需求理论</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#模型"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">模型</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#预防性货币需求理论"><span class="nav-number">1.2.2.</span> <span class="nav-text">预防性货币需求理论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#投机性货币需求理论"><span class="nav-number">1.2.3.</span> <span class="nav-text">投机性货币需求理论</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#弗里德曼"><span class="nav-number">1.3.</span> <span class="nav-text">弗里德曼</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#模型-1"><span class="nav-number">1.3.1.</span> <span class="nav-text">模型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实证结果"><span class="nav-number">1.4.</span> <span class="nav-text">实证结果</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
